@@ -4,7 +4,7 @@
   background: url('../images/banner.jpg');
   background-size: cover;
   background-position: center -250px;
-  color:white;
+  color: $white;
   text-align: center;
   position:relative;
   line-height: 1.4;
@@ -16,12 +16,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width:100%;
-}
-
-.info .btn{
-  margin-top:25px;
-}
-
-h1{
-  font-size: 100px;
+    a{
+        margin-top:25px;
+    }
 }

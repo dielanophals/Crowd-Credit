@@ -11,21 +11,12 @@
   margin: auto;
 }
 
-.btn{
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display:inline-block;
-  margin-top: 10px;
-}
-
-.red_btn{
-  background: $primary;
-  color:white;
-}
-
 h1, h2, h3, h4, h5, h6{
   font-family: 'Nunito', sans-serif;
+}
+
+h1{
+  font-size: 100px;
 }
 
 h2{
@@ -43,5 +34,25 @@ p, a{
 }
 
 .lightgrey{
-  color:$lightgrey;
+  color: $grey_light;
+}
+
+.btn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display:inline-block;
+  margin-top: 10px;
+}
+
+.red_btn{
+    background: $red_dark;
+    color:white;
+    transition: $transition;
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    &:hover{
+        background: $red_light;
+    }
 }

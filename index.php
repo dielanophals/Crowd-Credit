@@ -8,6 +8,7 @@
   <head>
     <meta charset="utf-8">
     <title>Crowd Credit</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
