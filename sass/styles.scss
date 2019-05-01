@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'components/header';
+@import 'components/index';
+@import 'components/project';
+
+.container{
+  width:1024px;
+  margin:auto;
+}
+
+.red_btn{
+  background: $primary;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color:white;
+  margin-top:10px !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Nunito', sans-serif;
+}
+
+p, a{
+  font-family: sans-serif;
+}
