@@ -6,6 +6,15 @@
   background-position: center -250px;
   color:white;
   text-align: center;
+  position:relative;
+}
+
+.info{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width:100%;
 }
 
 h1{

@@ -1,8 +1,13 @@
-nav{
+header{
   background:white;
   width:100%;
-  height:60px;
   margin:0;
+  display: inline-block;
+}
+
+nav{
+  float:right;
+  padding:20px;
 }
 
 nav ul{

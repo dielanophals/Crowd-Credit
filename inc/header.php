@@ -24,7 +24,6 @@
           <img src="<?php echo $profilePicture; ?>">
         </div>
         <a href="#"><?php echo $name; ?></a>
-        <a href="logout.php">Logout</a>
       </div>
     <?php
       }
