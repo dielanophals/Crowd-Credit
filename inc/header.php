@@ -11,7 +11,7 @@
 
     <?php
       if(!isset($_SESSION["id"])){
-        echo "woops";
+        echo "<a href='login.php'>Login</a>";
       }else{
     ?>
       <div class="nav_profile">

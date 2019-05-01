@@ -1,9 +1,7 @@
 <?php
   require_once("bootstrap.php");
 
-  if(Session::check() === false){
-    echo "woops";
-  }else{
+  if(Session::check()){
     header("Location: index.php");
   }
 

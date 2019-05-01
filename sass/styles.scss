@@ -1,2 +1,16 @@
 @import 'variables';
 @import 'components/header';
+@import 'components/project';
+
+.container{
+  width:1024px;
+  margin:auto;
+}
+
+.red_btn{
+  background: $primary;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color:white;
+}

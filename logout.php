@@ -3,9 +3,9 @@
 
     $s = Session::check();
     if($s === false){
-        header("location: login.php");
+        header("location: index.php");
     }
     else{
         Session::destroy();
-        header("location: login.php");
+        header("location: index.php");
     }
