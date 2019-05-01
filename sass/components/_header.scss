@@ -25,13 +25,18 @@ nav a{
 
 nav .nav_profile{
   display: inline-block;
+  position: relative;
 }
 
 nav .nav_profile_img{
   display: inline-block;
   width:40px;
+  height:40px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
 }
 
 nav .nav_profile_img img{
-  width:100%;
+  width:inherit;
 }

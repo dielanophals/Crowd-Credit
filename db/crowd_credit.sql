@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 24 apr 2019 om 16:15
--- Serverversie: 10.1.26-MariaDB
--- PHP-versie: 7.1.8
+-- Gegenereerd op: 01 mei 2019 om 19:09
+-- Serverversie: 10.1.38-MariaDB
+-- PHP-versie: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `productlab2`
+-- Database: `crowd_credit`
 --
 
 -- --------------------------------------------------------
@@ -111,6 +111,7 @@ CREATE TABLE `project` (
   `date_created` date NOT NULL,
   `date_start` date NOT NULL,
   `date_end` date NOT NULL,
+  `banner` varchar(300) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `feed_id` int(11) DEFAULT NULL,
   `goal` int(11) NOT NULL
@@ -120,8 +121,10 @@ CREATE TABLE `project` (
 -- Gegevens worden geëxporteerd voor tabel `project`
 --
 
-INSERT INTO `project` (`id`, `active`, `name`, `wallet_id`, `location`, `organisation_id`, `date_created`, `date_start`, `date_end`, `description`, `feed_id`, `goal`) VALUES
-(2, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'I like turtles', NULL, 350);
+INSERT INTO `project` (`id`, `active`, `name`, `wallet_id`, `location`, `organisation_id`, `date_created`, `date_start`, `date_end`, `banner`, `description`, `feed_id`, `goal`) VALUES
+(2, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
+(3, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
+(4, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350);
 
 -- --------------------------------------------------------
 
@@ -159,7 +162,8 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`) VALUES
 (1, 'normal'),
-(2, 'editor');
+(2, 'editor'),
+(3, 'admin');
 
 -- --------------------------------------------------------
 
@@ -170,9 +174,11 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `active` int(1) NOT NULL,
-  `date_created` date NOT NULL,
+  `date_created` datetime NOT NULL,
+  `email` varchar(255) NOT NULL,
   `firstname` varchar(250) NOT NULL,
   `lastname` varchar(250) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `img` varchar(250) NOT NULL,
   `role_id` int(11) NOT NULL,
   `organisation_id` int(11) NOT NULL,
@@ -183,11 +189,11 @@ CREATE TABLE `users` (
 -- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `users` (`id`, `active`, `date_created`, `firstname`, `lastname`, `img`, `role_id`, `organisation_id`, `wallet_id`) VALUES
-(1, 1, '2019-04-24', 'Aqsa', 'Intizar', 'https://www.facebook.com/photo.php?fbid=1521214634675774&set=a.106093152854603&type=3&theater', 2, 1, 1),
-(2, 1, '2019-04-24', 'Yannis', 'Wellemans', 'https://www.facebook.com/photo.php?fbid=715243655215732&set=a.103537826386321&type=3&theater', 2, 1, 2),
-(3, 1, '2019-04-23', 'Dielan ', 'Ophals', 'https://www.facebook.com/photo.php?fbid=1784065058352596&set=a.108001565958962&type=3&theater', 2, 1, 3),
-(4, 1, '2019-04-26', 'John', 'Doe', 'https://www.google.com/search?q=john+doe&source=lnms&tbm=isch&sa=X&ved=0ahUKEwju__bax-jhAhVM_KQKHQTSAGUQ_AUIDigB&biw=1396&bih=686#imgrc=NKHIErLRRkUJJM:', 1, 1, 4);
+INSERT INTO `users` (`id`, `active`, `date_created`, `email`, `firstname`, `lastname`, `password`, `img`, `role_id`, `organisation_id`, `wallet_id`) VALUES
+(1, 1, '2019-04-24 00:00:00', 'aqsatje@live.be', 'Aqsa', 'Intizar', '$2y$15$tfEgRx.hN73W4FMN7OjpAuOpgD.S2CUVftPwEjzafc7qprjrY6i32', 'https://upload.wikimedia.org/wikipedia/commons/d/df/Cute_Monkey_cropped.jpg', 3, 1, 1),
+(2, 1, '2019-04-24 00:00:00', 'yannis.wellemans@hotmail.com', 'Yannis', 'Wellemans', '$2y$15$tfEgRx.hN73W4FMN7OjpAuOpgD.S2CUVftPwEjzafc7qprjrY6i32', 'https://upload.wikimedia.org/wikipedia/commons/d/df/Cute_Monkey_cropped.jpg', 3, 1, 2),
+(3, 1, '2019-04-23 00:00:00', 'dielano@hotmail.be', 'Dielan ', 'Ophals', '$2y$15$tfEgRx.hN73W4FMN7OjpAuOpgD.S2CUVftPwEjzafc7qprjrY6i32', 'https://scontent.fbru2-1.fna.fbcdn.net/v/t1.0-9/36490118_1784065068352595_989980852102365184_n.jpg?_nc_cat=107&_nc_ht=scontent.fbru2-1.fna&oh=0dba5b59c5b82897d8f56dd0f18b51dc&oe=5D683018', 3, 1, 3),
+(4, 1, '2019-04-26 00:00:00', 'john_doe@hotmail.com', 'John', 'Doe', '$2y$15$tfEgRx.hN73W4FMN7OjpAuOpgD.S2CUVftPwEjzafc7qprjrY6i32', 'https://www.google.com/search?q=john+doe&source=lnms&tbm=isch&sa=X&ved=0ahUKEwju__bax-jhAhVM_KQKHQTSAGUQ_AUIDigB&biw=1396&bih=686#imgrc=NKHIErLRRkUJJM:', 1, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -301,46 +307,55 @@ ALTER TABLE `wallet`
 --
 ALTER TABLE `feed`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT voor een tabel `fundings`
 --
 ALTER TABLE `fundings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT voor een tabel `genres`
 --
 ALTER TABLE `genres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT voor een tabel `organisations`
 --
 ALTER TABLE `organisations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT voor een tabel `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT voor een tabel `projects_genres`
 --
 ALTER TABLE `projects_genres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT voor een tabel `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT voor een tabel `wallet`
 --
 ALTER TABLE `wallet`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- Beperkingen voor geëxporteerde tabellen
 --

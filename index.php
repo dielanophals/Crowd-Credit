@@ -18,11 +18,11 @@
       <div class="info">
         <h1>Crowdfund a dream</h1>
         <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance</p>
-        <a class="red_btn" href="#">View projects</a>
+        <a class="btn red_btn" href="#">View projects</a>
       </div>
     </section>
     <main>
-      <div class="container">
+      <div class="container project_tiles">
 
         <?php foreach(Project::getProjects() as $p): ?>
 
@@ -30,8 +30,8 @@
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
               <h2><?php echo $p['name']; ?></h2>
-              <h3><?php echo $p['location']; ?></h3>
-              <a class="red_btn" href="#">View project</a>
+              <h3 class="lightgrey"><?php echo $p['location']; ?></h3>
+              <a class="red_btn btn" href="#">View project</a>
             </article>
           </div>
 
