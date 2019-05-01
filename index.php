@@ -1,5 +1,8 @@
 <?php
   require_once("bootstrap.php");
+
+  Session::check();
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

@@ -9,11 +9,26 @@
 
     <span class="nav_line">|</span>
 
-    <div class="nav_profile">
-      <div class="nav_profile_img">
-        <img src="https://scontent.fbru2-1.fna.fbcdn.net/v/t1.0-9/36490118_1784065068352595_989980852102365184_n.jpg?_nc_cat=107&_nc_ht=scontent.fbru2-1.fna&oh=0dba5b59c5b82897d8f56dd0f18b51dc&oe=5D683018" alt="">
+    <?php
+      if(!isset($_SESSION["id"])){
+        echo "woops";
+      }else{
+    ?>
+      <div class="nav_profile">
+        <div class="nav_profile_img">
+          <?php
+            $user = new User();
+            $profilePicture = $user->profilePicture($_SESSION['id']);
+            $name = $user->name($_SESSION['id']);
+          ?>
+          <img src="<?php echo $profilePicture; ?>">
+        </div>
+        <a href="#"><?php echo $name; ?></a>
+        <a href="logout.php">Logout</a>
       </div>
-      <a href="#">Dielan Ophals</a>
-    </div>
+    <?php
+      }
+    ?>
+
   </nav>
 </header>
