@@ -8,35 +8,35 @@ header{
 nav{
   float:right;
   padding:20px;
-}
 
-nav ul{
-  display: inline-block;
-}
+  ul{
+    display: inline-block;
 
-nav ul li{
-  display: inline-block;
-}
+    li{
+      display: inline-block;
+    }
+  }
 
-nav a{
-  color:$grey;
-  text-decoration: none;
-}
+  a{
+    color:$grey;
+    text-decoration: none;
+  }
 
-nav .nav_profile{
-  display: inline-block;
-  position: relative;
-}
+  .nav_profile{
+    display: inline-block;
+    position: relative;
+  }
 
-nav .nav_profile_img{
-  display: inline-block;
-  width:40px;
-  height:40px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
+  .nav_profile_img{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
 
-nav .nav_profile_img img{
-  width:inherit;
+    img{
+      width:inherit;
+    }
+  }
 }
