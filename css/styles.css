@@ -1,37 +1,78 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 header {
   background: white;
   width: 100%;
   margin: 0;
   display: inline-block; }
-
-nav {
-  float: right;
-  padding: 20px; }
-
-nav ul {
-  display: inline-block; }
-
-nav ul li {
-  display: inline-block; }
-
-nav a {
-  color: #333;
-  text-decoration: none; }
-
-nav .nav_profile {
-  display: inline-block;
-  position: relative; }
-
-nav .nav_profile_img {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative; }
-
-nav .nav_profile_img img {
-  width: inherit; }
+  header nav {
+    float: right;
+    padding: 20px; }
+    header nav a {
+      color: #333;
+      text-decoration: none; }
+    header nav ul {
+      display: inline-block; }
+      header nav ul li {
+        display: inline-block; }
+    header nav .nav_profile {
+      display: inline-block;
+      position: relative; }
+      header nav .nav_profile .nav_profile_img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative; }
+        header nav .nav_profile .nav_profile_img img {
+          width: inherit; }
 
 .banner_image {
   width: 100%;
@@ -60,24 +101,21 @@ h1 {
 .project_tiles {
   display: flex;
   justify-content: space-between; }
-
-.project_tile {
-  width: 31%;
-  border-radius: 5px;
-  overflow: hidden;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
-  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
-  text-align: center;
-  line-height: 1.6;
-  margin-top: 60px; }
-
-.project_banner {
-  width: 100%;
-  height: 200px; }
-
-.project_info {
-  padding: 20px 0; }
+  .project_tiles .project_tile {
+    width: 31%;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
+    box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 60px; }
+    .project_tiles .project_tile .project_banner {
+      width: 100%;
+      height: 200px; }
+    .project_tiles .project_tile .project_info {
+      padding: 20px 0; }
 
 .container {
   width: 1024px;
@@ -98,13 +136,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif; }
 
 h2 {
-  font-size: 26px; }
+  font-size: 26px;
+  font-weight: 600; }
 
 h3 {
   font-size: 20px; }
 
 p, a {
-  font-family: sans-serif; }
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400; }
 
 .lightgrey {
   color: #858585; }
