@@ -7,6 +7,7 @@
   color:white;
   text-align: center;
   position:relative;
+  line-height: 1.4;
 }
 
 .info{
@@ -15,6 +16,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width:100%;
+}
+
+.info .btn{
+  margin-top:25px;
 }
 
 h1{

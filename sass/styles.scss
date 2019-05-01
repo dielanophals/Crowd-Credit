@@ -8,19 +8,35 @@
   margin:auto;
 }
 
-.red_btn{
-  background: $primary;
+.btn{
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
+  display:inline-block;
+  margin-top: 10px;
+}
+
+.red_btn{
+  background: $primary;
   color:white;
-  margin-top:10px !important;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: 'Nunito', sans-serif;
 }
 
+h2{
+  font-size: 26px;
+}
+
+h3{
+  font-size: 20px;
+}
+
 p, a{
   font-family: sans-serif;
+}
+
+.lightgrey{
+  color:$lightgrey;
 }
