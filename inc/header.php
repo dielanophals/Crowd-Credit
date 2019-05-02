@@ -15,14 +15,16 @@
       }else{
     ?>
       <div class="nav_profile">
-        <div class="nav_profile_img">
-          <?php
-            $user = new User();
-            $userData = $user->getUserData($_SESSION['id']);
-          ?>
-          <img src="<?php echo $userData['img']; ?>">
-        </div>
-        <a href="#"><?php echo $userData['firstname'] . " " . $userData['lastname']; ?></a>
+        <a href="#">
+          <div class="nav_profile_img">
+            <?php
+              $user = new User();
+              $userData = $user->getUserData($_SESSION['id']);
+            ?>
+            <img src="<?php echo $userData['img']; ?>">
+          </div>
+          <p><?php echo $userData['firstname'] . " " . $userData['lastname']; ?></p>
+        </a>
       </div>
     <?php
       }

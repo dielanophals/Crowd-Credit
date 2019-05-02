@@ -5,18 +5,29 @@ header {
   display: inline-block; }
 
 nav {
-  float: right;
-  padding: 20px; }
-  nav ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  display: flex;
+  align-items: center; }
+  nav ul li {
     display: inline-block; }
-    nav ul li {
-      display: inline-block; }
+    nav ul li a {
+      margin: 0 20px; }
+  nav .nav_line {
+    margin-right: 20px; }
   nav a {
     color: #333;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 16px; }
   nav .nav_profile {
-    display: inline-block;
     position: relative; }
+    nav .nav_profile a {
+      display: flex;
+      align-items: center; }
+      nav .nav_profile a p {
+        display: inline-block;
+        margin-left: 10px; }
   nav .nav_profile_img {
     display: inline-block;
     width: 40px;
@@ -94,7 +105,7 @@ h3 {
   font-size: 20px; }
 
 p, a {
-  font-family: sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 .lightgrey {
   color: #858585; }

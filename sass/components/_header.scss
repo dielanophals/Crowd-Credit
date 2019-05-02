@@ -6,25 +6,45 @@ header{
 }
 
 nav{
-  float:right;
+  display: flex;
+  justify-content: flex-end;
   padding:20px;
+  display: flex;
+  align-items:center;
 
   ul{
-    display: inline-block;
 
     li{
       display: inline-block;
+
+      a{
+        margin: 0 20px;
+      }
     }
+  }
+
+  .nav_line{
+    margin-right:20px;
   }
 
   a{
     color:$grey;
     text-decoration: none;
+    font-size:16px;
   }
 
   .nav_profile{
-    display: inline-block;
     position: relative;
+
+    a{
+      display: flex;
+      align-items:center;
+
+      p{
+        display: inline-block;
+        margin-left:10px;
+      }
+    }
   }
 
   .nav_profile_img{
