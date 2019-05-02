@@ -13,18 +13,23 @@ nav{
   align-items:center;
 
   ul{
+    margin-right:20px;
 
     li{
       display: inline-block;
 
       a{
         margin: 0 20px;
+
+      }
+      a:hover{
+        color:$primary;
       }
     }
   }
 
   .nav_line{
-    margin-right:20px;
+    margin-right:40px;
   }
 
   a{

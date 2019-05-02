@@ -10,12 +10,16 @@ nav {
   padding: 20px;
   display: flex;
   align-items: center; }
-  nav ul li {
-    display: inline-block; }
-    nav ul li a {
-      margin: 0 20px; }
-  nav .nav_line {
+  nav ul {
     margin-right: 20px; }
+    nav ul li {
+      display: inline-block; }
+      nav ul li a {
+        margin: 0 20px; }
+      nav ul li a:hover {
+        color: #F2494C; }
+  nav .nav_line {
+    margin-right: 40px; }
   nav a {
     color: #333;
     text-decoration: none;
