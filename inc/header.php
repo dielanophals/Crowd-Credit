@@ -15,7 +15,7 @@
       }else{
     ?>
       <div class="nav_profile">
-        <a href="#">
+        <a class="nav_profile_dropdown_btn" href="#">
           <div class="nav_profile_img">
             <?php
               $user = new User();
@@ -25,6 +25,13 @@
           </div>
           <p><?php echo $userData['firstname'] . " " . $userData['lastname']; ?></p>
         </a>
+        <div class="nav_profile_dropdown hide">
+          <ul>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li class="logout"><a href="logout.php">Logout</a></li>
+          </ul>
+        </div>
       </div>
     <?php
       }

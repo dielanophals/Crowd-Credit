@@ -45,18 +45,46 @@ nav{
         margin-left:10px;
       }
     }
-  }
 
-  .nav_profile_img{
-    display: inline-block;
-    width:40px;
-    height:40px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
+    .nav_profile_img{
+      display: inline-block;
+      width:40px;
+      height:40px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
 
-    img{
-      width:inherit;
+      img{
+        width:inherit;
+      }
+    }
+
+    .nav_profile_dropdown{
+      position: absolute;
+      width:200px;
+      background: #F2F2F2;
+      top:60px;
+      right:0;
+      box-sizing: border-box;
+      padding:15px;
+      z-index: 2;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+
+
+      ul{
+        width:100%;
+        text-align: center;
+
+        li{
+          margin:10px;
+        }
+
+        .logout{
+          margin-top:30px;
+        }
+      }
     }
   }
 }

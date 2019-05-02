@@ -28,15 +28,33 @@ nav {
       nav .nav_profile a p {
         display: inline-block;
         margin-left: 10px; }
-  nav .nav_profile_img {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative; }
-    nav .nav_profile_img img {
-      width: inherit; }
+    nav .nav_profile .nav_profile_img {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative; }
+      nav .nav_profile .nav_profile_img img {
+        width: inherit; }
+    nav .nav_profile .nav_profile_dropdown {
+      position: absolute;
+      width: 200px;
+      background: #F2F2F2;
+      top: 60px;
+      right: 0;
+      box-sizing: border-box;
+      padding: 15px;
+      z-index: 2;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+      nav .nav_profile .nav_profile_dropdown ul {
+        width: 100%;
+        text-align: center; }
+        nav .nav_profile .nav_profile_dropdown ul li {
+          margin: 10px; }
+        nav .nav_profile .nav_profile_dropdown ul .logout {
+          margin-top: 30px; }
 
 .banner_image {
   width: 100%;
@@ -109,5 +127,8 @@ p, a {
 
 .lightgrey {
   color: #858585; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */
