@@ -27,7 +27,7 @@
       <h2 class="grey">Latest projects</h2>
       <div class="container project_tiles">
 
-        <?php foreach(Project::getProjects() as $p): ?>
+        <?php foreach(Project::getHomeProjects() as $p): ?>
 
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
