@@ -27,8 +27,9 @@
         </a>
         <div class="nav_profile_dropdown hide">
           <ul>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#">My projects</a></li>
             <li><a href="#">Transactions</a></li>
+            <li><a href="#">Settings</a></li>
             <li class="logout"><a href="logout.php">Logout</a></li>
           </ul>
         </div>
