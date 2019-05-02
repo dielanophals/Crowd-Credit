@@ -21,21 +21,12 @@
       }
     }
 
-    public function profilePicture($id){
+    public function getUserData($id){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT img FROM users WHERE id = $id");
+      $statement = $conn->prepare("SELECT * FROM users WHERE id = $id");
       $statement->execute();
       $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-      return $user["img"];
-    }
-
-    public function name($id){
-      $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT firstname, lastname FROM users WHERE id = $id");
-      $statement->execute();
-      $user = $statement->fetch(PDO::FETCH_ASSOC);
-
-      return $user["firstname"] . " " . $user["lastname"];
+      return $user;
     }
   }

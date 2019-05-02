@@ -18,12 +18,11 @@
         <div class="nav_profile_img">
           <?php
             $user = new User();
-            $profilePicture = $user->profilePicture($_SESSION['id']);
-            $name = $user->name($_SESSION['id']);
+            $userData = $user->getUserData($_SESSION['id']);
           ?>
-          <img src="<?php echo $profilePicture; ?>">
+          <img src="<?php echo $userData['img']; ?>">
         </div>
-        <a href="#"><?php echo $name; ?></a>
+        <a href="#"><?php echo $userData['firstname'] . " " . $userData['lastname']; ?></a>
       </div>
     <?php
       }
