@@ -1,0 +1,42 @@
+form{
+  width:550px;
+  padding:25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  input{
+    border: none;
+    width:100%;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 15px 15px !important;
+    color:$grey;
+    outline: none;
+  }
+
+  input:focus{
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+  }
+
+  input[type="email"], input[type="password"]{
+    box-sizing: border-box;
+    margin-bottom:10px;
+    background: $light;
+  }
+
+  input[type="submit"]{
+    cursor: pointer;
+  }
+
+  p{
+    margin-top:20px;
+    margin-bottom:10px;
+  }
+
+  a{
+    color:$primary;
+  }
+}

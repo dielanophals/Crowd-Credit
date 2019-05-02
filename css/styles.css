@@ -6,11 +6,11 @@ header {
 }
 
 nav {
-  display: flex;
   justify-content: flex-end;
   padding: 20px;
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 nav ul {
   margin-right: 20px;
@@ -61,7 +61,7 @@ nav .nav_profile .nav_profile_dropdown {
   width: 200px;
   background: #F2F2F2;
   top: 60px;
-  right: 0;
+  right: -25px;
   box-sizing: border-box;
   padding: 15px;
   z-index: 2;
@@ -79,6 +79,43 @@ nav .nav_profile .nav_profile_dropdown ul .logout {
   margin-top: 30px;
 }
 
+form {
+  width: 550px;
+  padding: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+form input {
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 15px 15px !important;
+  color: #333;
+  outline: none;
+}
+form input:focus {
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+}
+form input[type="email"], form input[type="password"] {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #F2F2F2;
+}
+form input[type="submit"] {
+  cursor: pointer;
+}
+form p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+form a {
+  color: #F2494C;
+}
+
 .banner_image {
   width: 100%;
   height: 600px;
@@ -90,12 +127,11 @@ nav .nav_profile .nav_profile_dropdown ul .logout {
   position: relative;
   line-height: 1.4;
 }
+.banner_image p {
+  color: white;
+}
 
 .info {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
 }
 .info .btn {
@@ -179,6 +215,7 @@ h4 {
 
 p, a {
   font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 .red {
@@ -195,6 +232,13 @@ p, a {
 
 .hide {
   display: none;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=styles.css.map */

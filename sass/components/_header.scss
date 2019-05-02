@@ -6,11 +6,11 @@ header{
 }
 
 nav{
-  display: flex;
   justify-content: flex-end;
   padding:20px;
   display: flex;
   align-items:center;
+  margin-right:20px;
 
   ul{
     margin-right:20px;
@@ -69,9 +69,9 @@ nav{
     .nav_profile_dropdown{
       position: absolute;
       width:200px;
-      background: #F2F2F2;
+      background: $light;
       top:60px;
-      right:0;
+      right:-25px;
       box-sizing: border-box;
       padding:15px;
       z-index: 2;

@@ -8,13 +8,13 @@
   text-align: center;
   position:relative;
   line-height: 1.4;
+
+  p{
+    color:white;
+  }
 }
 
 .info{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width:100%;
 
   .btn{

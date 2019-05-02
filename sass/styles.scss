@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'components/header';
+@import 'components/form';
 @import 'components/index';
 @import 'components/project';
 
@@ -43,6 +44,7 @@ h4{
 
 p, a{
   font-family: 'Roboto', sans-serif;
+  color:$grey;
 }
 
 .red{
@@ -59,4 +61,11 @@ p, a{
 
 .hide{
   display: none;
+}
+
+.center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
