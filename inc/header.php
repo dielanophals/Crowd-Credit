@@ -1,10 +1,14 @@
-<header>
+<?php
+  $link = $_SERVER['PHP_SELF'];
+  $link_array = explode('/',$link);
+  $page = end($link_array);
+?><header>
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Organisations</a></li>
-      <li><a href="#">About us</a></li>
+      <li><a <?php if($page == 'index.php'){ echo' class="red"'; } ?> href="#">Home</a></li>
+      <li><a <?php if($page == 'projects.php'){ echo' class="red"'; } ?> href="#">Projects</a></li>
+      <li><a <?php if($page == 'organisations.php'){ echo' class="red"'; } ?> href="#">Organisations</a></li>
+      <li><a <?php if($page == 'about.php'){ echo' class="red"'; } ?> href="#">About us</a></li>
     </ul>
 
     <span class="nav_line">|</span>
@@ -30,7 +34,7 @@
             <li><a href="#">My projects</a></li>
             <li><a href="#">Transactions</a></li>
             <li><a href="#">Settings</a></li>
-            <li class="logout"><a href="logout.php">Logout</a></li>
+            <li class="logout"><a class="red" href="logout.php">Logout</a></li>
           </ul>
         </div>
       </div>
