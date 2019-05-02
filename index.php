@@ -24,6 +24,7 @@
       </div>
     </section>
     <main>
+      <h2 class="grey">Latest projects</h2>
       <div class="container project_tiles">
 
         <?php foreach(Project::getProjects() as $p): ?>
@@ -31,14 +32,17 @@
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
-              <h2><?php echo $p['name']; ?></h2>
-              <h3 class="lightgrey"><?php echo $p['location']; ?></h3>
+              <h3><?php echo $p['name']; ?></h2>
+              <h4 class="lightgrey"><?php echo $p['location']; ?></h3>
               <a class="red_btn btn" href="#">View project</a>
             </article>
           </div>
 
         <?php endforeach; ?>
 
+      </div>
+      <div class="see_more">
+        <a class="red_btn btn" href="#">See all projects</a>
       </div>
     </main>
   </body>

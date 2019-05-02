@@ -30,15 +30,27 @@ h1{
 }
 
 h2{
-  font-size: 26px;
+  font-size: 56px;
 }
 
 h3{
+  font-size: 26px;
+}
+
+h4{
   font-size: 20px;
 }
 
 p, a{
   font-family: 'Roboto', sans-serif;
+}
+
+.red{
+  color:$primary;
+}
+
+.grey{
+  color:$grey;
 }
 
 .lightgrey{
