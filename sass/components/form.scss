@@ -39,4 +39,12 @@ form{
   a{
     color:$primary;
   }
+
+  .error_message{
+    background: $primary;
+    padding:10px;
+    color:white;
+    border-radius: 5px;
+    margin-bottom:25px;
+  }
 }

@@ -30,14 +30,14 @@
   <body>
     <?php require_once("inc/header.php"); ?>
     <form action="#" method="post">
+      <?php
+      if(isset($err)){
+        echo "<p class='error_message'>Je gegevens kloppen niet.</p>";
+      }
+      ?>
       <input type="email" name="email" placeholder="Email Adress" required>
       <input type="password" name="password" placeholder="Password" required>
       <input class="red_btn btn" type="submit" name="submit" value="Login">
-      <?php
-      if(isset($err)){
-        echo "Je gegevens kloppen niet.";
-      }
-      ?>
       <p>Not an account yet?</p>
       <a href="#">Sign up here</a>
     </form>

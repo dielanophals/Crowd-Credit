@@ -115,6 +115,13 @@ form p {
 form a {
   color: #F2494C;
 }
+form .error_message {
+  background: #F2494C;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
 
 .banner_image {
   width: 100%;
