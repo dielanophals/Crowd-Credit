@@ -68,6 +68,20 @@ nav .nav_profile .nav_profile_dropdown {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+nav .nav_profile .nav_profile_dropdown .wallet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+nav .nav_profile .nav_profile_dropdown .wallet h4 {
+  display: inline-block;
+  margin-left: 8px;
+  margin-top: 3px;
+}
+nav .nav_profile .nav_profile_dropdown .wallet img {
+  width: 26px;
+}
 nav .nav_profile .nav_profile_dropdown ul {
   width: 100%;
   text-align: center;

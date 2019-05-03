@@ -78,7 +78,22 @@ nav{
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
 
+      .wallet{
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        margin-bottom:20px;
 
+        h4{
+          display: inline-block;
+          margin-left:8px;
+          margin-top:3px;
+        }
+
+        img{
+          width:26px;
+        }
+      }
 
       ul{
         width:100%;
