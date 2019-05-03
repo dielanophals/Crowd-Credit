@@ -34,7 +34,7 @@
         <div class="nav_profile_dropdown hide">
           <div class="wallet">
             <img src="images/credit_card.svg" alt="Credit card">
-            <h4>€100</h4>
+            <h4>€ <?php echo $userData['wallet']; ?></h4>
           </div>
           <ul>
             <li><a href="#">My projects</a></li>
