@@ -38,6 +38,18 @@
     <main>
       <h2 class="grey">Projects</h2>
       <div class="container">
+        <select>
+          <option value="volvo">Continent</option>
+          <?php foreach(Project::getContinents() as $co): ?>
+            <option value="<?php $co['id']; ?>"><?php echo $co['continent']; ?></option>
+          <?php endforeach; ?>
+        </select>
+        <select>
+          <option>Category</option>
+          <?php foreach(Project::getCategories() as $ca): ?>
+            <option value="<?php $ca['id']; ?>"><?php echo $ca['name']; ?></option>
+          <?php endforeach; ?>
+        </select>
         <form class="search" action="#" method="post">
           <input class="search_input" type="text" name="search" placeholder="Search..." <?php if(isset($search)){ echo 'value="'.$search.'"'; } ?>>
         </form>
@@ -56,7 +68,6 @@
               <a class="red_btn btn" href="#">View project</a>
             </article>
           </div>
-
         <?php endforeach; ?>
         <div class="project_pages">
           <?php

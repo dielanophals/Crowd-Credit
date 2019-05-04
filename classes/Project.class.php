@@ -24,4 +24,20 @@
       $location = $statement->fetch(PDO::FETCH_ASSOC);
       return $location;
     }
+
+    public function getCategories(){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM genres");
+      $statement->execute();
+      $category = $statement->fetchAll();
+      return $category;
+    }
+
+    public function getContinents(){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM locations");
+      $statement->execute();
+      $continent = $statement->fetchAll();
+      return $continent;
+    }
   }
