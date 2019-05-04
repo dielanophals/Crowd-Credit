@@ -54,9 +54,9 @@
               for ($i=0; $i < $total; $i++) {
                 $page = $i+1;
                 if ($i == $current_page - 1) {
-                  echo "<a class='current_page number_page' href='#' data-page='$page'>$page</a>";
+                  echo "<a class='current_page number_page' href='?page=$page' data-page='$page'>$page</a>";
                 }else{
-                  echo "<a class='number_page' href='#' data-page='$page'>$page</a>";
+                  echo "<a class='number_page' href='?page=$page' data-page='$page'>$page</a>";
                 }
               }
             }
