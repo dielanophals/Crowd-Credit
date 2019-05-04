@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 04 mei 2019 om 13:30
+-- Gegenereerd op: 04 mei 2019 om 13:32
 -- Serverversie: 10.1.38-MariaDB
 -- PHP-versie: 7.3.3
 
@@ -61,7 +61,6 @@ CREATE TABLE `projects` (
   `date_end` date NOT NULL,
   `banner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `current` float NOT NULL,
   `goal` float NOT NULL,
   `organisation_id` int(11) NOT NULL,
   `timestamp` datetime NOT NULL,
@@ -72,8 +71,8 @@ CREATE TABLE `projects` (
 -- Gegevens worden geëxporteerd voor tabel `projects`
 --
 
-INSERT INTO `projects` (`id`, `name`, `location`, `date_start`, `date_end`, `banner`, `description`, `current`, `goal`, `organisation_id`, `timestamp`, `active`) VALUES
-(1, 'Donkey farm', 'Congo', '2019-05-11', '2019-05-31', 'http://2.bp.blogspot.com/-WnRZOGyOwMM/TrpA6oATSMI/AAAAAAAADJg/wRp9Cx54qdg/s1600/donkeys.jpg', 'Donkey farm', 0, 500, 2, '2019-05-04 11:10:09', 1);
+INSERT INTO `projects` (`id`, `name`, `location`, `date_start`, `date_end`, `banner`, `description`, `goal`, `organisation_id`, `timestamp`, `active`) VALUES
+(1, 'Donkey farm', 'Congo', '2019-05-11', '2019-05-31', 'http://2.bp.blogspot.com/-WnRZOGyOwMM/TrpA6oATSMI/AAAAAAAADJg/wRp9Cx54qdg/s1600/donkeys.jpg', 'Donkey farm', 500, 2, '2019-05-04 11:10:09', 1);
 
 -- --------------------------------------------------------
 
