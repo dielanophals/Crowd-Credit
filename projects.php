@@ -50,12 +50,14 @@
               echo "<a href=?page=$back>Back</a>";
             }
 
-            for ($i=0; $i < $total; $i++) {
-              $page = $i+1;
-              if ($i == $current_page - 1) {
-                echo "<a class='current_page' href='?page=$page'>$page</a>";
-              }else{
-                echo "<a href='?page=$page'>$page</a>";
+            if($total <= 10){
+              for ($i=0; $i < $total; $i++) {
+                $page = $i+1;
+                if ($i == $current_page - 1) {
+                  echo "<a class='current_page' href='?page=$page'>$page</a>";
+                }else{
+                  echo "<a href='?page=$page'>$page</a>";
+                }
               }
             }
 
