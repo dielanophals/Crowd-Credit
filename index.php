@@ -26,7 +26,7 @@
       <div class="container project_tiles">
 
         <?php foreach(Project::getHomeProjects() as $p): ?>
-          <?php $location = Project::getLocation($p['location_id']); ?>
+          <?php $location = Project::getLocation($p['locations_id']); ?>
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
