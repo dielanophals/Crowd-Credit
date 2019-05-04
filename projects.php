@@ -16,18 +16,11 @@
   </head>
   <body>
     <?php require_once("inc/header.php"); ?>
-    <section class="banner_image">
-      <div class="info center">
-        <h1>Crowdfund a dream</h1>
-        <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance</p>
-        <a class="btn red_btn" href="#">View projects</a>
-      </div>
-    </section>
     <main>
-      <h2 class="grey">Latest projects</h2>
+      <h2 class="grey">Projects</h2>
       <div class="container project_tiles">
 
-        <?php foreach(Project::getHomeProjects() as $p): ?>
+        <?php foreach(Project::getProjects() as $p): ?>
           <?php $location = Project::getLocation($p['location_id']); ?>
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
@@ -40,9 +33,6 @@
 
         <?php endforeach; ?>
 
-      </div>
-      <div class="see_more">
-        <a class="red_btn btn" href="projects.php">See all projects</a>
       </div>
     </main>
   </body>
