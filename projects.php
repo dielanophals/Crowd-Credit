@@ -42,16 +42,26 @@
         <?php endforeach; ?>
         <div class="project_pages">
           <?php
-          $total_projects = Project::getTotalProjects();
+            $total_projects = Project::getTotalProjects();
             $total = $total_projects / 9;
+
+            if($total >= 2 && $current_page != 1){
+              $back = $current_page - 1;
+              echo "<a href=?page=$back>Back</a>";
+            }
+
             for ($i=0; $i < $total; $i++) {
               $page = $i+1;
-
               if ($i == $current_page - 1) {
                 echo "<a class='current_page' href='?page=$page'>$page</a>";
               }else{
                 echo "<a href='?page=$page'>$page</a>";
               }
+            }
+
+            if($total >= $current_page){
+              $next = $current_page + 1;
+              echo "<a href=?page=$next>Next</a>";
             }
           ?>
         </div>
