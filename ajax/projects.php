@@ -6,7 +6,6 @@
     $page = $_POST['page'];
 
     echo $page;
-
   }else{
     echo "nope";
   }

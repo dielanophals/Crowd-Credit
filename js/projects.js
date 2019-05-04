@@ -12,7 +12,7 @@ $(document).ready(function() {
         },
         success: function (data) {
           console.log(data);
-          window.history.pushState('page2', 'Title', 'projects.php?page=' + data);
+          window.history.pushState('page2', 'Title', 'index.php?page=' + data);
           $('.project_tiles').load(document.URL +  ' .project_tiles');
         }
     });

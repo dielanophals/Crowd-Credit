@@ -6,7 +6,6 @@
   <nav>
     <ul>
       <li><a <?php if($page == 'index.php'){ echo' class="red"'; } ?> href="index.php">Home</a></li>
-      <li><a <?php if($page == 'projects.php'){ echo' class="red"'; } ?> href="projects.php">Projects</a></li>
       <li><a <?php if($page == 'organisations.php'){ echo' class="red"'; } ?> href="#">Organisations</a></li>
       <li><a <?php if($page == 'about.php'){ echo' class="red"'; } ?> href="#">About us</a></li>
     </ul>
