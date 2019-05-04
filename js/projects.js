@@ -14,12 +14,7 @@ $(document).ready(function() {
             'page': page
         },
         success: function (data) {
-          console.log(data);
-          if(search == ""){
-            window.history.pushState('page2', 'Title', 'index.php?page=' + data);
-          }else{
-            window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&page=' + data);
-          }
+          window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&page=' + data);
           $('.project_tiles').load(document.URL +  ' .project_tiles');
         }
     });
