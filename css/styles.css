@@ -261,6 +261,9 @@ main h2 {
 .project_pages a {
   margin: 10px;
 }
+.project_pages .current_page {
+  color: #F2494C;
+}
 
 .container {
   width: 1024px;
