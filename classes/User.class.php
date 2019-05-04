@@ -3,7 +3,7 @@
     public function login($mail, $pass){
       try{
           $conn = Db::getInstance();
-          $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
+          $statement = $conn->prepare("SELECT * FROM users WHERE email = :email && active = 1");
           $statement->bindParam(":email", $mail);
           $statement->execute();
           $user = $statement->fetch(PDO::FETCH_ASSOC);
@@ -11,13 +11,39 @@
           if(password_verify($pass, $user['password'])){
             $_SESSION["id"] = $user["id"];
             return true;
-          }
-          else{
+          }else{
               return false;
           }
       }
       catch(Throwable $t){
           return false;
+      }
+    }
+
+    public function checkMail($mail){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM users WHERE email = :email && active = 1");
+      $statement->bindParam(":email", $mail);
+      $statement->execute();
+      $statement->fetch(PDO::FETCH_ASSOC);
+      return $statement->rowCount();
+    }
+
+    public function register($firstname, $lastname, $email, $password){
+      try{
+        date_default_timezone_set("Europe/Brussels");
+        $timestamp = date('Y-m-d H:i:s');
+
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("INSERT INTO users (firstname, lastname, email, password, role_id, organisation_id, timestamp, active) VALUES (:firstname, :lastname, :email, :password, 1, 1, '$timestamp', 1)");
+        $statement->bindParam(":firstname", $firstname);
+        $statement->bindParam(":lastname", $lastname);
+        $statement->bindParam(":email", $email);
+        $statement->bindParam(":password", $password);
+        $result = $statement->execute();
+        return $result;
+      }catch(Throwable $t){
+        return false;
       }
     }
 
