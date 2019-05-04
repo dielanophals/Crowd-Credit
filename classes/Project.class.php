@@ -15,4 +15,12 @@
       $project = $statement->fetchAll();
       return $project;
     }
+
+    public function getLocation($location){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM locations WHERE id = $location");
+      $statement->execute();
+      $location = $statement->fetch(PDO::FETCH_ASSOC);
+      return $location;
+    }
   }

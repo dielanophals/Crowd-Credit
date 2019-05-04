@@ -9,13 +9,12 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $u = new User();
-    $isLogged = $u->login($email, $password);
+    $login = User::login($email, $password);
 
-    if($isLogged){
+    if($login){
       header("Location: index.php");
     }else{
-      $err = true;
+      $error = "Your data is incorrect.";
     }
   }
 
@@ -30,8 +29,8 @@
     <?php require_once("inc/header.php"); ?>
     <form action="#" method="post">
       <?php
-      if(isset($err)){
-        echo "<p class='error_message'>Je gegevens kloppen niet.</p>";
+      if(isset($error)){
+        echo "<p class='error_message'>$error</p>";
       }
       ?>
       <input type="email" name="email" placeholder="Email Adress" required>
