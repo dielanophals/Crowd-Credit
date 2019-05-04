@@ -5,8 +5,8 @@
 
   .project_tile{
     width:31%;
-    border-radius: 5px;
     overflow: hidden;
+    border-radius: $radius;
     -webkit-box-shadow: $shadow;
     -moz-box-shadow: $shadow;
     box-shadow: $shadow;

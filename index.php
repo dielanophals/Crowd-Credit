@@ -18,8 +18,8 @@
       <div class="info center">
         <h1>Crowdfund a dream</h1>
         <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance</p>
-        <a class="btn red_btn" href="#">View projects</a>
       </div>
+      <a class="btn red_btn" href="#">Crowdfund a dream</a>
     </section>
     <main>
       <h2 class="grey">Latest projects</h2>
@@ -30,8 +30,8 @@
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
-              <h3><?php echo $p['name']; ?></h2>
-              <h4 class="lightgrey"><?php echo $location['continent']; ?></h3>
+              <h3><?php echo $p['name']; ?></h3>
+              <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
               <a class="red_btn btn" href="#">View project</a>
             </article>
           </div>

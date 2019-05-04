@@ -10,17 +10,11 @@ form{
   input{
     border: none;
     width: 100%;
-    border-radius: 5px;
+    border-radius: $radius;
     font-size: 16px;
     padding: 15px 15px !important;
     color: $darkgrey;
     outline: none;
-  }
-
-  input:focus{
-    -webkit-box-shadow: $shadow;
-    -moz-box-shadow: $shadow;
-    box-shadow: $shadow;
   }
 
   input[type="email"], input[type="password"], input[type="text"]{

@@ -75,8 +75,8 @@ nav{
       box-sizing: border-box;
       padding: 15px;
       z-index: 2;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
 
       .wallet{
         display: flex;

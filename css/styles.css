@@ -166,11 +166,6 @@ form input {
   color: #333;
   outline: none;
 }
-form input:focus {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
-  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
-}
 form input[type="email"], form input[type="password"], form input[type="text"] {
   box-sizing: border-box;
   margin-bottom: 10px;
@@ -195,15 +190,16 @@ form .error_message {
 }
 
 .banner_image {
-  width: 100%;
-  height: 600px;
+  width: 95%;
+  height: calc(100vh - 120px);
+  margin: 0 2.5% 10px 2.5%;
   background: url("../images/banner.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
-  text-align: center;
   position: relative;
   line-height: 1.4;
+  border-radius: 5px;
 }
 .banner_image p {
   color: white;
@@ -211,9 +207,17 @@ form .error_message {
 
 .info {
   width: 100%;
+  display: none;
 }
-.info .btn {
-  margin-top: 25px;
+
+.btn {
+  border-radius: 5px;
+}
+
+section .btn {
+  bottom: 0;
+  position: absolute;
+  transform: translate(40vw, 21px);
 }
 
 main {
@@ -236,8 +240,8 @@ main h2 {
 }
 .project_tiles .project_tile {
   width: 31%;
-  border-radius: 5px;
   overflow: hidden;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
   -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
   box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.23);
