@@ -2,18 +2,27 @@
   class Project{
     public function getHomeProjects(){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects ORDER BY id DESC LIMIT 6");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 ORDER BY id DESC LIMIT 6");
       $statement->execute();
       $project = $statement->fetchAll();
       return $project;
     }
 
-    public function getProjects(){
+    public function getProjects($off){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 ORDER BY id ASC LIMIT 9 OFFSET $off");
       $statement->execute();
       $project = $statement->fetchAll();
       return $project;
+    }
+
+    public function getTotalProjects(){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1");
+      $statement->execute();
+      $statement->fetchAll();
+      $total_projects = $statement->rowCount();
+      return $total_projects;
     }
 
     public function getLocation($location){
