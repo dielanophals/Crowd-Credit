@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
     <script src="js/nav_dropdown.js"></script>
-    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/projects.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -47,23 +47,23 @@
 
             if($total >= 2 && $current_page != 1){
               $back = $current_page - 1;
-              echo "<a href=?page=$back>Back</a>";
+              echo "<a class='number_page' href='?page=$back' data-page='$back'>Back</a>";
             }
 
             if($total_projects >= 10){
               for ($i=0; $i < $total; $i++) {
                 $page = $i+1;
                 if ($i == $current_page - 1) {
-                  echo "<a class='current_page' href='?page=$page'>$page</a>";
+                  echo "<a class='current_page number_page' href='#' data-page='$page'>$page</a>";
                 }else{
-                  echo "<a href='?page=$page'>$page</a>";
+                  echo "<a class='number_page' href='#' data-page='$page'>$page</a>";
                 }
               }
             }
 
             if($total >= $current_page){
               $next = $current_page + 1;
-              echo "<a href=?page=$next>Next</a>";
+              echo "<a class='number_page' href='?page=$next' data-page='$next'>Next</a>";
             }
           ?>
         </div>
