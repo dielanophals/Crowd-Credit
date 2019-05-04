@@ -28,12 +28,12 @@
       <div class="container project_tiles">
 
         <?php foreach(Project::getHomeProjects() as $p): ?>
-
+          <?php $location = Project::getLocation($p['location_id']); ?>
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
               <h3><?php echo $p['name']; ?></h2>
-              <h4 class="lightgrey"><?php echo $p['location']; ?></h3>
+              <h4 class="lightgrey"><?php echo $location['continent']; ?></h3>
               <a class="red_btn btn" href="#">View project</a>
             </article>
           </div>
