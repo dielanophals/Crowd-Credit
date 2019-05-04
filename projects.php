@@ -3,6 +3,12 @@
 
   Session::check();
 
+  if(isset($_GET['page'])){
+    $current_page = $_GET['page'];
+  }else{
+    $current_page = 1;
+  }
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -19,8 +25,10 @@
     <main>
       <h2 class="grey">Projects</h2>
       <div class="container project_tiles">
-
-        <?php foreach(Project::getProjects() as $p): ?>
+        <?php
+          $get_total = $current_page * 9 - 9;
+        ?>
+        <?php foreach(Project::getProjects($get_total) as $p): ?>
           <?php $location = Project::getLocation($p['location_id']); ?>
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
@@ -32,7 +40,16 @@
           </div>
 
         <?php endforeach; ?>
-
+        <div class="project_pages">
+          <?php
+          $total_projects = Project::getTotalProjects();
+            $total = $total_projects / 9;
+            for ($i=0; $i < $total; $i++) {
+              $page = $i+1;
+              echo "<a href='?page=$page'>$page</a>";
+            }
+          ?>
+        </div>
       </div>
     </main>
   </body>
