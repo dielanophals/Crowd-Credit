@@ -29,6 +29,17 @@ main{
   h2{
     margin-bottom: 20px;
   }
+
+  .search{
+    padding:0;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+
+    input{
+      width:300px;
+    }
+  }
 }
 
 .see_more{

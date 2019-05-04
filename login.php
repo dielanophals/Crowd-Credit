@@ -27,7 +27,7 @@
   </head>
   <body>
     <?php require_once("inc/header.php"); ?>
-    <form action="#" method="post">
+    <form class="center" action="#" method="post">
       <?php
       if(isset($error)){
         echo "<p class='error_message'>$error</p>";

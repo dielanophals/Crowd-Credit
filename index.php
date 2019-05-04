@@ -9,6 +9,12 @@
     $current_page = 1;
   }
 
+  if(isset($_GET['search'])){
+    $search = $_GET['search'];
+  }else{
+    $search = "";
+  }
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -31,11 +37,16 @@
     </section>
     <main>
       <h2 class="grey">Projects</h2>
+      <div class="container">
+        <form class="search" action="#" method="post">
+          <input class="search_input" type="text" name="search" placeholder="Search..." <?php if(isset($search)){ echo 'value="'.$search.'"'; } ?>>
+        </form>
+      </div>
       <div class="container project_tiles">
         <?php
           $get_total = $current_page * 9 - 9;
         ?>
-        <?php foreach(Project::getProjects($get_total) as $p): ?>
+        <?php foreach(Project::getProjects($get_total, $search) as $p): ?>
           <?php $location = Project::getLocation($p['locations_id']); ?>
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
@@ -49,7 +60,7 @@
         <?php endforeach; ?>
         <div class="project_pages">
           <?php
-            $total_projects = Project::getTotalProjects();
+            $total_projects = Project::getTotalProjects($search);
             $total = $total_projects / 9;
 
             if($total >= 2 && $current_page != 1){

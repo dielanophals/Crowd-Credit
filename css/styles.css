@@ -151,10 +151,6 @@ nav .nav_profile .nav_profile_dropdown ul .logout {
 form {
   width: 550px;
   padding: 25px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 form input {
@@ -222,6 +218,15 @@ main {
 }
 main h2 {
   margin-bottom: 20px;
+}
+main .search {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+main .search input {
+  width: 300px;
 }
 
 .see_more {
