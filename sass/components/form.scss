@@ -21,7 +21,7 @@ form{
     box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
   }
 
-  input[type="email"], input[type="password"]{
+  input[type="email"], input[type="password"], input[type="text"]{
     box-sizing: border-box;
     margin-bottom:10px;
     background: $light;

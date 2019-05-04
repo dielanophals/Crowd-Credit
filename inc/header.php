@@ -27,7 +27,7 @@
               $user = new User();
               $userData = $user->getUserData($_SESSION['id']);
             ?>
-            <img src="<?php echo $userData['img']; ?>">
+            <img src="<?php echo $userData['image']; ?>">
           </div>
           <p><?php echo $userData['firstname'] . " " . $userData['lastname']; ?></p>
         </a>

@@ -35,11 +35,14 @@
         echo "<p class='error_message'>Je gegevens kloppen niet.</p>";
       }
       ?>
+      <input type="text" name="firstname" placeholder="First name" required>
+      <input type="text" name="lastname" placeholder="Last name" required>
       <input type="email" name="email" placeholder="Email Adress" required>
       <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" placeholder="Confirm password" required>
       <input class="red_btn btn" type="submit" name="submit" value="Login">
-      <p>Not an account yet?</p>
-      <a href="register.php">Sign up here</a>
+      <p>Already have an account?</p>
+      <a href="login.php">Sign in here</a>
     </form>
   </body>
 </html>
