@@ -50,7 +50,7 @@
               echo "<a href=?page=$back>Back</a>";
             }
 
-            if($total_projects <= 10){
+            if($total_projects >= 10){
               for ($i=0; $i < $total; $i++) {
                 $page = $i+1;
                 if ($i == $current_page - 1) {
