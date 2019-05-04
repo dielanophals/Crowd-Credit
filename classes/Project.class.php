@@ -1,13 +1,5 @@
 <?php
   class Project{
-    public function getHomeProjects(){
-      $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 ORDER BY id DESC LIMIT 6");
-      $statement->execute();
-      $project = $statement->fetchAll();
-      return $project;
-    }
-
     public function getProjects($off){
       $conn = Db::getInstance();
       $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 ORDER BY id ASC LIMIT 9 OFFSET $off");
