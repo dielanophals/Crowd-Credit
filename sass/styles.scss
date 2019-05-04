@@ -1,25 +1,27 @@
 @import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
+@import 'components/reset';
 @import 'components/header';
 @import 'components/form';
 @import 'components/index';
 @import 'components/project';
 
 .container{
-  width:1024px;
-  margin:auto;
+  width: 1024px;
+  margin: auto;
 }
 
 .btn{
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  display:inline-block;
+  display: inline-block;
   margin-top: 10px;
 }
 
 .red_btn{
-  background: $primary;
-  color:white;
+  background: $darkred;
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -44,19 +46,19 @@ h4{
 
 p, a{
   font-family: 'Roboto', sans-serif;
-  color:$grey;
+  color: $darkgrey;
 }
 
 .red{
-  color:$primary;
+  color: $darkred;
 }
 
 .grey{
-  color:$grey;
+  color: $darkgrey;
 }
 
 .lightgrey{
-  color:$lightgrey;
+  color: $grey;
 }
 
 .hide{

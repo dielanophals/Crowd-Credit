@@ -1,6 +1,6 @@
 form{
-  width:550px;
-  padding:25px;
+  width: 550px;
+  padding: 25px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -9,22 +9,24 @@ form{
 
   input{
     border: none;
-    width:100%;
+    width: 100%;
     border-radius: 5px;
     font-size: 16px;
     padding: 15px 15px !important;
-    color:$grey;
+    color: $darkgrey;
     outline: none;
   }
 
   input:focus{
-    box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
   }
 
   input[type="email"], input[type="password"], input[type="text"]{
     box-sizing: border-box;
-    margin-bottom:10px;
-    background: $light;
+    margin-bottom: 10px;
+    background: $lightgrey;
   }
 
   input[type="submit"]{
@@ -32,19 +34,19 @@ form{
   }
 
   p{
-    margin-top:20px;
-    margin-bottom:10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   a{
-    color:$primary;
+    color:$darkred;
   }
 
   .error_message{
-    background: $primary;
-    padding:10px;
-    color:white;
+    background: $darkred;
+    padding: 10px;
+    color: white;
     border-radius: 5px;
-    margin-bottom:25px;
+    margin-bottom: 25px;
   }
 }

@@ -9,9 +9,7 @@
     <meta charset="utf-8">
     <title>Crowd Credit</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
     <script src="js/nav_dropdown.js"></script>
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>

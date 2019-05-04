@@ -1,30 +1,30 @@
 header{
-  background:white;
-  width:100%;
-  margin:0;
+  background: $white;
+  width: 100%;
+  margin: 0;
   display: inline-block;
 }
 
 nav{
   justify-content: flex-end;
-  padding:20px;
+  padding: 20px;
   display: flex;
-  align-items:center;
-  margin-right:20px;
+  align-items: center;
+  margin-right: 20px;
 
   ul{
-    margin-right:20px;
+    margin-right: 20px;
 
     li{
       display: inline-block;
 
       a{
         margin: 0 20px;
-        color:$grey;
+        color: $darkgrey;
 
       }
       a:hover{
-        color:$primary;
+        color: $darkred;
       }
     }
   }
@@ -34,7 +34,7 @@ nav{
   }
 
   a{
-    color:$grey;
+    color:$darkgrey;
     text-decoration: none;
     font-size:16px;
   }
@@ -44,67 +44,67 @@ nav{
 
     a{
       display: flex;
-      align-items:center;
+      align-items: center;
 
       p{
         display: inline-block;
-        margin-left:10px;
-        color:$grey;
+        margin-left: 10px;
+        color: $darkgrey;
       }
     }
 
     .nav_profile_img{
       display: inline-block;
-      width:40px;
-      height:40px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       overflow: hidden;
       position: relative;
 
       img{
-        width:inherit;
+        width: inherit;
       }
     }
 
     .nav_profile_dropdown{
       position: absolute;
-      width:200px;
-      background: $light;
-      top:60px;
-      right:-25px;
+      width: 200px;
+      background: $lightgrey;
+      top: 60px;
+      right: -25px;
       box-sizing: border-box;
-      padding:15px;
+      padding: 15px;
       z-index: 2;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
 
       .wallet{
         display: flex;
-        align-items:center;
-        justify-content:center;
-        margin-bottom:20px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
 
         h4{
           display: inline-block;
-          margin-left:8px;
-          margin-top:3px;
+          margin-left: 8px;
+          margin-top: 3px;
         }
 
         img{
-          width:26px;
+          width: 26px;
         }
       }
 
       ul{
-        width:100%;
+        width: 100%;
         text-align: center;
 
         li{
-          margin:10px;
+          margin: 10px;
         }
 
         .logout{
-          margin-top:30px;
+          margin-top: 30px;
         }
       }
     }
