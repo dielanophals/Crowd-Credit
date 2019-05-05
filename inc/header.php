@@ -20,15 +20,15 @@
       }else{
     ?>
       <div class="nav_profile">
-        <a class="nav_profile_dropdown_btn" href="#">
+        <a id="profile" class="nav_profile_dropdown_btn" href="#">
           <div class="nav_profile_img">
             <?php
               $user = new User();
               $userData = $user->getUserData($_SESSION['id']);
             ?>
-            <img src="<?php echo $userData['image']; ?>">
+            <img id="profile_image" src="<?php echo $userData['image']; ?>">
           </div>
-          <p><?php echo $userData['firstname'] . " " . $userData['lastname']; ?></p>
+          <p id="name"><?php echo $userData['firstname'] . " " . $userData['lastname']; ?></p>
         </a>
         <div class="nav_profile_dropdown hide">
           <div class="wallet">

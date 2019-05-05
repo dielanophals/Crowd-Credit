@@ -26,7 +26,7 @@
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Nunito', sans-serif;
+  font-family: $nunito;
 }
 
 h1{
@@ -46,7 +46,7 @@ h4{
 }
 
 p, a{
-  font-family: 'Roboto', sans-serif;
+  font-family: $roboto;
   color: $darkgrey;
 }
 

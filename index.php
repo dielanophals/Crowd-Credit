@@ -22,7 +22,7 @@
     <title>Crowd Credit</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
-    <script src="js/nav_dropdown.js"></script>
+    <script src="js/dropdowns.js"></script>
     <script src="js/projects.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -37,19 +37,23 @@
     </section>
     <main>
       <h2 class="grey">Projects</h2>
-      <div class="container">
-        <select>
-          <option value="volvo">Continent</option>
-          <?php foreach(Project::getContinents() as $co): ?>
-            <option value="<?php $co['id']; ?>"><?php echo $co['continent']; ?></option>
-          <?php endforeach; ?>
-        </select>
-        <select>
-          <option>Category</option>
-          <?php foreach(Project::getCategories() as $ca): ?>
-            <option value="<?php $ca['id']; ?>"><?php echo $ca['name']; ?></option>
-          <?php endforeach; ?>
-        </select>
+      <div class="container search_filters">
+        <div class="filter">
+          <a href="#" class="filter_dropdown_btn" id="continent">Continent <p>&rangle;</p></a>
+          <div id="continents" class="dropdown hide">
+            <?php foreach(Project::getContinents() as $co): ?>
+              <p id="continent<?php $co['id']; ?>"><input type="checkbox" name="continent" value="<?php $co['id']; ?>" id="<?php echo $co['continent']; ?>"><label id="con<?php $co['id']; ?>" for="<?php echo $co['continent']; ?>"><?php echo $co['continent']; ?></label></p>
+            <?php endforeach; ?>
+          </div>
+        </div>
+        <div class="filter">
+          <a href="#" class="filter_dropdown_btn" id="category">Category <p>&rangle;</p></a>
+          <div id="categories" class="dropdown hide">
+            <?php foreach(Project::getCategories() as $ca): ?>
+              <p id=category"<?php $ca['id']; ?>"><input type="checkbox" name="vehicle" value="<?php $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label id="cat<?php $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
+            <?php endforeach; ?>
+          </div>
+        </div>
         <form class="search" action="#" method="post">
           <input class="search_input" type="text" name="search" placeholder="Search..." <?php if(isset($search)){ echo 'value="'.$search.'"'; } ?>>
         </form>

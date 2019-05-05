@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(document).on("click", '.number_page', function(e) {
+  $(document).on("click", '.number_page', function(e) {
     e.preventDefault();
     var page = $(this).data('page');
 

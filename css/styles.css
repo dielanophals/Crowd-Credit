@@ -219,11 +219,57 @@ main {
 main h2 {
   margin-bottom: 20px;
 }
+main .search_filters {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  padding-top: 20px;
+}
+main .filter {
+  display: flex;
+  align-items: flex-start;
+  z-index: 1;
+  position: relative;
+  padding: 10px 20px;
+}
+main .filter a {
+  text-decoration: none;
+}
+main .filter a p {
+  transform: rotate(90deg);
+  display: inline-block;
+  margin-left: 15px;
+}
+main .filter .dropdown {
+  background: red;
+  position: absolute;
+  width: auto;
+  text-align: left;
+  top: 35px;
+  left: 0;
+  background: #F2F2F2;
+  box-sizing: border-box;
+  padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+main .filter .dropdown p {
+  display: flex;
+  align-items: center;
+  min-width: 131px;
+  padding: 5px 0px;
+}
+main .filter .dropdown p label {
+  margin-left: 5px;
+}
 main .search {
   padding: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: absolute;
 }
 main .search input {
   width: 300px;
@@ -289,7 +335,7 @@ main .search input {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 h1 {
@@ -309,7 +355,7 @@ h4 {
 }
 
 p, a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #333;
 }
 
