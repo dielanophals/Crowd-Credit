@@ -10,7 +10,7 @@
 
     public function getTotalProjects($search, $continent){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 $continent && name LIKE '%$search%'");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE $continent active = 1 && name LIKE '%$search%'");
       $statement->execute();
       $statement->fetchAll();
       $total_projects = $statement->rowCount();
