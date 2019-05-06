@@ -1,16 +1,16 @@
 <?php
   class Project{
-    public function getProjects($off, $search){
+    public function getProjects($off, $search, $continent){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 && name LIKE '%$search%' ORDER BY id ASC LIMIT 9 OFFSET $off");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE $continent active = 1 && name LIKE '%$search%' ORDER BY id ASC LIMIT 9 OFFSET $off");
       $statement->execute();
       $project = $statement->fetchAll();
       return $project;
     }
 
-    public function getTotalProjects($search){
+    public function getTotalProjects($search, $continent){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 && name LIKE '%$search%'");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE active = 1 $continent && name LIKE '%$search%'");
       $statement->execute();
       $statement->fetchAll();
       $total_projects = $statement->rowCount();
@@ -39,5 +39,11 @@
       $statement->execute();
       $continent = $statement->fetchAll();
       return $continent;
+    }
+
+    public function setContinent($continent){
+      $loc = "locations_id IN(" . str_replace('-', ', ', $continent);
+      $loc .= ") &&";
+      return $loc;
     }
   }

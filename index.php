@@ -15,6 +15,13 @@
     $search = "";
   }
 
+  if(isset($_GET['continent']) && !empty($_GET['continent'])){
+    $continent = $_GET['continent'];
+    $set_continent = Project::setContinent($continent);
+  }else{
+    $set_continent = "";
+  }
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -41,16 +48,16 @@
         <div class="filter">
           <a href="#" class="filter_dropdown_btn" id="continent">Continent <p>&rangle;</p></a>
           <div id="continents" class="dropdown hide">
-            <?php foreach(Project::getContinents() as $co): ?>
-              <p id="continent<?php $co['id']; ?>"><input type="checkbox" name="continent" value="<?php $co['id']; ?>" id="<?php echo $co['continent']; ?>"><label id="con<?php $co['id']; ?>" for="<?php echo $co['continent']; ?>"><?php echo $co['continent']; ?></label></p>
-            <?php endforeach; ?>
+              <?php foreach(Project::getContinents() as $co): ?>
+                <p id="continent<?php $co['id']; ?>"><input  class="check_continent" data-continent="<?php echo $co['id']; ?>" type="checkbox" name="continent" value="<?php echo $co['id']; ?>" id="<?php echo $co['continent']; ?>"><label class="check_continent" data-continent="<?php echo $co['id']; ?>" id="con<?php $co['id']; ?>" for="<?php echo $co['continent']; ?>"><?php echo $co['continent']; ?></label></span></p>
+              <?php endforeach; ?>
           </div>
         </div>
         <div class="filter">
           <a href="#" class="filter_dropdown_btn" id="category">Category <p>&rangle;</p></a>
           <div id="categories" class="dropdown hide">
             <?php foreach(Project::getCategories() as $ca): ?>
-              <p id=category"<?php $ca['id']; ?>"><input type="checkbox" name="vehicle" value="<?php $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label id="cat<?php $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
+              <p id=category"<?php $ca['id']; ?>"><input type="checkbox" name="category" value="<?php $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label id="cat<?php $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
             <?php endforeach; ?>
           </div>
         </div>
@@ -62,7 +69,7 @@
         <?php
           $get_total = $current_page * 9 - 9;
         ?>
-        <?php foreach(Project::getProjects($get_total, $search) as $p): ?>
+        <?php foreach(Project::getProjects($get_total, $search, $set_continent) as $p): ?>
           <?php $location = Project::getLocation($p['locations_id']); ?>
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
@@ -75,7 +82,7 @@
         <?php endforeach; ?>
         <div class="project_pages">
           <?php
-            $total_projects = Project::getTotalProjects($search);
+            $total_projects = Project::getTotalProjects($search, $set_continent);
             $total = $total_projects / 9;
 
             if($total >= 2 && $current_page != 1){
