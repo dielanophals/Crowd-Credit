@@ -6,6 +6,7 @@ $(document).ready(function() {
     var params = new URL(location.href).searchParams;
     var search = params.get('search');
     var continent = params.get('continent');
+    var category = params.get('category');
 
     $.ajax({
         url: 'ajax/projects.php',
@@ -15,15 +16,21 @@ $(document).ready(function() {
             'page': page
         },
         success: function (data) {
-          if(search && continent){
-            window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&continent=' + continent + '&page=' + data);
-          }else if(search){
-            window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&page=' + data);
-          }else if(continent){
-            window.history.pushState('page2', 'Title', 'index.php?continent=' + continent + '&page=' + data);
-          }else{
-            window.history.pushState('page2', 'Title', 'index.php?page=' + data);
+          var push_search = "";
+          var push_continent = "";
+          var push_category = "";
+
+          if(search){
+            push_search = 'search=' + search + '&';
           }
+          if(continent){
+            push_continent = 'continent=' + continent + '&';
+          }
+          if(category){
+            push_category = 'category=' + category + '&';
+          }
+
+          window.history.pushState('page2', 'Title', 'index.php?' + push_search + push_continent + push_category + 'page=' + data);
           $('.project_tiles').load(document.URL +  ' .project_tiles');
         }
     });
