@@ -22,6 +22,13 @@
     $set_continent = "";
   }
 
+  if(isset($_GET['category']) && !empty($_GET['category'])){
+    $category = $_GET['category'];
+    $set_category = Project::setCategory($category);
+  }else{
+    $set_category = "";
+  }
+
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -49,7 +56,7 @@
           <a href="#" class="filter_dropdown_btn" id="continent">Continent <p>&rangle;</p></a>
           <div id="continents" class="dropdown hide">
               <?php foreach(Project::getContinents() as $co): ?>
-                <p id="continent<?php $co['id']; ?>"><input  class="check_continent" data-continent="<?php echo $co['id']; ?>" type="checkbox" name="continent" value="<?php echo $co['id']; ?>" id="<?php echo $co['continent']; ?>"><label class="check_continent" data-continent="<?php echo $co['id']; ?>" id="con<?php $co['id']; ?>" for="<?php echo $co['continent']; ?>"><?php echo $co['continent']; ?></label></span></p>
+                <p id="continent<?php $co['id']; ?>"><input class="check_continent" data-continent="<?php echo $co['id']; ?>" type="checkbox" name="continent" value="<?php echo $co['id']; ?>" id="<?php echo $co['continent']; ?>"><label class="check_continent" data-continent="<?php echo $co['id']; ?>" id="con<?php $co['id']; ?>" for="<?php echo $co['continent']; ?>"><?php echo $co['continent']; ?></label></p>
               <?php endforeach; ?>
           </div>
         </div>
@@ -57,7 +64,7 @@
           <a href="#" class="filter_dropdown_btn" id="category">Category <p>&rangle;</p></a>
           <div id="categories" class="dropdown hide">
             <?php foreach(Project::getCategories() as $ca): ?>
-              <p id=category"<?php $ca['id']; ?>"><input type="checkbox" name="category" value="<?php $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label id="cat<?php $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
+              <p id=category"<?php echo $ca['id']; ?>"><input class="check_category" data-category="<?php echo $ca['id']; ?>" type="checkbox" name="category" value="<?php echo $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label class="check_category" data-category="<?php echo $ca['id']; ?>" id="cat<?php echo $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
             <?php endforeach; ?>
           </div>
         </div>
@@ -69,13 +76,13 @@
         <?php
           $get_total = $current_page * 9 - 9;
         ?>
-        <?php foreach(Project::getProjects($get_total, $search, $set_continent) as $p): ?>
+        <?php foreach(Project::getProjects($get_total, $search, $set_continent, $set_continent) as $p): ?>
           <?php $location = Project::getLocation($p['locations_id']); ?>
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
-              <h3><?php echo $p['name']; ?></h2>
-              <h4 class="lightgrey"><?php echo $location['continent']; ?></h3>
+              <h3><?php echo $p['name']; ?></h3>
+              <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
               <a class="red_btn btn" href="#">View project</a>
             </article>
           </div>

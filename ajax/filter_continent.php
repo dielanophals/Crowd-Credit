@@ -3,11 +3,11 @@
   Session::check();
 
   if(isset($_POST['continents'])){
-    $page = $_POST['continents'];
+    $continent = $_POST['continents'];
 
-    $page = implode('-', $page);
+    $continent = implode('-', $continent);
 
-    echo $page;
+    echo $continent;
   }else{
     echo "";
   }

@@ -46,4 +46,10 @@
       $loc .= ") &&";
       return $loc;
     }
+
+    public function setCategory($category){
+      $loc = "locations_id IN(" . str_replace('-', ', ', $category);
+      $loc .= ") &&";
+      return $loc;
+    }
   }

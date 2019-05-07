@@ -32,6 +32,7 @@ $(document).ready(function() {
   $(document).on("click", '.check_continent', function(e) {
     var params = new URL(location.href).searchParams;
     var search = params.get('search');
+    var category = params.get('category');
 
     var continents = new Array();
     $('input[name="continent"]:checked').each(function() {
@@ -39,17 +40,53 @@ $(document).ready(function() {
     });
 
     $.ajax({
-        url: 'ajax/filters.php',
+        url: 'ajax/filter_continent.php',
         type: 'POST',
         dataType: 'html',
         data: {
             'continents': continents
         },
         success: function (data) {
-          if(search){
+          if(search && category){
+            window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&continent=' + data + '&category=' + category);
+          }else if(search){
             window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&continent=' + data);
+          }else if(category){
+            window.history.pushState('page2', 'Title', 'index.php?continent=' + data + '&category=' + category);
           }else{
             window.history.pushState('page2', 'Title', 'index.php?continent=' + data);
+          }
+          $('.project_tiles').load(document.URL +  ' .project_tiles');
+        }
+    });
+  });
+
+  $(document).on("click", '.check_category', function(e) {
+    var params = new URL(location.href).searchParams;
+    var search = params.get('search');
+    var continent = params.get('continent');
+
+    var categories = new Array();
+    $('input[name="category"]:checked').each(function() {
+      categories.push(this.value);
+    });
+
+    $.ajax({
+        url: 'ajax/filter_category.php',
+        type: 'POST',
+        dataType: 'html',
+        data: {
+            'category': categories
+        },
+        success: function (data) {
+          if(search && continent){
+            window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&continent=' + continent + '&category=' + data);
+          }else if(search){
+            window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&category=' + data);
+          }else if(continent){
+            window.history.pushState('page2', 'Title', 'index.php?continent=' + continent + '&category=' + data);
+          }else{
+            window.history.pushState('page2', 'Title', 'index.php?category=' + data);
           }
           $('.project_tiles').load(document.URL +  ' .project_tiles');
         }
@@ -61,9 +98,14 @@ $(document).ready(function() {
 
     var params = new URL(location.href).searchParams;
     var continent = params.get('continent');
+    var category = params.get('category');
 
-    if(continent){
+    if(continent && category){
+      window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&continent=' + continent + '&category=' + category);
+    }else if(continent){
       window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&continent=' + continent);
+    }else if(category){
+      window.history.pushState('page2', 'Title', 'index.php?search=' + search + '&category=' + category);
     }else{
       window.history.pushState('page2', 'Title', 'index.php?search=' + search);
     }
