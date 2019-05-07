@@ -52,4 +52,12 @@
       $loc .= ") &&";
       return $loc;
     }
+
+    public function getProject($id){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM projects WHERE id = $id");
+      $statement->execute();
+      $project = $statement->fetch(PDO::FETCH_ASSOC);
+      return $project;
+    }
   }

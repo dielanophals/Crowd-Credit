@@ -83,7 +83,7 @@
             <article class="project_info">
               <h3><?php echo $p['name']; ?></h3>
               <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
-              <a class="red_btn btn" href="#">View project</a>
+              <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">View project</a>
             </article>
           </div>
         <?php endforeach; ?>
