@@ -69,7 +69,7 @@
           </div>
         </div>
         <form class="search" action="#" method="post">
-          <input class="search_input" type="text" name="search" placeholder="Search..." <?php if(isset($search)){ echo 'value="'.$search.'"'; } ?>>
+          <input class="search_input" type="text" name="search" placeholder="Search..." <?php if(isset($search) && !empty($search)){ echo 'value="'.$search.'"'; } ?>>
         </form>
       </div>
       <div class="container project_tiles">

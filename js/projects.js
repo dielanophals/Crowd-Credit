@@ -100,7 +100,7 @@ $(document).ready(function() {
     });
   });
 
-  $(document).keyup('.search_input',function() {
+  $(".search").keyup('.search_input',function() {
     var search = $('.search_input').val();
 
     var params = new URL(location.href).searchParams;
