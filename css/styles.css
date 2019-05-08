@@ -363,6 +363,7 @@ form .error_message {
 .container {
   width: 1024px;
   margin: auto;
+  max-width: 100%;
 }
 
 .btn {
