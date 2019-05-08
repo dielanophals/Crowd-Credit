@@ -1,27 +1,33 @@
-.project_tiles{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  min-height:600px;
-
-  .project_tile{
-    width:31%;
-    border-radius: 5px;
-    overflow: hidden;
-    -webkit-box-shadow: $shadow;
-    -moz-box-shadow: $shadow;
-    box-shadow: $shadow;
-    text-align: center;
-    line-height: 1.6;
-    margin-top: 35px;
+.main_project{
+  margin-top:30px;
+  
+  .banner_wrapper{
+      width:70%;
+      height:450px;
+      overflow: hidden;
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+      display: inline-block;
+      box-sizing: border-box;
   }
 
-  .project_banner{
-    width: 100%;
-    height: 200px;
-  }
+  .project_information{
+      width:30%;
+      float:right;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
+      padding:20px;
+      position: relative;
+      height:450px;
 
-  .project_info{
-    padding: 20px 0;
+      h3{
+          margin-bottom:10px;
+      }
+
+      h5{
+          margin-top:25px;
+          margin-bottom:10px;
+      }
   }
 }

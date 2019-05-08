@@ -280,6 +280,18 @@ form .error_message {
   margin: 50px 0 100px 0;
 }
 
+.project_pages {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.project_pages a {
+  margin: 10px;
+}
+.project_pages .current_page {
+  color: #F2494C;
+}
+
 .project_tiles {
   display: flex;
   justify-content: space-between;
@@ -319,9 +331,9 @@ form .error_message {
 }
 .main_project .project_information {
   width: 30%;
+  float: right;
   display: inline-block;
   box-sizing: border-box;
-  float: right;
   text-align: center;
   padding: 20px;
   position: relative;
