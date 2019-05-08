@@ -284,6 +284,7 @@ main .search input {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  min-height: 600px;
 }
 .project_tiles .project_tile {
   width: 31%;
