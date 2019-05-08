@@ -335,18 +335,6 @@ form .error_message {
   margin-bottom: 10px;
 }
 
-.project_pages {
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 60px;
-}
-.project_pages a {
-  margin: 10px;
-}
-.project_pages .current_page {
-  color: #F2494C;
-}
-
 .container {
   width: 1024px;
   margin: auto;
