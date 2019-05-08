@@ -50,7 +50,7 @@
         <a class="btn red_btn" href="#">View projects</a>
       </div>
     </section>
-    <main>
+    <main class="main_home">
       <h2 class="grey">Projects</h2>
       <div class="container search_filters">
         <div class="filter">

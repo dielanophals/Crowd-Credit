@@ -212,36 +212,36 @@ form .error_message {
   margin-top: 25px;
 }
 
-main {
+.main_home {
   margin-top: 80px;
   text-align: center;
 }
-main h2 {
+.main_home h2 {
   margin-bottom: 20px;
 }
-main .search_filters {
+.main_home .search_filters {
   display: flex;
   flex-wrap: wrap;
   position: relative;
   align-items: center;
   padding-top: 20px;
 }
-main .filter {
+.main_home .filter {
   display: flex;
   align-items: flex-start;
   z-index: 1;
   position: relative;
   padding: 10px 20px;
 }
-main .filter a {
+.main_home .filter a {
   text-decoration: none;
 }
-main .filter a img {
+.main_home .filter a img {
   width: 12px;
   margin-left: 12px;
   transform: translateY(-2px);
 }
-main .filter .dropdown {
+.main_home .filter .dropdown {
   background: red;
   position: absolute;
   width: auto;
@@ -255,23 +255,23 @@ main .filter .dropdown {
   border-bottom-right-radius: 5px;
   font-family: "Roboto", sans-serif;
 }
-main .filter .dropdown p {
+.main_home .filter .dropdown p {
   display: flex;
   align-items: center;
   min-width: 131px;
   padding: 5px 0px;
 }
-main .filter .dropdown p label {
+.main_home .filter .dropdown p label {
   margin-left: 5px;
 }
-main .search {
+.main_home .search {
   padding: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   position: absolute;
 }
-main .search input {
+.main_home .search input {
   width: 300px;
 }
 
@@ -303,6 +303,17 @@ main .search input {
 }
 .project_tiles .project_info {
   padding: 20px 0;
+}
+
+.main_project {
+  margin-top: 30px;
+}
+.main_project .project .banner_wrapper {
+  width: 65%;
+  height: 450px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .project_pages {
