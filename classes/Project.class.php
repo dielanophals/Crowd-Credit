@@ -25,6 +25,14 @@
       return $location;
     }
 
+    public function getOrganisation($organisation){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM organisations WHERE id = $organisation");
+      $statement->execute();
+      $organisation = $statement->fetch(PDO::FETCH_ASSOC);
+      return $organisation;
+    }
+
     public function getCategories(){
       $conn = Db::getInstance();
       $statement = $conn->prepare("SELECT * FROM genres");

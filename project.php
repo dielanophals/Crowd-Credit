@@ -8,6 +8,7 @@
     $pro = new Project;
     $project = $pro->getProject($project_id);
     $location = $pro->getLocation($project['locations_id']);
+    $organisation = $pro->getOrganisation($project['organisation_id']);
   }else{
     header("Location: index.php");
   }
@@ -32,6 +33,7 @@
       <section class="project_information">
         <h3 class="red"><?php echo $project['name']; ?></h3>
         <h4><?php echo $location['continent']; ?></h4>
+        <h4><?php echo $organisation['name']; ?></h4>
       </section>
     </div>
     </main>
