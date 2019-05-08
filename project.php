@@ -41,13 +41,8 @@
           <h5 class="lightgrey">Goal</h5>
           <h4 class="red">&euro;<?php echo $project['goal']; ?></h4>
           <?php
-              $total_transactions = 0;
-              $transactions = $pro->getTotalTransactions($project_id);
-              foreach($transactions as $t){
-                $total_transactions += $t['amount'];
-              }
-              $total_transactions_procent = round($total_transactions / $project['goal'] * 100);
-            ?>
+              $total_transactions_procent = $pro->getTotalTransactions($project_id, $project['goal']);
+          ?>
           <div class="bar">
             <div class="progress" style="width: <?php echo $total_transactions_procent ?>%"></div>
           </div>

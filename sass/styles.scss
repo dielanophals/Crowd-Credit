@@ -7,6 +7,7 @@
 @import 'components/projects_pages';
 @import 'components/projects';
 @import 'components/project';
+@import 'components/about';
 
 .container{
   width: 1024px;
@@ -50,6 +51,12 @@ h4{
 p, a{
   font-family: $roboto;
   color: $darkgrey;
+}
+
+p{
+  line-height: 1.4;
+  margin-bottom:20px;
+  font-size:16px;
 }
 
 .red{

@@ -69,11 +69,17 @@
       return $project;
     }
 
-    public function getTotalTransactions($id){
+    public function getTotalTransactions($id, $goal){
       $conn = Db::getInstance();
       $statement = $conn->prepare("SELECT * FROM transactions WHERE project_id = $id");
       $statement->execute();
       $transactions = $statement->fetchAll();
-      return $transactions;
+
+      $total_transactions = 0;
+      foreach($transactions as $t){
+        $total_transactions += $t['amount'];
+      }
+      $total_transactions_procent = round($total_transactions / $goal * 100);
+      return $total_transactions_procent;
     }
   }
