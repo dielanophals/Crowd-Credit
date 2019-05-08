@@ -309,7 +309,7 @@ form .error_message {
   margin-top: 30px;
 }
 .main_project .banner_wrapper {
-  width: 65%;
+  width: 70%;
   height: 450px;
   overflow: hidden;
   border-top-left-radius: 5px;
@@ -318,11 +318,21 @@ form .error_message {
   box-sizing: border-box;
 }
 .main_project .project_information {
-  width: 35%;
+  width: 30%;
   display: inline-block;
   box-sizing: border-box;
   float: right;
   text-align: center;
+  padding: 20px;
+  position: relative;
+  height: 450px;
+}
+.main_project .project_information h3 {
+  margin-bottom: 10px;
+}
+.main_project .project_information h5 {
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .project_pages {
