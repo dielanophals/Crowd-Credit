@@ -237,8 +237,8 @@ main .filter a {
   text-decoration: none;
 }
 main .filter a img {
-  width: 16px;
-  margin-left: 15px;
+  width: 12px;
+  margin-left: 12px;
   transform: translateY(-2px);
 }
 main .filter .dropdown {
