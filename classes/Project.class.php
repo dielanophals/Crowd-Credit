@@ -68,4 +68,12 @@
       $project = $statement->fetch(PDO::FETCH_ASSOC);
       return $project;
     }
+
+    public function getTotalTransactions($id){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM transactions WHERE project_id = $id");
+      $statement->execute();
+      $transactions = $statement->fetchAll();
+      return $transactions;
+    }
   }
