@@ -7,7 +7,7 @@
     <ul>
       <li><a <?php if($page == 'index.php'){ echo' class="red"'; } ?> href="index.php">Home</a></li>
       <li><a <?php if($page == 'organisations.php'){ echo' class="red"'; } ?> href="#">Organisations</a></li>
-      <li><a <?php if($page == 'about.php'){ echo' class="red"'; } ?> href="#">About us</a></li>
+      <li><a <?php if($page == 'about.php'){ echo' class="red"'; } ?> href="about.php">About us</a></li>
     </ul>
 
     <span class="nav_line">|</span>
