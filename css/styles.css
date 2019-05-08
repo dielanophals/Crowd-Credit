@@ -324,8 +324,7 @@ form .error_message {
   width: 70%;
   height: 450px;
   overflow: hidden;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
   display: inline-block;
   box-sizing: border-box;
 }
@@ -345,6 +344,20 @@ form .error_message {
 .main_project .project_information h5 {
   margin-top: 25px;
   margin-bottom: 10px;
+}
+.main_project .project_information .bar {
+  width: 180px;
+  background: #F2F2F2;
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.main_project .project_information .bar .progress {
+  height: 100%;
+  background: #F2494C;
+  width: 30%;
 }
 
 .container {

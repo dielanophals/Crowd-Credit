@@ -39,7 +39,10 @@
           <h5 class="lightgrey">End date</h5>
           <h4><?php echo $project['date_end']; ?></h4>
           <h5 class="lightgrey">Goal</h5>
-          <h4><?php echo $project['goal']; ?></h4>
+          <h4>&euro; <?php echo $project['goal']; ?></h4>
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
           <a class="btn red_btn" href="#">Fund today</a>
         </div>
       </section>
