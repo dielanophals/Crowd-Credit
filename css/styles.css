@@ -308,12 +308,21 @@ form .error_message {
 .main_project {
   margin-top: 30px;
 }
-.main_project .project .banner_wrapper {
+.main_project .banner_wrapper {
   width: 65%;
   height: 450px;
   overflow: hidden;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.main_project .project_information {
+  width: 35%;
+  display: inline-block;
+  box-sizing: border-box;
+  float: right;
+  text-align: center;
 }
 
 .project_pages {

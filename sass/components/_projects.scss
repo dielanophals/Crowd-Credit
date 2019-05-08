@@ -1,14 +1,21 @@
 .main_project{
     margin-top:30px;
+    
+    .banner_wrapper{
+        width:65%;
+        height:450px;
+        overflow: hidden;
+        border-top-left-radius:5px;
+        border-bottom-left-radius:5px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
 
-    .project{
-
-        .banner_wrapper{
-            width:65%;
-            height:450px;
-            overflow: hidden;
-            border-top-left-radius:5px;
-            border-bottom-left-radius:5px;
-        }
+    .project_information{
+        width:35%;
+        display: inline-block;
+        box-sizing: border-box;
+        float:right;
+        text-align: center;
     }
 }
