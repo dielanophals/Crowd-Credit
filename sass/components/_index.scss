@@ -48,10 +48,10 @@ main{
     a{
       text-decoration: none;
 
-      p{
-        transform: rotate(90deg);
-        display: inline-block;
+      img{
+        width: 16px;
         margin-left: 15px;
+        transform: translateY(-2px);
       }
     }
 

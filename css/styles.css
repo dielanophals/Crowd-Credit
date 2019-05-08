@@ -236,10 +236,10 @@ main .filter {
 main .filter a {
   text-decoration: none;
 }
-main .filter a p {
-  transform: rotate(90deg);
-  display: inline-block;
+main .filter a img {
+  width: 16px;
   margin-left: 15px;
+  transform: translateY(-2px);
 }
 main .filter .dropdown {
   background: red;
