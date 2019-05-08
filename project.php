@@ -33,7 +33,13 @@
       <section class="project_information">
         <h3 class="red"><?php echo $project['name']; ?></h3>
         <h4><?php echo $location['continent']; ?></h4>
+        <h5>Organisation</h5>
         <h4><?php echo $organisation['name']; ?></h4>
+        <h5>End date</h5>
+        <h4><?php echo $project['date_end']; ?></h4>
+        <h5>Goal</h5>
+        <h4><?php echo $project['goal']; ?></h4>
+        <a class="btn red_btn" href="#">Fund today</a>
       </section>
     </div>
     </main>
