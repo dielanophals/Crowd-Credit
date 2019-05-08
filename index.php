@@ -64,7 +64,7 @@
           <a href="#" class="filter_dropdown_btn" id="category">Category <p>&rangle;</p></a>
           <div id="categories" class="dropdown hide">
             <?php foreach(Project::getCategories() as $ca): ?>
-              <p id=category"<?php echo $ca['id']; ?>"><input class="check_category" data-category="<?php echo $ca['id']; ?>" type="checkbox" name="category" value="<?php echo $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label class="check_category" data-category="<?php echo $ca['id']; ?>" id="cat<?php echo $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
+              <p id="category<?php echo $ca['id']; ?>"><input class="check_category" data-category="<?php echo $ca['id']; ?>" type="checkbox" name="category" value="<?php echo $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label class="check_category" data-category="<?php echo $ca['id']; ?>" id="cat<?php echo $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
             <?php endforeach; ?>
           </div>
         </div>
