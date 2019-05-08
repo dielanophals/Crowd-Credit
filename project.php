@@ -5,6 +5,7 @@
 
   if(isset($_GET['project'])){
     $project_id = $_GET['project'];
+    $project = Project::getProject($project_id);
   }else{
     header("Location: index.php");
   }
@@ -22,10 +23,11 @@
   <body>
     <?php require_once("inc/header.php"); ?>
     <main>
-      <?php
-        $project = Project::getProject($project_id);
-        echo $project['name'];
-      ?>
+    <div class="container">
+      <div class="banner_wrapper">
+        <div class="banner_image" style="background:url(<?php echo $project['banner']; ?>);"></div>
+      </div>
+    </div>
     </main>
   </body>
 </html>
