@@ -66,6 +66,7 @@
             <p><?php echo $f['description']; ?></p>
           </article>
         <?php endforeach; ?>
+        <a class="btn grey_btn" href="#">More news</a>
       </div>
       </div>
     </section>

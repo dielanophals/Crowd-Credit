@@ -57,15 +57,16 @@
 
 .about_project{
   h3{
-    margin-bottom:10px;
+    margin-bottom:20px;
   }
 }
 
 .project_feed{
   float:right;
+  text-align: center;
 
   h3{
-    margin-bottom:10px;
+    margin-bottom:20px;
   }
 
   .feed_block{
@@ -75,6 +76,7 @@
     width:100%;
     margin-bottom:10px;
     padding:10px;
+    text-align: left;
 
     .feed_image_wrapper{
       width:120px;
@@ -90,5 +92,9 @@
         height:100%;
       }
     }
+  }
+
+  .btn{
+    margin-bottom:20px;
   }
 }
