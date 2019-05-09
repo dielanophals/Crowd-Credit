@@ -40,9 +40,7 @@
           <h4><?php echo $project['date_end']; ?></h4>
           <h5 class="lightgrey">Goal</h5>
           <h4 class="red">&euro;<?php echo $project['goal']; ?></h4>
-          <?php
-              $total_transactions_procent = $pro->getTotalTransactions($project_id, $project['goal']);
-          ?>
+          <?php $total_transactions_procent = $pro->getTotalProjectTransactions($project_id, $project['goal']); ?>
           <div class="bar">
             <div class="progress" style="width: <?php echo $total_transactions_procent ?>%"></div>
           </div>
@@ -54,9 +52,21 @@
     </main>
     <section>
       <div class="container">
-      <article>
+      <article class="about_project">
+        <h3>About this project</h3>
         <p><?php echo $project['description']; ?></p>
       </article>
+      <div class="project_feed">
+        <h3>Project feed</h3>
+        <?php foreach($pro->getProjectFeed3($project_id) as $f): ?>
+          <article class="feed_block">
+            <div class="feed_image_wrapper">
+              <div class="feed_image" style="background: url(<?php echo $f['image'] ?>); background-size:cover; background-position:center;"></div>
+            </div>
+            <p><?php echo $f['description']; ?></p>
+          </article>
+        <?php endforeach; ?>
+      </div>
       </div>
     </section>
   </body>

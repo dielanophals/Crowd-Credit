@@ -69,7 +69,7 @@
       return $project;
     }
 
-    public function getTotalTransactions($id, $goal){
+    public function getTotalProjectTransactions($id, $goal){
       $conn = Db::getInstance();
       $statement = $conn->prepare("SELECT * FROM transactions WHERE project_id = $id");
       $statement->execute();
@@ -81,5 +81,13 @@
       }
       $total_transactions_procent = round($total_transactions / $goal * 100);
       return $total_transactions_procent;
+    }
+
+    public function getProjectFeed3($id){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM project_feed WHERE project_id = $id ORDER BY id DESC LIMIT 3");
+      $statement->execute();
+      $feed = $statement->fetchAll();
+      return $feed;
     }
   }

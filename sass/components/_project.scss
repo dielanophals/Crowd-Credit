@@ -49,3 +49,46 @@
       }
   }
 }
+
+.about_project, .project_feed{
+  width:48%;
+  float:left;
+}
+
+.about_project{
+  h3{
+    margin-bottom:10px;
+  }
+}
+
+.project_feed{
+  float:right;
+
+  h3{
+    margin-bottom:10px;
+  }
+
+  .feed_block{
+    box-shadow: $shadow;
+    border-radius: 5px;
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+    padding:10px;
+
+    .feed_image_wrapper{
+      width:120px;
+      height:80px;
+      background:red;
+      float:left;
+      border-radius:5px;
+      margin-right:10px;
+      overflow:hidden;
+
+      .feed_image{
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+}
