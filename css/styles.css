@@ -297,7 +297,7 @@ form .error_message {
 
 .project_tiles {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   min-height: 600px;
 }
@@ -311,6 +311,10 @@ form .error_message {
   text-align: center;
   line-height: 1.6;
   margin-top: 35px;
+}
+.project_tiles .project_tile:nth-child(3n+2) {
+  margin-left: 3.5%;
+  margin-right: 3.5%;
 }
 .project_tiles .project_banner {
   width: 100%;
