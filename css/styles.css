@@ -99,6 +99,7 @@ nav .nav_profile a p {
   display: inline-block;
   margin-left: 10px;
   color: #333;
+  margin-bottom: 0;
 }
 nav .nav_profile .nav_profile_img {
   display: inline-block;
