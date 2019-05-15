@@ -24,6 +24,17 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+  <?php
+    if(isset($_GET['fund']) && $_GET['fund'] == true):
+  ?>
+  <div class="popup">
+      <div class="center fund">
+
+      </div>
+  </div>
+  <?php
+    endif;
+  ?>
     <?php require_once("inc/header.php"); ?>
     <main class="main_project">
     <div class="container">
@@ -45,7 +56,7 @@
             <div class="progress" style="width: <?php echo $total_transactions_procent ?>%"></div>
           </div>
           <p class="lightgrey"><?php echo $total_transactions_procent; ?> %</p>
-          <a class="btn red_btn" href="#">Fund today</a>
+          <a class="btn red_btn" href="?project=<?php echo $project_id; ?>&fund=true">Fund today</a>
         </div>
       </section>
     </div>
