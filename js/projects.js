@@ -122,4 +122,23 @@ $(document).ready(function() {
   $('.search').submit(function () {
     return false;
   });
+
+  $(document).on("click", '#fund', function(e) {
+    e.preventDefault();
+    var project_id = $(this).data('project');
+    var amount = $('#amount').val();
+
+    $.ajax({
+        url: 'ajax/fund.php',
+        type: 'POST',
+        dataType: 'html',
+        data: {
+            'project': project_id,
+            'amount': amount
+        },
+        success: function (data) {
+          alert(data)
+        }
+    });
+  });
 });
