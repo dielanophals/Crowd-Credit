@@ -4,7 +4,7 @@ form{
   text-align: center;
   max-width:100%;
 
-  input[type="email"], input[type="password"], input[type="text"], input[type="submit"], textarea{
+  input[type="email"], input[type="password"], input[type="text"], input[type="submit"], input[type="number"], textarea{
     border: none;
     width: 100%;
     border-radius: 5px;
@@ -24,7 +24,7 @@ form{
     box-shadow: $shadow;
   }
 
-  input[type="email"], input[type="password"], input[type="text"], textarea{
+  input[type="email"], input[type="password"], input[type="text"], input[type="number"], textarea{
     box-sizing: border-box;
     margin-bottom: 10px;
     background: $lightgrey;

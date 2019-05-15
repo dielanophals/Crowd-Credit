@@ -12,6 +12,12 @@
   }else{
     header("Location: index.php");
   }
+
+  if(!empty($_POST)){
+    $user = new User();
+    echo $_SESSION['id'];
+    $project = $pro->insertFund($project_id, $_SESSION['id'], $_POST['value']);
+  }
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -33,12 +39,12 @@
         <h5 class="lightgrey">Project</h5>
         <h3 class="red"><?php echo $project['name'] ?></h3>
         <h5 class="lightgrey">Amount</h5>
-        <form action="#">
-          <input type="text" value="100">
+        <form action="#" method="post">
+          <input type="number" name="value" value="100">
           <h5 class="lightgrey">Terms</h5>
           <input type="checkbox" id="accept">
           <p class="terms"><label for="accept">I know & understand the <a href="#">risks</a> of funding this project</label></p>
-          <input class="btn red_btn" type="submit" value="Fund">
+          <input class="btn red_btn" type="submit" name="fund" value="Fund">
           <a class="btn darkgrey_btn" href="?project=<?php echo $project_id; ?>">Cancel</a>
         </form>
       </div>
