@@ -29,7 +29,18 @@
   ?>
   <div class="popup">
       <div class="center fund">
-
+        <h4 class="grey">Fund a dream</h4>
+        <h5 class="lightgrey">Project</h5>
+        <h3 class="red"><?php echo $project['name'] ?></h3>
+        <h5 class="lightgrey">Amount</h5>
+        <form action="#">
+          <input type="text" value="10000">
+          <h5 class="lightgrey">Terms</h5>
+          <input type="checkbox" id="accept">
+          <p class="terms"><label for="accept">I know & understand the <a href="#">risks</a> of funding this project</label></p>
+          <input class="btn red_btn" type="submit" value="Fund">
+          <a class="btn darkgrey_btn" href="#">Cancel</a>
+        </form>
       </div>
   </div>
   <?php

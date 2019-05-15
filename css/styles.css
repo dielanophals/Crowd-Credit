@@ -153,8 +153,9 @@ form {
   width: 550px;
   padding: 25px;
   text-align: center;
+  max-width: 100%;
 }
-form input, form textarea {
+form input[type="email"], form input[type="password"], form input[type="text"], form input[type="submit"], form textarea {
   border: none;
   width: 100%;
   border-radius: 5px;
@@ -178,6 +179,7 @@ form input[type="email"], form input[type="password"], form input[type="text"], 
 }
 form input[type="submit"] {
   cursor: pointer;
+  color: #fff;
 }
 form p {
   margin-top: 20px;
@@ -419,13 +421,46 @@ form .error_message {
   background: rgba(255, 255, 255, 0.75);
   position: fixed;
   z-index: 1;
+  text-align: center;
 }
 .popup .fund {
   width: 400px;
-  height: 500px;
   background: #fff;
   box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
   border-radius: 5px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.popup .fund h4, .popup .fund h5 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.popup .fund h5 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.popup .fund form {
+  padding: 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+.popup .fund form p {
+  display: inline;
+}
+.popup .fund form input {
+  text-align: center;
+}
+.popup .fund form input[type="submit"] {
+  margin-top: 30px;
+}
+.popup .fund form .darkgrey_btn {
+  font-size: 16px;
+  padding: 15px 15px !important;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
 .main_about {
@@ -473,6 +508,11 @@ form .error_message {
   color: white;
 }
 
+.darkgrey_btn {
+  background: #333;
+  color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
@@ -491,6 +531,10 @@ h3 {
 
 h4 {
   font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
 }
 
 p, a {

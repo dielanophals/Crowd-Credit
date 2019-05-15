@@ -5,7 +5,7 @@
       width:70%;
       height:450px;
       overflow: hidden;
-      border-radius: 5px;
+      border-radius: $radius;
       display: inline-block;
       box-sizing: border-box;
   }
@@ -73,7 +73,7 @@
 
   .feed_block{
     box-shadow: $shadow;
-    border-radius: 5px;
+    border-radius: $radius;
     float:left;
     width:100%;
     margin-bottom:10px;
@@ -106,12 +106,52 @@
   background: rgba(255,255,255, 0.75);
   position: fixed;
   z-index:1;
+  text-align: center;
 
   .fund{
     width:400px;
-    height:500px;
     background:$white;
     box-shadow: $shadow;
-    border-radius: $radius
+    border-radius: $radius;
+    padding: 30px;
+    box-sizing: border-box;
+
+    h4, h5{
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    h5{
+      margin-top:30px;
+      margin-bottom: 10px;
+    }
+
+    form{
+      padding:0;
+      text-align: center;
+      font-family: $roboto;
+      text-align: left;
+
+      p{
+        display: inline;
+      }
+
+      input{
+        text-align: center
+      }
+
+      input[type="submit"]{
+        margin-top:30px;
+      }
+
+      .darkgrey_btn{
+        font-size: 16px;
+        padding: 15px 15px !important;
+        width:100%;
+        box-sizing: border-box;
+        text-align:center;
+        font-family: $nunito;
+      }
+    }
   }
 }
