@@ -176,6 +176,7 @@ form input[type="email"], form input[type="password"], form input[type="text"], 
   box-sizing: border-box;
   margin-bottom: 10px;
   background: #F2F2F2;
+  font-family: "Roboto", sans-serif;
 }
 form input[type="submit"] {
   cursor: pointer;
