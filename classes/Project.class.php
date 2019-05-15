@@ -100,4 +100,11 @@
       $result = $statement->execute();
       return $result;
     }
+
+    public function insertFundUser($id, $wallet){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("UPDATE users SET wallet = '$wallet' WHERE id = '$id'");
+      $result = $statement->execute();
+      return $result;
+    }
   }
