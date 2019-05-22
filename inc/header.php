@@ -3,8 +3,8 @@
   $link_array = explode('/',$link);
   $page = end($link_array);
 ?><header>
+  	<img class="logo" src="icons/logo.png" alt="Crowd Credit Logo">
   <nav>
-  	<img src="icons/logo.png" alt="Crowd Credit Logo">
     <ul>
       <li><a <?php if($page == 'index.php'){ echo' class="red"'; } ?> href="index.php">Home</a></li>
       <li><a <?php if($page == 'organisations.php'){ echo' class="red"'; } ?> href="#">Organisations</a></li>
