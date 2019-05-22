@@ -67,6 +67,10 @@ nav {
   align-items: center;
   margin-right: 20px;
 }
+nav img {
+  height: 16px;
+  margin-right: 659px;
+}
 nav ul {
   margin-right: 20px;
 }
