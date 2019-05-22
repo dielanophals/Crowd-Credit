@@ -9,7 +9,7 @@
     $user = new User;
     $data = $user->getUserData($_SESSION['id']);
     $wallet = $data['wallet'];
-    if($wallet < $amount){
+    if($wallet < $amount || $amount <= 0){
       echo "ahzo marcheer het ni he makker";
     }else{
       $wallet -= $amount;
