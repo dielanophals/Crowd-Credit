@@ -58,6 +58,9 @@ nav {
   display: flex;
   align-items: center;
   margin-right: 20px; }
+  nav img {
+    height: 16px;
+    margin-right: 659px; }
   nav ul {
     margin-right: 20px; }
     nav ul li {
@@ -126,49 +129,40 @@ form {
   width: 550px;
   padding: 25px;
   text-align: center;
-  max-width: 100%;
-}
-form input[type="email"], form input[type="password"], form input[type="text"], form input[type="submit"], form input[type="number"], form textarea {
-  border: none;
-  width: 100%;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 15px 15px !important;
-  color: #333;
-  outline: none;
-}
-form textarea {
-  resize: none;
-}
-form input:focus, form textarea:focus {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
-  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
-}
-form input[type="email"], form input[type="password"], form input[type="text"], form input[type="number"], form textarea {
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  background: #F2F2F2;
-  font-family: "Roboto", sans-serif;
-}
-form input[type="submit"] {
-  cursor: pointer;
-  color: #fff;
-}
-form p {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-form a {
-  color: #F2494C;
-}
-form .error_message {
-  background: #F2494C;
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-  margin-bottom: 25px;
-}
+  max-width: 100%; }
+  form input[type="email"], form input[type="password"], form input[type="text"], form input[type="submit"], form input[type="number"], form textarea {
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 15px 15px !important;
+    color: #333;
+    outline: none; }
+  form textarea {
+    resize: none; }
+  form input:focus, form textarea:focus {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
+    box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3); }
+  form input[type="email"], form input[type="password"], form input[type="text"], form input[type="number"], form textarea {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background: #F2F2F2;
+    font-family: "Roboto", sans-serif; }
+  form input[type="submit"] {
+    cursor: pointer;
+    color: #fff; }
+  form p {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  form a {
+    color: #F2494C; }
+  form .error_message {
+    background: #F2494C;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 25px; }
 
 .banner_image {
   width: 100%;
@@ -385,47 +379,38 @@ form .error_message {
   background: rgba(255, 255, 255, 0.75);
   position: fixed;
   z-index: 1;
-  text-align: center;
-}
-.popup .fund {
-  width: 400px;
-  background: #fff;
-  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
-  border-radius: 5px;
-  padding: 30px;
-  box-sizing: border-box;
-}
-.popup .fund h4, .popup .fund h5 {
-  text-transform: uppercase;
-  text-align: center;
-}
-.popup .fund h5 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.popup .fund form {
-  padding: 0;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  text-align: left;
-}
-.popup .fund form p {
-  display: inline;
-}
-.popup .fund form input {
-  text-align: center;
-}
-.popup .fund form input[type="submit"] {
-  margin-top: 30px;
-}
-.popup .fund form .darkgrey_btn {
-  font-size: 16px;
-  padding: 15px 15px !important;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-}
+  text-align: center; }
+  .popup .fund {
+    width: 400px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
+    border-radius: 5px;
+    padding: 30px;
+    box-sizing: border-box; }
+    .popup .fund h4, .popup .fund h5 {
+      text-transform: uppercase;
+      text-align: center; }
+    .popup .fund h5 {
+      margin-top: 30px;
+      margin-bottom: 10px; }
+    .popup .fund form {
+      padding: 0;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      text-align: left; }
+      .popup .fund form p {
+        display: inline; }
+      .popup .fund form input {
+        text-align: center; }
+      .popup .fund form input[type="submit"] {
+        margin-top: 30px; }
+      .popup .fund form .darkgrey_btn {
+        font-size: 16px;
+        padding: 15px 15px !important;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: "Nunito", sans-serif; }
 
 .main_about {
   margin-top: 30px; }
@@ -471,8 +456,7 @@ body {
 
 .darkgrey_btn {
   background: #333;
-  color: white;
-}
+  color: white; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif; }
@@ -490,8 +474,7 @@ h4 {
   font-size: 20px; }
 
 h5 {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 p, a {
   font-family: "Roboto", sans-serif;
