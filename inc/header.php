@@ -32,7 +32,7 @@
         </a>
         <div id="profile_dropdown" class="nav_profile_dropdown hide">
           <div id="wallet" class="wallet">
-            <img id="credit_card" src="icons/credit_card.svg" alt="Credit card">
+            <img id="credit_card" src="icons/credit_card.png" alt="Credit card">
             <h4 id="wallet_data">€ <?php echo $userData['wallet']; ?></h4>
           </div>
           <ul id="wallet_ul">
