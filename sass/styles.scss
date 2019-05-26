@@ -1,13 +1,6 @@
-@import 'variables';
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
 @import 'components/reset';
-@import 'components/header';
-@import 'components/form';
-@import 'components/index';
-@import 'components/projects_pages';
-@import 'components/projects';
-@import 'components/project';
-@import 'components/about';
+@import 'variables';
 
 body{
     -webkit-user-select:none;
@@ -106,3 +99,12 @@ p{
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@import 'components/header';
+@import 'components/form';
+@import 'components/index';
+@import 'components/projects_pages';
+@import 'components/projects';
+@import 'components/project';
+@import 'components/about';
+@import 'components/mediaqueries';

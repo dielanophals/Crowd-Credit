@@ -1,0 +1,45 @@
+@media only screen and (max-width: 950px){
+	
+	h1{
+		font-size: 40px;
+		max-width: 90%;
+		margin: 0 5%;
+	}
+	
+	header{
+		nav{
+			display: none;
+		}
+	}
+
+	form{
+		width: 90%;
+	}
+	
+	#page_index{
+		.info p{
+			max-width: 90%;
+			margin: 0 5%;
+			font-size: 20px;
+		}
+		.search_filters{
+			div{
+				display: none;
+			}
+			form input{
+				width: 100%;
+			}
+		}
+		.container{
+			width: 90%;
+			margin: 0 5%;
+			.project_tile{
+				width: 47.5%;
+				float: left;
+				&:nth-child(even){
+					margin: 35px 0 0 5%;
+				}
+			}
+		}
+	}
+}
