@@ -531,11 +531,15 @@ form .error_message {
   width: 100%;
 }
 
-body {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #F2494C;
+}
+
+::selection {
+  color: #fff;
+  background: #F2494C;
 }
 
 .container {
@@ -554,17 +558,17 @@ body {
 
 .red_btn {
   background: #F2494C;
-  color: white;
+  color: #fff;
 }
 
 .grey_btn {
   background: #ADADAD;
-  color: white;
+  color: #fff;
 }
 
 .darkgrey_btn {
   background: #333;
-  color: white;
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {

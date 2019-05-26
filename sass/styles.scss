@@ -9,11 +9,14 @@
 @import 'components/project';
 @import 'components/about';
 
-body{
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: $darkred;
+}
+
+::selection {
+  color: $white; 
+  background: $darkred;
 }
 
 .container{
@@ -32,17 +35,17 @@ body{
 
 .red_btn{
   background: $darkred;
-  color: white;
+  color: $white;
 }
 
 .grey_btn{
   background: $grey;
-  color: white;
+  color: $white;
 }
 
 .darkgrey_btn{
   background: $darkgrey;
-  color: white;
+  color: $white;
 }
 
 h1, h2, h3, h4, h5, h6{
