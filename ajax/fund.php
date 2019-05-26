@@ -10,7 +10,7 @@
     $data = $user->getUserData($_SESSION['id']);
     $wallet = $data['wallet'];
     if($wallet < $amount || $amount <= 0){
-      echo "ahzo marcheer het ni he makker";
+      echo "Gelieve een geldig bedrag in te voegen.";
     }else{
       $wallet -= $amount;
       $pro = new Project;

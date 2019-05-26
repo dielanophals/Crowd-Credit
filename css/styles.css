@@ -275,6 +275,7 @@ form .error_message {
   align-items: center;
   min-width: 131px;
   padding: 5px 0px;
+  margin: 0;
 }
 .main_home .filter .dropdown p label {
   margin-left: 5px;
