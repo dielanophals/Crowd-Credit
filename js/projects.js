@@ -137,7 +137,10 @@ $(document).ready(function() {
             'amount': amount
         },
         success: function (data) {
-          alert(data)
+          if(data !== ""){
+            alert(data);
+          }
+          window.location = "project.php?project=" + project_id;
         }
     });
   });
