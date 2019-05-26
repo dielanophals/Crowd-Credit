@@ -57,13 +57,14 @@ header {
   background: #fff;
   width: 100%;
   margin: 0;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 header .logo {
   height: 20px;
   margin-left: 40px;
-  margin-top: 28px;
 }
 
 nav {
