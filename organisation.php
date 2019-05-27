@@ -23,8 +23,12 @@
       <section class="detail_information">
         <div class="center">
           <h3 class="red"><?php echo $organisation['name']; ?></h3>
-          <h5 class="lightgrey">End date</h5>
-          <h4><?php echo $organisation['timestamp']; ?></h4>
+          <h5 class="lightgrey">Active since</h5>
+          <?php
+            $dateProvided="1979-06-13";
+            $yearOnly = substr($organisation['timestamp'], 0, 4);
+          ?>
+          <h4><?php echo  $yearOnly; ?></h4>
         </div>
       </section>
     </div>
