@@ -20,11 +20,7 @@
 
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+  <?php require_once("inc/head.php"); ?>
   <body>
     <?php require_once("inc/header.php"); ?>
     <form class="center" action="#" method="post">

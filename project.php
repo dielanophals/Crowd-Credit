@@ -18,15 +18,7 @@
   }
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Crowd Credit</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
-    <script src="js/dropdowns.js"></script>
-    <script src="js/projects.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+  <?php require_once("inc/head.php"); ?>
   <body>
   <?php
     if(isset($_GET['fund']) && $_GET['fund'] == true):
@@ -38,7 +30,7 @@
         <h3 class="red"><?php echo $project['name'] ?></h3>
         <h5 class="lightgrey">Amount</h5>
         <form action="#" method="post">
-          <input type="number" name="value" id="amount" value="100" min="10">
+          <input type="number" name="value" id="amount" value="100">
           <h5 class="lightgrey">Terms</h5>
           <input type="checkbox" id="accept">
           <p class="terms"><label for="accept">I know & understand the <a href="#">risks</a> of funding this project</label></p>
