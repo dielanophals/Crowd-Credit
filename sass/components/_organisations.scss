@@ -1,0 +1,28 @@
+.main_organisations{
+    display: flex;
+    justify-content: space-between;
+
+    .organisation_tile{
+        width:49%;
+        text-align: center;
+        box-shadow: $shadow;
+        border-radius: $radius;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-top:20px;
+    
+        .image_wrapper{
+            height:200px;
+            width:100%;
+    
+            .image{
+                width:100%;
+                height:100%;
+            }
+        }
+    
+        article{
+            padding:30px;
+        }
+    }
+}
