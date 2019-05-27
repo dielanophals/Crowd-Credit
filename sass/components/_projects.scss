@@ -1,0 +1,33 @@
+.project_tiles{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-height:600px;
+  
+    .project_tile{
+      width:31%;
+      border-radius: 5px;
+      overflow: hidden;
+      -webkit-box-shadow: $shadow;
+      -moz-box-shadow: $shadow;
+      box-shadow: $shadow;
+      text-align: center;
+      line-height: 1.6;
+      margin-top: 35px;
+    }
+
+    .project_tile:nth-child(3n+2) {
+        margin-left: 3.5%;
+        margin-right: 3.5%;
+    }
+  
+    .project_banner{
+      width: 100%;
+      height: 200px;
+    }
+  
+    .project_info{
+      padding: 20px 0;
+    }
+  }
+  

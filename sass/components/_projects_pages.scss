@@ -1,0 +1,49 @@
+.project_pages{
+    width: 31%;
+    margin: 30px 34.5% 60px 34.5%;
+    a{
+        padding: 12px 14px;
+        font-size: 16px;
+        text-decoration: none;
+        font-family: $nunito;
+        border-radius: 50%;
+        display: inline-block;
+        transition: $hover;
+        transition-property: color;
+        &:hover{
+            color: $darkred;
+        }
+      }
+    .arrow{
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        background: $grey;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-property: background;
+        img{
+            height: 8px;
+        }
+        &:hover{
+            background: $darkred;
+        }
+    }
+    .back{
+        float: left;
+    }
+    .next{
+        float: right;
+    }
+    .current_page{
+        color:$darkred;
+    }
+    .arrow-back{
+        transform: rotate(90deg) translateY(1px);
+    }
+    .arrow-next{
+        transform: rotate(-90deg) translateY(1px);
+    }
+}

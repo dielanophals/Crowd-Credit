@@ -1,0 +1,55 @@
+form{
+  width: 550px;
+  padding: 25px;
+  text-align: center;
+  max-width:100%;
+
+  input[type="email"], input[type="password"], input[type="text"], input[type="submit"], input[type="number"], textarea{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 15px 15px !important;
+    color: $darkgrey;
+    outline: none;
+  }
+
+  textarea{
+    resize:none;
+  }
+
+  input:focus, textarea:focus{
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+  }
+
+  input[type="email"], input[type="password"], input[type="text"], input[type="number"], textarea{
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background: $lightgrey;
+    font-family: $roboto;
+  }
+
+  input[type="submit"]{
+    cursor: pointer;
+    color:$white;
+  }
+
+  p{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  a{
+    color:$darkred;
+  }
+
+  .error_message{
+    background: $darkred;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 25px;
+  }
+}

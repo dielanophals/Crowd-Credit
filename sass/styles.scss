@@ -1,18 +1,59 @@
 @import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
 @import 'components/reset';
 @import 'components/header';
+@import 'components/form';
 @import 'components/index';
+@import 'components/projects_pages';
+@import 'components/projects';
 @import 'components/project';
+@import 'components/about';
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: $darkred;
+}
+
+::selection {
+  color: $white; 
+  background: $darkred;
+}
 
 .container{
   width: 1024px;
   margin: auto;
+  max-width:100%;
+}
+
+.btn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.red_btn{
+  background: $darkred;
+  color: $white;
+}
+
+.grey_btn{
+  background: $grey;
+  color: $white;
+}
+
+.darkgrey_btn{
+  background: $darkgrey;
+  color: $white;
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Nunito', sans-serif;
+  font-family: $nunito;
+}
+
+h1{
+  font-size: 100px;
 }
 
 h1{
@@ -20,12 +61,19 @@ h1{
 }
 
 h2{
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 56px;
 }
 
 h3{
+  font-size: 26px;
+}
+
+h4{
   font-size: 20px;
+}
+
+h5{
+  font-size: 16px;
 }
 
 p, a{
@@ -47,7 +95,8 @@ p, a{
 
 .red_btn{
     background: $red_dark;
-    color:white;
+    font-family: $roboto;
+  	color: $white;
     transition: $transition;
     -webkit-transition-property: background-color;
     -o-transition-property: background-color;
@@ -55,4 +104,37 @@ p, a{
     &:hover{
         background: $red_light;
     }
+}
+
+p{
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.red{
+  color: $darkred;
+}
+
+.grey{
+  color: $darkgrey;
+}
+
+.lightgrey{
+  color: $grey;
+}
+
+.hide{
+  display: none;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

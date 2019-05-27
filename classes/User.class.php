@@ -3,7 +3,7 @@
     public function login($mail, $pass){
       try{
           $conn = Db::getInstance();
-          $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
+          $statement = $conn->prepare("SELECT * FROM users WHERE email = :email && active = 1");
           $statement->bindParam(":email", $mail);
           $statement->execute();
           $user = $statement->fetch(PDO::FETCH_ASSOC);
@@ -11,8 +11,7 @@
           if(password_verify($pass, $user['password'])){
             $_SESSION["id"] = $user["id"];
             return true;
-          }
-          else{
+          }else{
               return false;
           }
       }
@@ -21,21 +20,39 @@
       }
     }
 
-    public function profilePicture($id){
+    public function checkMail($mail){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT img FROM users WHERE id = $id");
+      $statement = $conn->prepare("SELECT * FROM users WHERE email = :email && active = 1");
+      $statement->bindParam(":email", $mail);
       $statement->execute();
-      $user = $statement->fetch(PDO::FETCH_ASSOC);
-
-      return $user["img"];
+      $statement->fetch(PDO::FETCH_ASSOC);
+      return $statement->rowCount();
     }
 
-    public function name($id){
+    public function register($firstname, $lastname, $email, $password){
+      try{
+        date_default_timezone_set("Europe/Brussels");
+        $timestamp = date('Y-m-d H:i:s');
+
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("INSERT INTO users (firstname, lastname, email, password, role_id, organisation_id, timestamp, active) VALUES (:firstname, :lastname, :email, :password, 1, 1, '$timestamp', 1)");
+        $statement->bindParam(":firstname", $firstname);
+        $statement->bindParam(":lastname", $lastname);
+        $statement->bindParam(":email", $email);
+        $statement->bindParam(":password", $password);
+        $result = $statement->execute();
+        return $result;
+      }catch(Throwable $t){
+        return false;
+      }
+    }
+
+    public function getUserData($id){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT firstname, lastname FROM users WHERE id = $id");
+      $statement = $conn->prepare("SELECT * FROM users WHERE id = $id");
       $statement->execute();
       $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-      return $user["firstname"] . " " . $user["lastname"];
+      return $user;
     }
   }

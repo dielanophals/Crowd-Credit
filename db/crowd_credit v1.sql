@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 01 mei 2019 om 19:09
+-- Gegenereerd op: 02 mei 2019 om 22:40
 -- Serverversie: 10.1.38-MariaDB
 -- PHP-versie: 7.3.3
 
@@ -122,9 +122,12 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`id`, `active`, `name`, `wallet_id`, `location`, `organisation_id`, `date_created`, `date_start`, `date_end`, `banner`, `description`, `feed_id`, `goal`) VALUES
-(2, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
+(2, 1, 'Yaya', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
 (3, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
-(4, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350);
+(4, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
+(5, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
+(6, 1, 'Touraya Mbali', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350),
+(7, 1, 'Kolo', 5, 'Africa', 2, '2019-04-24', '2019-04-25', '2019-05-25', 'https://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg', 'I like turtles', NULL, 350);
 
 -- --------------------------------------------------------
 
@@ -330,7 +333,7 @@ ALTER TABLE `organisations`
 -- AUTO_INCREMENT voor een tabel `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT voor een tabel `projects_genres`

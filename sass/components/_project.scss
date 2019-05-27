@@ -20,3 +20,161 @@
         }
     }
 }
+	
+.main_project{
+  margin-top:30px;
+  
+  .banner_wrapper{
+      width:70%;
+      height:450px;
+      overflow: hidden;
+      border-radius: $radius;
+      display: inline-block;
+      box-sizing: border-box;
+  }
+
+  .project_information{
+      width:30%;
+      float:right;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
+      padding:20px;
+      position: relative;
+      height:450px;
+
+      h3{
+          margin-bottom:10px;
+      }
+
+      h5{
+          margin-top:30px;
+          margin-bottom:10px;
+      }
+
+      .bar{
+        width:180px;
+        background:$lightgrey;
+        height:6px;
+        border-radius:3px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
+
+        .progress{
+          height:100%;
+          background: $darkred;
+        }
+      }
+
+      .btn{
+        margin-top:20px;
+      }
+  }
+}
+
+.about_project, .project_feed{
+  width:48%;
+  float:left;
+  margin-top:40px;
+}
+
+.about_project{
+  h3{
+    margin-bottom:20px;
+  }
+}
+
+.project_feed{
+  float:right;
+  text-align: center;
+
+  h3{
+    margin-bottom:20px;
+    text-align: left;
+  }
+
+  .feed_block{
+    box-shadow: $shadow;
+    border-radius: $radius;
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+    padding:10px;
+    text-align: left;
+
+    .feed_image_wrapper{
+      width:120px;
+      height:80px;
+      float:left;
+      border-radius:5px;
+      margin-right:10px;
+      overflow:hidden;
+
+      .feed_image{
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+
+  .btn{
+    margin-bottom:20px;
+  }
+}
+
+.popup{
+  width:100%;
+  height:100vh;
+  background: rgba(255,255,255, 0.75);
+  position: fixed;
+  z-index:1;
+  text-align: center;
+
+  .fund{
+    width:400px;
+    background:$white;
+    box-shadow: $shadow;
+    border-radius: $radius;
+    padding: 30px;
+    box-sizing: border-box;
+
+    h4, h5{
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    h5{
+      margin-top:30px;
+      margin-bottom: 10px;
+    }
+
+    form{
+      padding:0;
+      text-align: center;
+      font-family: $roboto;
+      text-align: left;
+
+      p{
+        display: inline;
+      }
+
+      input{
+        text-align: center;
+      }
+
+      input[type="submit"]{
+        margin-top:30px;
+      }
+
+      .darkgrey_btn{
+        font-size: 16px;
+        padding: 15px 15px !important;
+        width:100%;
+        box-sizing: border-box;
+        text-align:center;
+        font-family: $nunito;
+      }
+    }
+  }
+}

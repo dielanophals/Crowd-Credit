@@ -1,35 +1,122 @@
 header{
-    background:white;
-    width:100%;
-    margin:0;
-    display: inline-block;
-    nav{
-        float:right;
-        padding:20px;
-        a{
-          color: $grey_dark;
-          text-decoration: none;
-        }
-        ul{
-            display: inline-block;
-            li{
-                display: inline-block;
-            }
-        }
-        .nav_profile{
-            display: inline-block;
-            position: relative;
-            .nav_profile_img{
-                display: inline-block;
-                width:40px;
-                height:40px;
-                border-radius: 50%;
-                overflow: hidden;
-                position: relative;
-                img{
-                  width:inherit;
-                }
-            }
-        }
+  background: $white;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .logo{
+    height:20px;
+    margin-left:40px;
+  }
+}
+
+nav{
+  justify-content: flex-end;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  float:right;
+
+  ul{
+    margin-right: 20px;
+
+    li{
+      display: inline-block;
+
+      a{
+        margin: 0 20px;
+        color: $darkgrey;
+
+      }
+      a:hover{
+        color: $darkred;
+      }
     }
+  }
+
+  .nav_line{
+    margin-right:40px;
+  }
+
+  a{
+    color:$darkgrey;
+    text-decoration: none;
+    font-size:16px;
+  }
+
+  .nav_profile{
+    position: relative;
+
+    a{
+      display: flex;
+      align-items: center;
+
+      p{
+        display: inline-block;
+        margin-left: 10px;
+        color: $darkgrey;
+        margin-bottom:0;
+      }
+    }
+
+    .nav_profile_img{
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+
+      img{
+        width: inherit;
+      }
+    }
+
+    .nav_profile_dropdown{
+      position: absolute;
+      width: 200px;
+      background: $lightgrey;
+      top: 60px;
+      right: -25px;
+      box-sizing: border-box;
+      padding: 15px;
+      z-index: 2;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+      .wallet{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        h4{
+          display: inline-block;
+          margin-left: 8px;
+          margin-top: 3px;
+        }
+
+        img{
+          width: 26px;
+        }
+      }
+
+      ul{
+        width: 100%;
+        text-align: center;
+
+        li{
+          margin: 10px;
+        }
+
+        .logout{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
 }

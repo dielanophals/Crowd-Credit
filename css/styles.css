@@ -1,2 +1,40 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700");html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}header{background:white;width:100%;margin:0;display:inline-block}header nav{float:right;padding:20px}header nav a{color:#333;text-decoration:none}header nav ul{display:inline-block}header nav ul li{display:inline-block}header nav .nav_profile{display:inline-block;position:relative}header nav .nav_profile .nav_profile_img{display:inline-block;width:40px;height:40px;border-radius:50%;overflow:hidden;position:relative}header nav .nav_profile .nav_profile_img img{width:inherit}.banner_image{width:100%;height:600px;background:url("../images/banner.jpg");background-size:cover;background-position:center -250px;color:#fff;text-align:center;position:relative;line-height:1.4}.info{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:100%}.info a{margin-top:25px}.project_tiles{display:flex;justify-content:space-between}.project_tiles .project_tile{width:31%;border-radius:5px;overflow:hidden;-webkit-box-shadow:0px 0px 10px 0px rgba(51,51,51,0.23);-moz-box-shadow:0px 0px 10px 0px rgba(51,51,51,0.23);box-shadow:0px 0px 10px 0px rgba(51,51,51,0.23);text-align:center;line-height:1.6;margin-top:60px}.project_tiles .project_tile .project_banner{width:100%;height:200px}.project_tiles .project_tile .project_info{padding:20px 0}.container{width:1024px;margin:auto}h1,h2,h3,h4,h5,h6{font-family:'Nunito', sans-serif}h1{font-size:100px}h2{font-size:26px;font-weight:600}h3{font-size:20px}p,a{font-family:'Nunito', sans-serif;font-weight:400}.lightgrey{color:#F2F2F2}.btn{padding:10px 20px;border-radius:5px;text-decoration:none;display:inline-block;margin-top:10px}.red_btn{background:#F2494C;color:white;transition:all 0.3s;-webkit-transition-property:background-color;-o-transition-property:background-color;transition-property:background-color}.red_btn:hover{background:#f55}
-/*# sourceMappingURL=styles.css.map */
+/*
+Error: Invalid CSS after "@import ": expected "{", was "url('https://fo..."
+        on line 4 of C:\xampp\htdocs\websites\0 GitHub\Crowd-Credit\sass\styles.scss
+
+1: @import 'variables';
+2: <<<<<<< HEAD
+3: =======
+4: @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
+5: >>>>>>> master
+6: @import 'components/reset';
+7: @import 'components/header';
+8: @import 'components/form';
+9: @import 'components/index';
+
+Backtrace:
+C:\xampp\htdocs\websites\0 GitHub\Crowd-Credit\sass\styles.scss:4
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"@import \": expected \"{\", was \"url('https://fo...\"\A         on line 4 of C:\xampp\htdocs\websites\0 GitHub\Crowd-Credit\sass\styles.scss\A \A 1: @import 'variables';\A 2: <<<<<<< HEAD\A 3: =======\A 4: @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');\A 5: >>>>>>> master\A 6: @import 'components/reset';\A 7: @import 'components/header';\A 8: @import 'components/form';\A 9: @import 'components/index';"; }
