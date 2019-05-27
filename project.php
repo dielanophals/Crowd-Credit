@@ -12,10 +12,6 @@
   }else{
     header("Location: index.php");
   }
-
-  if(!empty($_POST)){
-    //$project = $pro->insertFund($project_id, $_SESSION['id'], $_POST['value']);
-  }
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <?php require_once("inc/head.php"); ?>
@@ -43,12 +39,12 @@
     endif;
   ?>
     <?php require_once("inc/header.php"); ?>
-    <main class="main_project">
+    <main class="main_detail">
     <div class="container">
       <div class="banner_wrapper">
         <div class="banner_image" style="background:url(<?php echo $project['banner']; ?>); background-size:cover; background-position:center;"></div>
       </div>
-      <section class="project_information">
+      <section class="detail_information">
         <div class="center">
           <h3 class="red"><?php echo $project['name']; ?></h3>
           <h4><?php echo $location['continent']; ?></h4>

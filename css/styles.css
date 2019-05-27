@@ -514,10 +514,10 @@ form .error_message {
   padding: 20px 0;
 }
 
-.main_project {
+.main_detail {
   margin-top: 30px;
 }
-.main_project .banner_wrapper {
+.main_detail .banner_wrapper {
   width: 70%;
   height: 450px;
   overflow: hidden;
@@ -525,7 +525,7 @@ form .error_message {
   display: inline-block;
   box-sizing: border-box;
 }
-.main_project .project_information {
+.main_detail .detail_information {
   width: 30%;
   float: right;
   display: inline-block;
@@ -535,14 +535,14 @@ form .error_message {
   position: relative;
   height: 450px;
 }
-.main_project .project_information h3 {
+.main_detail .detail_information h3 {
   margin-bottom: 10px;
 }
-.main_project .project_information h5 {
+.main_detail .detail_information h5 {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.main_project .project_information .bar {
+.main_detail .detail_information .bar {
   width: 180px;
   background: #F2F2F2;
   height: 6px;
@@ -551,11 +551,11 @@ form .error_message {
   margin-bottom: 10px;
   overflow: hidden;
 }
-.main_project .project_information .bar .progress {
+.main_detail .detail_information .bar .progress {
   height: 100%;
   background: #F2494C;
 }
-.main_project .project_information .btn {
+.main_detail .detail_information .btn {
   margin-top: 20px;
 }
 
