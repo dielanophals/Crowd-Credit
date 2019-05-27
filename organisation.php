@@ -24,11 +24,10 @@
         <div class="center">
           <h3 class="red"><?php echo $organisation['name']; ?></h3>
           <h5 class="lightgrey">Active since</h5>
-          <?php
-            $dateProvided="1979-06-13";
-            $yearOnly = substr($organisation['timestamp'], 0, 4);
-          ?>
-          <h4><?php echo  $yearOnly; ?></h4>
+          <?php $year = substr($organisation['timestamp'], 0, 4); ?>
+          <h4><?php echo $year; ?></h4>
+          <h5 class="lightgrey">Active projects</h5>
+          <h4><?php echo Project::getTotalProjects("", "organisation_id = $organisation_id &&"); ?></h4>
         </div>
       </section>
     </div>
