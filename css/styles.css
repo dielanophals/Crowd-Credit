@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,11 +54,14 @@ table {
   border-spacing: 0;
 }
 
-body {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+::-moz-selection {
+  color: #fff;
+  background: #F2494C;
+}
+
+::selection {
+  color: #fff;
+  background: #F2494C;
 }
 
 .container {
@@ -76,21 +80,25 @@ body {
 
 .red_btn {
   background: #F2494C;
-  color: white;
+  color: #fff;
 }
 
 .grey_btn {
   background: #ADADAD;
-  color: white;
+  color: #fff;
 }
 
 .darkgrey_btn {
   background: #333;
-  color: white;
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 100px;
 }
 
 h1 {
@@ -114,8 +122,33 @@ h5 {
 }
 
 p, a {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+.lightgrey {
+  color: #F2F2F2;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.red_btn {
+  background: #F2494C;
   font-family: "Roboto", sans-serif;
-  color: #333;
+  color: #fff;
+  transition: all 0.3s;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+}
+.red_btn:hover {
+  background: #FF5555;
 }
 
 p {
@@ -155,13 +188,14 @@ header {
   background: #fff;
   width: 100%;
   margin: 0;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 header .logo {
   height: 20px;
   margin-left: 40px;
-  margin-top: 28px;
 }
 
 nav {
@@ -372,6 +406,7 @@ form .error_message {
   align-items: center;
   min-width: 131px;
   padding: 5px 0px;
+  margin: 0;
 }
 .main_home .filter .dropdown p label {
   margin-left: 5px;
@@ -635,6 +670,25 @@ form .error_message {
     margin: 0 5%;
   }
 
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+  header .logo {
+    height: 15px;
+    margin-left: 5%;
+  }
   header nav {
     display: none;
   }
@@ -648,22 +702,33 @@ form .error_message {
     margin: 0 5%;
     font-size: 20px;
   }
-  #page_index .search_filters div {
+  #page_index main {
+    margin-top: 40px;
+  }
+  #page_index main .search_filters .filter {
     display: none;
   }
-  #page_index .search_filters form input {
+  #page_index main .search_filters form {
+    position: inherit;
+  }
+  #page_index main .search_filters form input {
     width: 100%;
   }
-  #page_index .container {
+  #page_index main .container {
     width: 90%;
-    margin: 0 5%;
   }
-  #page_index .container .project_tile {
+  #page_index main .container .project_tile {
     width: 47.5%;
     float: left;
+    margin: 15px 0 0 0;
   }
-  #page_index .container .project_tile:nth-child(even) {
-    margin: 35px 0 0 5%;
+  #page_index main .container .project_tile:nth-child(even) {
+    margin: 15px 0 0 5%;
+  }
+
+  .project_pages {
+    width: 90%;
+    margin: 15px 5%;
   }
 }
 

@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
-@import 'components/reset';
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import 'variables';
+@import 'components/reset';
 
-body{
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+::-moz-selection {
+  color: $white;
+  background: $darkred;
+}
+
+::selection {
+  color: $white; 
+  background: $darkred;
 }
 
 .container{
@@ -25,21 +29,25 @@ body{
 
 .red_btn{
   background: $darkred;
-  color: white;
+  color: $white;
 }
 
 .grey_btn{
   background: $grey;
-  color: white;
+  color: $white;
 }
 
 .darkgrey_btn{
   background: $darkgrey;
-  color: white;
+  color: $white;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: $nunito;
+}
+
+h1{
+  font-size: 100px;
 }
 
 h1{
@@ -63,8 +71,33 @@ h5{
 }
 
 p, a{
-  font-family: $roboto;
-  color: $darkgrey;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+.lightgrey{
+  color: $lightgrey;
+}
+
+.btn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display:inline-block;
+  margin-top: 10px;
+}
+
+.red_btn{
+    background: $darkred;
+    font-family: $roboto;
+  	color: $white;
+    transition: $hover;
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    &:hover{
+        background: $lightred;
+    }
 }
 
 p{
@@ -107,4 +140,4 @@ p{
 @import 'components/projects';
 @import 'components/project';
 @import 'components/about';
-@import 'components/mediaqueries';
+@import 'components/mediaqueries'; 
