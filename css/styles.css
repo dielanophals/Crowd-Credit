@@ -650,7 +650,8 @@ form .error_message {
 }
 
 .main_about {
-  margin-top: 30px;
+  overflow: hidden;
+  margin: 100px 0 0 0;
 }
 .main_about h3 {
   margin-bottom: 20px;

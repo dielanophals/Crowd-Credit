@@ -11,7 +11,7 @@
 } ?> href="index.php">Home</a></li>
       <li><a <?php if ($page == 'organisations.php') {
     echo' class="red"';
-} ?> href="#">Organisations</a></li>
+} ?> href="organisations.php">Organisations</a></li>
       <li><a <?php if ($page == 'about.php') {
     echo' class="red"';
 } ?> href="about.php">About us</a></li>
@@ -38,7 +38,7 @@
         </a>
         <div id="profile_dropdown" class="nav_profile_dropdown hide">
           <div id="wallet" class="wallet">
-            <img id="credit_card" src="icons/credit_card.png" alt="Credit card">
+            <img id="credit_card" src="sign/credit_card.png" alt="Credit card">
             <h4 id="wallet_data">€ <?php echo $userData['wallet']; ?></h4>
           </div>
           <ul id="wallet_ul">
