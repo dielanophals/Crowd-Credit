@@ -5,11 +5,16 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  box-shadow: $shadow;
   .logo{
     height:20px;
     margin-left:40px;
+  }
+  .menu{
+    display: none;
   }
 }
 
