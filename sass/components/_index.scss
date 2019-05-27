@@ -15,11 +15,8 @@
 }
 
 .info{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width:100%;
+  width: 100%;
+
   .btn{
     margin-top: 25px;
   }
@@ -77,7 +74,6 @@
         align-items:center;
         min-width: 131px;
         padding: 5px 0px;
-        margin:0;
 
         label{
           margin-left:5px;

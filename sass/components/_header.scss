@@ -2,14 +2,13 @@ header{
   background: $white;
   width: 100%;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: inline-block;
   position: relative;
 
   .logo{
     height:20px;
     margin-left:40px;
+    margin-top:28px;
   }
 }
 

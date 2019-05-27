@@ -3,7 +3,7 @@
   $link_array = explode('/',$link);
   $page = end($link_array);
 ?><header>
-  	<img class="logo" src="sign/logo.png" alt="Crowd Credit Logo">
+  	<img class="logo" src="icons/logo.png" alt="Crowd Credit Logo">
   <nav>
     <ul>
       <li><a <?php if($page == 'index.php'){ echo' class="red"'; } ?> href="index.php">Home</a></li>
@@ -33,7 +33,7 @@
         </a>
         <div id="profile_dropdown" class="nav_profile_dropdown hide">
           <div id="wallet" class="wallet">
-            <img id="credit_card" src="sign/credit_card.png" alt="Credit card">
+            <img id="credit_card" src="icons/credit_card.png" alt="Credit card">
             <h4 id="wallet_data">€ <?php echo $userData['wallet']; ?></h4>
           </div>
           <ul id="wallet_ul">

@@ -1,22 +1,12 @@
-@import 'variables';
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
 @import 'components/reset';
-@import 'components/header';
-@import 'components/form';
-@import 'components/index';
-@import 'components/projects_pages';
-@import 'components/projects';
-@import 'components/project';
-@import 'components/about';
+@import 'variables';
 
-::-moz-selection { /* Code for Firefox */
-  color: $white;
-  background: $darkred;
-}
-
-::selection {
-  color: $white; 
-  background: $darkred;
+body{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 
 .container{
@@ -35,25 +25,21 @@
 
 .red_btn{
   background: $darkred;
-  color: $white;
+  color: white;
 }
 
 .grey_btn{
   background: $grey;
-  color: $white;
+  color: white;
 }
 
 .darkgrey_btn{
   background: $darkgrey;
-  color: $white;
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: $nunito;
-}
-
-h1{
-  font-size: 100px;
 }
 
 h1{
@@ -77,33 +63,8 @@ h5{
 }
 
 p, a{
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-}
-
-.lightgrey{
-  color: $grey_light;
-}
-
-.btn{
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display:inline-block;
-  margin-top: 10px;
-}
-
-.red_btn{
-    background: $red_dark;
-    font-family: $roboto;
-  	color: $white;
-    transition: $transition;
-    -webkit-transition-property: background-color;
-    -o-transition-property: background-color;
-    transition-property: background-color;
-    &:hover{
-        background: $red_light;
-    }
+  font-family: $roboto;
+  color: $darkgrey;
 }
 
 p{
@@ -138,3 +99,12 @@ p{
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@import 'components/header';
+@import 'components/form';
+@import 'components/index';
+@import 'components/projects_pages';
+@import 'components/projects';
+@import 'components/project';
+@import 'components/about';
+@import 'components/mediaqueries';

@@ -32,16 +32,8 @@
 
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Crowd Credit</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
-    <script src="js/dropdowns.js"></script>
-    <script src="js/projects.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
+  <?php require_once("inc/head.php"); ?>
+  <body id="page_index">
     <?php require_once("inc/header.php"); ?>
     <section class="banner_image">
       <div class="info center">
@@ -54,7 +46,7 @@
       <h2 class="grey">Projects</h2>
       <div class="container search_filters">
         <div class="filter">
-          <a href="#" class="filter_dropdown_btn" id="continent">Continent <img src="sign/arrow-grey.png" id="dropdown_arrow_continent" alt="options"></a>
+          <a href="#" class="filter_dropdown_btn" id="continent">Continent <img src="icons/arrow-grey.svg" id="dropdown_arrow_continent" alt="options"></a>
           <div id="continents" class="dropdown hide">
               <?php foreach($project->getContinents() as $co): ?>
                 <p id="continent<?php $co['id']; ?>"><input class="check_continent" data-continent="<?php echo $co['id']; ?>" type="checkbox" name="continent" value="<?php echo $co['id']; ?>" id="<?php echo $co['continent']; ?>"><label class="check_continent" data-continent="<?php echo $co['id']; ?>" id="con<?php $co['id']; ?>" for="<?php echo $co['continent']; ?>"><?php echo $co['continent']; ?></label></p>
@@ -62,7 +54,7 @@
           </div>
         </div>
         <div class="filter">
-          <a href="#" class="filter_dropdown_btn" id="category">Category <img src="sign/arrow-grey.png" id="dropdown_arrow_category" alt="options"></a>
+          <a href="#" class="filter_dropdown_btn" id="category">Category <img src="icons/arrow-grey.svg" id="dropdown_arrow_category" alt="options"></a>
           <div id="categories" class="dropdown hide">
             <?php foreach($project->getCategories() as $ca): ?>
               <p id="category<?php echo $ca['id']; ?>"><input class="check_category" data-category="<?php echo $ca['id']; ?>" type="checkbox" name="category" value="<?php echo $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label class="check_category" data-category="<?php echo $ca['id']; ?>" id="cat<?php echo $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
@@ -98,9 +90,9 @@
 
             if($total >= 2 && $current_page != 1){
               $back = $current_page - 1;
-              echo "<a class='number_page arrow back' href='?page=$back' data-page='$back'><img src=\"sign/arrow-white.png\" class=\"arrow-back\"></a>";
+              echo "<a class='number_page arrow back' href='?page=$back' data-page='$back'><img src=\"icons/arrow-white.svg\" class=\"arrow-back\"></a>";
             }else{
-                echo "<a class='number_page arrow back invisible' href='?page=#' data-page='#'><img src=\"sign/arrow-white.png\" class=\"arrow-back\"></a>";
+                echo "<a class='number_page arrow back invisible' href='?page=#' data-page='#'><img src=\"icons/arrow-white.svg\" class=\"arrow-back\"></a>";
             }
 
             if($total_projects >= 10){
@@ -116,9 +108,9 @@
 
             if($total >= $current_page){
               $next = $current_page + 1;
-              echo "<a class='number_page arrow next' href='?page=$next' data-page='$next'><img src=\"sign/arrow-white.png\" class=\"arrow-next\"></a>";
+              echo "<a class='number_page arrow next' href='?page=$next' data-page='$next'><img src=\"icons/arrow-white.svg\" class=\"arrow-next\"></a>";
             }else{
-                echo "<a class='number_page arrow next invisible' href='?page=#' data-page='#'><img src=\"sign/arrow-white.png\" class=\"arrow-next\"></a>";
+                echo "<a class='number_page arrow next invisible' href='?page=#' data-page='#'><img src=\"icons/arrow-white.svg\" class=\"arrow-next\"></a>";
             }
           ?>
         </div>

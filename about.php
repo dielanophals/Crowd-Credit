@@ -4,14 +4,7 @@
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Crowd Credit</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
-    <script src="js/dropdowns.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+  <?php require_once("inc/head.php"); ?>
   <body>
   <?php require_once("inc/header.php"); ?>
   <main class="main_about">
