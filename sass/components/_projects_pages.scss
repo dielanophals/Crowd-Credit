@@ -3,9 +3,10 @@
     margin: 30px 34.5% 60px 34.5%;
     a{
         padding: 12px 14px;
+		color: $darkgrey;
         font-size: 16px;
-        text-decoration: none;
         font-family: $nunito;
+		text-decoration: none;
         border-radius: 50%;
         display: inline-block;
         transition: $hover;
