@@ -32,22 +32,16 @@
 
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Crowd Credit</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
-    <script src="js/dropdowns.js"></script>
-    <script src="js/projects.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
+  <?php require_once("inc/head.php"); ?>
+  <body id="page_index">
     <?php require_once("inc/header.php"); ?>
     <section class="banner_image">
-      <div class="info center">
-        <h1>Crowdfund a dream</h1>
-        <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance</p>
-        <a class="btn red_btn" href="#">View projects</a>
+      <div class="overlay">
+        <div class="info center">
+          <h1>Crowdfund a dream</h1>
+          <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance</p>
+          <a class="btn red_btn" href="#">View projects</a>
+        </div>
       </div>
     </section>
     <main class="main_home">

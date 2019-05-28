@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,6 +54,141 @@ table {
   border-spacing: 0;
 }
 
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #F2494C;
+}
+
+::selection {
+  color: #fff;
+  background: #F2494C;
+}
+
+.container {
+  width: 1024px;
+  margin: auto;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.red_btn {
+  background: #F2494C;
+  color: #fff;
+}
+
+.grey_btn {
+  background: #ADADAD;
+  color: #fff;
+}
+
+.darkgrey_btn {
+  background: #333;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+p, a {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+.lightgrey {
+  color: #F2F2F2;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.red_btn {
+  background: #F2494C;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  transition: all 0.3s;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+}
+.red_btn:hover {
+  background: #FF5555;
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.red {
+  color: #F2494C;
+}
+
+.grey {
+  color: #333;
+}
+
+.lightgrey {
+  color: #ADADAD;
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 header {
   background: #fff;
   width: 100%;
@@ -60,11 +196,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
 }
 header .logo {
   height: 20px;
   margin-left: 40px;
+}
+header .menu {
+  display: none;
 }
 
 nav {
@@ -216,6 +358,11 @@ form .error_message {
   position: relative;
   line-height: 1.4;
 }
+.banner_image .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.2);
+}
 .banner_image p {
   color: white;
 }
@@ -249,6 +396,7 @@ form .error_message {
   padding: 10px 20px;
 }
 .main_home .filter a {
+  color: #333;
   text-decoration: none;
 }
 .main_home .filter a img {
@@ -302,9 +450,10 @@ form .error_message {
 }
 .project_pages a {
   padding: 12px 14px;
+  color: #333;
   font-size: 16px;
-  text-decoration: none;
   font-family: "Nunito", sans-serif;
+  text-decoration: none;
   border-radius: 50%;
   display: inline-block;
   transition: all 0.3s;
@@ -362,6 +511,7 @@ form .error_message {
   text-align: center;
   line-height: 1.6;
   margin-top: 35px;
+  max-height: 368px;
 }
 .project_tiles .project_tile:nth-child(3n+2) {
   margin-left: 3.5%;
@@ -375,10 +525,10 @@ form .error_message {
   padding: 20px 0;
 }
 
-.main_project {
+.main_detail {
   margin-top: 30px;
 }
-.main_project .banner_wrapper {
+.main_detail .banner_wrapper {
   width: 70%;
   height: 450px;
   overflow: hidden;
@@ -386,7 +536,7 @@ form .error_message {
   display: inline-block;
   box-sizing: border-box;
 }
-.main_project .project_information {
+.main_detail .detail_information {
   width: 30%;
   float: right;
   display: inline-block;
@@ -396,14 +546,14 @@ form .error_message {
   position: relative;
   height: 450px;
 }
-.main_project .project_information h3 {
+.main_detail .detail_information h3 {
   margin-bottom: 10px;
 }
-.main_project .project_information h5 {
+.main_detail .detail_information h5 {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.main_project .project_information .bar {
+.main_detail .detail_information .bar {
   width: 180px;
   background: #F2F2F2;
   height: 6px;
@@ -412,11 +562,11 @@ form .error_message {
   margin-bottom: 10px;
   overflow: hidden;
 }
-.main_project .project_information .bar .progress {
+.main_detail .detail_information .bar .progress {
   height: 100%;
   background: #F2494C;
 }
-.main_project .project_information .btn {
+.main_detail .detail_information .btn {
   margin-top: 20px;
 }
 
@@ -512,7 +662,8 @@ form .error_message {
 }
 
 .main_about {
-  margin-top: 30px;
+  overflow: hidden;
+  margin: 100px 0 0 0;
 }
 .main_about h3 {
   margin-bottom: 20px;
@@ -532,106 +683,114 @@ form .error_message {
   width: 100%;
 }
 
-::-moz-selection {
-  /* Code for Firefox */
-  color: #fff;
-  background: #F2494C;
+.main_organisations {
+  display: flex;
+  justify-content: space-between;
 }
-
-::selection {
-  color: #fff;
-  background: #F2494C;
-}
-
-.container {
-  width: 1024px;
-  margin: auto;
-  max-width: 100%;
-}
-
-.btn {
-  padding: 10px 20px;
+.main_organisations .organisation_tile {
+  width: 49%;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
   border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.main_organisations .organisation_tile .image_wrapper {
+  height: 200px;
+  width: 100%;
+}
+.main_organisations .organisation_tile .image_wrapper .image {
+  width: 100%;
+  height: 100%;
+}
+.main_organisations .organisation_tile article {
+  padding: 30px;
 }
 
-.red_btn {
-  background: #F2494C;
-  color: #fff;
+.about_organisation {
+  text-align: center;
+  margin-top: 60px;
+  width: 100%;
+}
+.about_organisation p {
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
 
-.grey_btn {
-  background: #ADADAD;
-  color: #fff;
-}
+@media only screen and (max-width: 950px) {
+  h1 {
+    font-size: 40px;
+    max-width: 90%;
+    margin: 0 5%;
+  }
 
-.darkgrey_btn {
-  background: #333;
-  color: #fff;
-}
+  h2 {
+    font-size: 30px;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Nunito", sans-serif;
-}
+  h3 {
+    font-size: 18px;
+  }
 
-h1 {
-  font-size: 100px;
-}
+  h4 {
+    font-size: 12px;
+  }
 
-h2 {
-  font-size: 56px;
-}
+  header {
+    padding: 15px 0;
+  }
+  header .logo {
+    height: 15px;
+    margin-left: 5%;
+  }
+  header .menu {
+    height: 15px;
+    margin-right: 5%;
+    float: right;
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
 
-h3 {
-  font-size: 26px;
-}
+  form {
+    width: 90%;
+  }
 
-h4 {
-  font-size: 20px;
-}
+  #page_index .info p {
+    max-width: 90%;
+    margin: 0 5%;
+    font-size: 20px;
+  }
+  #page_index main {
+    margin-top: 40px;
+  }
+  #page_index main .search_filters .filter {
+    display: none;
+  }
+  #page_index main .search_filters form {
+    position: inherit;
+  }
+  #page_index main .search_filters form input {
+    width: 100%;
+  }
+  #page_index main .container {
+    width: 90%;
+  }
+  #page_index main .container .project_tile {
+    width: 47.5%;
+    float: left;
+    margin: 15px 0 0 0;
+  }
+  #page_index main .container .project_tile:nth-child(even) {
+    margin: 15px 0 0 5%;
+  }
 
-h5 {
-  font-size: 16px;
-}
-
-p, a {
-  font-family: "Roboto", sans-serif;
-  color: #333;
-}
-
-p {
-  line-height: 1.4;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.red {
-  color: #F2494C;
-}
-
-.grey {
-  color: #333;
-}
-
-.lightgrey {
-  color: #ADADAD;
-}
-
-.hide {
-  display: none;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  .project_pages {
+    width: 90%;
+    margin: 15px 5%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

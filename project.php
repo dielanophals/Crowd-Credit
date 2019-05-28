@@ -12,21 +12,9 @@
   }else{
     header("Location: index.php");
   }
-
-  if(!empty($_POST)){
-    //$project = $pro->insertFund($project_id, $_SESSION['id'], $_POST['value']);
-  }
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Crowd Credit</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto" rel="stylesheet">
-    <script src="js/dropdowns.js"></script>
-    <script src="js/projects.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+  <?php require_once("inc/head.php"); ?>
   <body>
   <?php
     if(isset($_GET['fund']) && $_GET['fund'] == true):
@@ -38,7 +26,7 @@
         <h3 class="red"><?php echo $project['name'] ?></h3>
         <h5 class="lightgrey">Amount</h5>
         <form action="#" method="post">
-          <input type="number" name="value" id="amount" value="100" min="10">
+          <input type="number" name="value" id="amount" value="100">
           <h5 class="lightgrey">Terms</h5>
           <input type="checkbox" id="accept">
           <p class="terms"><label for="accept">I know & understand the <a href="#">risks</a> of funding this project</label></p>
@@ -51,12 +39,12 @@
     endif;
   ?>
     <?php require_once("inc/header.php"); ?>
-    <main class="main_project">
+    <main class="main_detail">
     <div class="container">
       <div class="banner_wrapper">
         <div class="banner_image" style="background:url(<?php echo $project['banner']; ?>); background-size:cover; background-position:center;"></div>
       </div>
-      <section class="project_information">
+      <section class="detail_information">
         <div class="center">
           <h3 class="red"><?php echo $project['name']; ?></h3>
           <h4><?php echo $location['continent']; ?></h4>
