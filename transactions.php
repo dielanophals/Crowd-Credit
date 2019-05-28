@@ -8,7 +8,9 @@
   <body>
   <?php require_once("inc/header.php"); ?>
   <main>
-    <div class="container">
+    <div class="container transactions">
+      <h3 class="transaction_wallet">Wallet total: €<?php echo $userData['wallet']; ?></h3>
+      <a href="#" class="red add_money">+ Add money</a>
       <div class="transaction_title">
         <h5>Project</h5>
         <h5>Amount</h5>
