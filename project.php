@@ -26,7 +26,7 @@
         <h3 class="red"><?php echo $project['name'] ?></h3>
         <h5 class="lightgrey">Amount</h5>
         <form action="#" method="post">
-          <input type="number" name="value" id="amount" value="100">
+          <input type="number" name="value" id="amount" value="100" min="10">
           <h5 class="lightgrey">Terms</h5>
           <input type="checkbox" id="accept">
           <p class="terms"><label for="accept">I know & understand the <a href="#">risks</a> of funding this project</label></p>

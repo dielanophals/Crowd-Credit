@@ -9,8 +9,8 @@
     $user = new User;
     $data = $user->getUserData($_SESSION['id']);
     $wallet = $data['wallet'];
-    if($wallet < $amount || $amount <= 0){
-      echo "ahzo marcheer het ni he makker";
+    if($wallet < $amount || $amount <= 9){
+      echo "Please enter an amount of at least €10.";
     }else{
       $wallet -= $amount;
       $pro = new Project;

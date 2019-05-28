@@ -632,6 +632,7 @@ form .error_message {
   position: fixed;
   z-index: 1;
   text-align: center;
+  top: 0;
 }
 .popup .fund {
   width: 400px;
