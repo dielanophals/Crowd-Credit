@@ -90,11 +90,11 @@
             $total_projects = $project->getTotalProjects($search, $set_continent);
             $total = $total_projects / 9;
 
-            if($total >= 2 && $current_page != 1){
+            if($total > 1 && $current_page != 1){
               $back = $current_page - 1;
               echo "<a class='number_page arrow back' href='?page=$back' data-page='$back'><img src=\"sign/arrow-white.png\" class=\"arrow-back\"></a>";
             }else{
-                echo "<a class='number_page arrow back invisible' href='?page=#' data-page='#'><img src=\"sign/arrow-white.png\" class=\"arrow-back\"></a>";
+              echo "<a class='number_page arrow back invisible' href='?page=#' data-page='#'><img src=\"sign/arrow-white.png\" class=\"arrow-back\"></a>";
             }
 
             if($total_projects >= 10){
@@ -112,7 +112,7 @@
               $next = $current_page + 1;
               echo "<a class='number_page arrow next' href='?page=$next' data-page='$next'><img src=\"sign/arrow-white.png\" class=\"arrow-next\"></a>";
             }else{
-                echo "<a class='number_page arrow next invisible' href='?page=#' data-page='#'><img src=\"sign/arrow-white.png\" class=\"arrow-next\"></a>";
+              echo "<a class='number_page arrow next invisible' href='?page=#' data-page='#'><img src=\"sign/arrow-white.png\" class=\"arrow-next\"></a>";
             }
           ?>
         </div>
