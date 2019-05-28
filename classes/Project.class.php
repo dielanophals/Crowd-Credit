@@ -8,6 +8,14 @@
       return $project;
     }
 
+    public function getAllProjectsOrg($org){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM projects WHERE organisation_id = $org && active = 1 ORDER BY id ASC");
+      $statement->execute();
+      $project = $statement->fetchAll();
+      return $project;
+    }
+
     public function getTotalProjects($search, $continent){
       $conn = Db::getInstance();
       $statement = $conn->prepare("SELECT * FROM projects WHERE $continent active = 1 && name LIKE '%$search%'");

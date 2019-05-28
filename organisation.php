@@ -26,7 +26,7 @@
           <h5 class="lightgrey">Active since</h5>
           <?php $year = substr($organisation['timestamp'], 0, 4); ?>
           <h4><?php echo $year; ?></h4>
-          <h5 class="lightgrey">Active projects</h5>
+          <h5 class="lightgrey">Projects</h5>
           <h4><?php echo Project::getTotalProjects("", "organisation_id = $organisation_id &&"); ?></h4>
         </div>
       </section>
@@ -37,6 +37,22 @@
         <article class="about_organisation">
           <h3>About this organisation</h3>
           <p><?php echo $organisation['description']; ?></p>
+        </article>
+        <article>
+          <h3>Active projects</h3>
+            <?php
+              foreach(Project::getAllProjectsOrg($organisation_id) as $p):
+              $location = Project::getLocation($p['locations_id']);
+            ?>
+              <div class="project_tile">
+                <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
+                <article class="project_info">
+                  <h3><?php echo $p['name']; ?></h3>
+                  <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
+                  <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">View project</a>
+                </article>
+              </div>
+            <?php endforeach; ?>
         </article>
       </div>
     </section>
