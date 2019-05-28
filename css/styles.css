@@ -698,6 +698,16 @@ form .error_message {
   padding: 30px;
 }
 
+.about_organisation {
+  text-align: center;
+  margin-top: 60px;
+  width: 100%;
+}
+.about_organisation p {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
 @media only screen and (max-width: 950px) {
   h1 {
     font-size: 40px;
