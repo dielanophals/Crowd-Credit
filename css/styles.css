@@ -54,6 +54,11 @@ table {
   border-spacing: 0;
 }
 
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 ::-moz-selection {
   color: #fff;
   background: #F2494C;
