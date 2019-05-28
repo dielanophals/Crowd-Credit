@@ -37,24 +37,24 @@
         <article class="about_organisation">
           <h3>About this organisation</h3>
           <p><?php echo $organisation['description']; ?></p>
-        </article>
-        <article>
           <h3>Active projects</h3>
-            <?php
-              foreach(Project::getAllProjectsOrg($organisation_id) as $p):
-              $location = Project::getLocation($p['locations_id']);
-            ?>
-              <div class="project_tile">
-                <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
-                <article class="project_info">
-                  <h3><?php echo $p['name']; ?></h3>
-                  <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
-                  <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">View project</a>
-                </article>
-              </div>
-            <?php endforeach; ?>
         </article>
       </div>
+        <div class="project_tiles container">
+          <?php
+            foreach(Project::getAllProjectsOrg($organisation_id) as $p):
+            $location = Project::getLocation($p['locations_id']);
+          ?>
+            <div class="project_tile">
+              <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
+              <article class="project_info">
+                <h3><?php echo $p['name']; ?></h3>
+                <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
+                <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">View project</a>
+              </article>
+            </div>
+          <?php endforeach; ?>
+        </div>
     </section>
   </body>
 </html>
