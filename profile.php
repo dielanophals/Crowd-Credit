@@ -14,8 +14,8 @@
           <div class="profile_image" style="background: url(<?php echo $userData['image']; ?>); background-size:cover; background-position:center;"></div>
         </div>
         <h3 class="name"><?php echo $userData['firstname'] . ' ' . $userData['lastname']; ?></h3>
-        <a class="btn red_btn" href="#">My wallet</a>
-        <a class="btn grey_btn" href="#">Settings</a>
+        <a class="btn red_btn" href="transactions.php">My wallet</a>
+        <a class="btn grey_btn" href="settings.php">Settings</a>
         <h3 class="funded">Funded projects</h3>
       </section>
       <div class="project_tiles">
