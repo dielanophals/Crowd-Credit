@@ -37,7 +37,7 @@
           </div>
           <ul id="wallet_ul">
             <li id="li_projects"><a href="#">My projects</a></li>
-            <li id="li_transactions"><a href="#">Transactions</a></li>
+            <li id="li_transactions"><a href="transactions.php">Transactions</a></li>
             <li id="li_settings"><a href="settings.php">Settings</a></li>
             <li id="li_logout" class="logout"><a class="red" href="logout.php">Logout</a></li>
           </ul>
