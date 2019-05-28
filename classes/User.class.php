@@ -59,7 +59,7 @@
     public function getUserTransactions(){
       $id = $_SESSION['id'];
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM transactions WHERE user_id = $id");
+      $statement = $conn->prepare("SELECT DISTINCT * FROM transactions WHERE user_id = $id");
       $statement->execute();
       $transactions = $statement->fetchAll();
 

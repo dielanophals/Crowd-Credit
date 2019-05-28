@@ -252,16 +252,9 @@ nav .nav_profile a p {
   color: #333;
   margin-bottom: 0;
 }
-nav .nav_profile .nav_profile_img {
-  display: inline-block;
+nav .nav_profile .profile_image_wrapper {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
-nav .nav_profile .nav_profile_img img {
-  width: inherit;
 }
 nav .nav_profile .nav_profile_dropdown {
   position: absolute;
@@ -298,6 +291,19 @@ nav .nav_profile .nav_profile_dropdown ul li {
 }
 nav .nav_profile .nav_profile_dropdown ul .logout {
   margin-top: 30px;
+}
+
+.profile_image_wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.profile_image {
+  height: 100%;
+  width: 100%;
 }
 
 form {
@@ -687,6 +693,20 @@ form .error_message {
 }
 .main_about .about-form form {
   width: 100%;
+}
+
+.profile_information {
+  text-align: center;
+  margin-top: 140px;
+}
+.profile_information .name {
+  margin-top: 20px;
+}
+.profile_information a {
+  margin-top: 20px;
+}
+.profile_information .funded {
+  margin-top: 50px;
 }
 
 .main_organisations {

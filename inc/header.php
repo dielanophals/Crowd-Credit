@@ -22,12 +22,12 @@
           ?>
       <div class="nav_profile">
         <a id="profile" class="nav_profile_dropdown_btn" href="#">
-          <div class="nav_profile_img">
             <?php
               $user = new User();
           $userData = $user->getUserData($_SESSION['id']); ?>
-            <img id="profile_image" src="<?php echo $userData['image']; ?>">
-          </div>
+            <div class="profile_image_wrapper">
+              <div id="image" class="profile_image" style="background: url(<?php echo $userData['image']; ?>); background-size:cover; background-position:center;"></div>
+            </div>
           <p id="name"><?php echo $userData['firstname'].' '.$userData['lastname']; ?></p>
         </a>
         <div id="profile_dropdown" class="nav_profile_dropdown hide">
@@ -36,7 +36,7 @@
             <h4 id="wallet_data">€ <?php echo $userData['wallet']; ?></h4>
           </div>
           <ul id="wallet_ul">
-            <li id="li_projects"><a href="#">My projects</a></li>
+            <li id="li_projects"><a href="profile.php">My profile</a></li>
             <li id="li_transactions"><a href="transactions.php">Transactions</a></li>
             <li id="li_settings"><a href="settings.php">Settings</a></li>
             <li id="li_logout" class="logout"><a class="red" href="logout.php">Logout</a></li>
