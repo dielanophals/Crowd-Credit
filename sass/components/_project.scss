@@ -1,5 +1,5 @@
 .main_detail{
-  margin-top:30px;
+  margin-top:140px;
   
   .banner_wrapper{
       width:70%;
@@ -8,6 +8,11 @@
       border-radius: $radius;
       display: inline-block;
       box-sizing: border-box;
+
+      .banner_image{
+        width:100%;
+        height:100%;
+      }
   }
 
   .detail_information{

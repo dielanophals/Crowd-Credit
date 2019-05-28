@@ -200,6 +200,7 @@ header {
   top: 0;
   z-index: 5;
   box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
+  height: 80px;
 }
 header .logo {
   height: 20px;
@@ -347,7 +348,7 @@ form .error_message {
   margin-bottom: 25px;
 }
 
-.banner_image {
+.home_banner_image {
   width: 100%;
   height: 600px;
   background: url("../images/banner.jpg");
@@ -357,13 +358,14 @@ form .error_message {
   text-align: center;
   position: relative;
   line-height: 1.4;
+  margin-top: 80px;
 }
-.banner_image .overlay {
+.home_banner_image .overlay {
   width: 100%;
   height: 100%;
   background: rgba(51, 51, 51, 0.2);
 }
-.banner_image p {
+.home_banner_image p {
   color: white;
 }
 
@@ -526,7 +528,7 @@ form .error_message {
 }
 
 .main_detail {
-  margin-top: 30px;
+  margin-top: 140px;
 }
 .main_detail .banner_wrapper {
   width: 70%;
@@ -535,6 +537,10 @@ form .error_message {
   border-radius: 5px;
   display: inline-block;
   box-sizing: border-box;
+}
+.main_detail .banner_wrapper .banner_image {
+  width: 100%;
+  height: 100%;
 }
 .main_detail .detail_information {
   width: 30%;
@@ -663,7 +669,7 @@ form .error_message {
 
 .main_about {
   overflow: hidden;
-  margin: 100px 0 0 0;
+  margin: 140px 0 0 0;
 }
 .main_about h3 {
   margin-bottom: 20px;
@@ -686,6 +692,7 @@ form .error_message {
 .main_organisations {
   display: flex;
   justify-content: space-between;
+  margin-top: 120px;
 }
 .main_organisations .organisation_tile {
   width: 49%;
@@ -709,7 +716,7 @@ form .error_message {
 }
 
 .transactions {
-  margin-top: 150px;
+  margin-top: 140px;
 }
 
 .transaction_wallet {

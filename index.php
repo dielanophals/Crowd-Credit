@@ -35,7 +35,7 @@
   <?php require_once("inc/head.php"); ?>
   <body id="page_index">
     <?php require_once("inc/header.php"); ?>
-    <section class="banner_image">
+    <section class="home_banner_image">
       <div class="overlay">
         <div class="info center">
           <h1>Crowdfund a dream</h1>
