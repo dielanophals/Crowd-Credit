@@ -353,6 +353,11 @@ form .error_message {
   position: relative;
   line-height: 1.4;
 }
+.banner_image .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.2);
+}
 .banner_image p {
   color: white;
 }
