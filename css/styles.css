@@ -674,22 +674,23 @@ form .error_message {
   overflow: hidden;
   margin: 140px 0 0 0;
 }
-.main_about h3 {
+.main_about h4 {
   margin-bottom: 20px;
   text-align: left;
 }
 .main_about .about-article {
-  width: 55%;
+  width: 50%;
   float: left;
   box-sizing: border-box;
   padding-right: 50px;
 }
 .main_about .about-form {
-  width: 45%;
+  width: 50%;
   float: right;
 }
 .main_about .about-form form {
   width: 100%;
+  padding: 0;
 }
 
 .profile_information {
@@ -907,6 +908,19 @@ form .error_message {
   }
   #page_project .fund form {
     width: 100%;
+  }
+
+  #page_about .main_about {
+    margin: 68px 0 20px 0;
+  }
+  #page_about .main_about .about-article {
+    width: 100%;
+    float: left;
+    padding: 0 0 10px 0;
+  }
+  #page_about .main_about .about-form {
+    width: 100%;
+    float: left;
   }
 }
 

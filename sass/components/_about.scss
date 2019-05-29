@@ -1,24 +1,25 @@
 .main_about{
 	overflow: hidden;
     margin: 140px 0 0 0;
-    h3{
+    h4{
         margin-bottom: 20px;
         text-align: left;
     }
 
     .about-article{
-        width:55%;
+        width:50%;
         float:left;
         box-sizing: border-box;
         padding-right:50px;
     }
 
     .about-form{
-        width:45%;
+        width:50%;
         float:right;
 
         form{
             width:100%;
+			padding: 0;
         }
     }
 }

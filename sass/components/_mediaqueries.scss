@@ -1,7 +1,6 @@
 @media only screen and (max-width: 950px){
 	
 	// GENERAL
-	
 	.container{
 		width: 90%;
 	}
@@ -88,7 +87,7 @@
     	margin: 15px 0;
 	}
 	
-	// INDEX
+	// PROJECT DETAIL
 	#page_project{
 		.main_detail{
 			margin-top: 58px;
@@ -137,6 +136,25 @@
 			padding: 30px 5%;
 			form{
 				width: 100%;
+			}
+		}
+	}
+	
+	
+	
+	// ABOUT US
+	#page_about{
+		.main_about{
+			margin: 68px 0 20px 0;
+			.about-article{
+				width: 100%;
+				float: left;
+				padding: 0 0 10px 0;
+			}
+
+			.about-form{
+				width: 100%;
+				float: left;
 			}
 		}
 	}
