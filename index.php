@@ -40,11 +40,11 @@
         <div class="info center">
           <h1>Crowdfund a dream</h1>
           <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance</p>
-          <a class="btn red_btn" href="#">View projects</a>
+          <a class="btn red_btn" href="#CTA">View projects</a>
         </div>
       </div>
     </section>
-    <main class="main_home">
+    <main class="main_home" id="CTA">
       <h2 class="grey">Projects</h2>
       <div class="container search_filters">
         <div class="filter">

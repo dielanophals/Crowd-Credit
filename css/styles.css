@@ -71,8 +71,9 @@ body {
 
 .container {
   width: 1024px;
-  margin: auto;
   max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .btn {
@@ -199,7 +200,6 @@ header {
   position: fixed;
   top: 0;
   z-index: 5;
-  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
   height: 80px;
 }
 header .logo {
@@ -783,6 +783,10 @@ form .error_message {
 }
 
 @media only screen and (max-width: 950px) {
+  .container {
+    width: 90%;
+  }
+
   h1 {
     font-size: 40px;
     max-width: 90%;
@@ -794,19 +798,23 @@ form .error_message {
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   h4 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   header {
-    padding: 15px 0;
+    height: inherit;
+    padding: 20px 0;
   }
-  header .logo {
-    height: 15px;
+  header a {
     margin-left: 5%;
+  }
+  header a .logo {
+    height: 15px;
+    margin: 0;
   }
   header .menu {
     height: 15px;
@@ -822,7 +830,11 @@ form .error_message {
     width: 90%;
   }
 
-  #page_index .info p {
+  #page_index .home_banner_image {
+    height: calc(100vh - 58px);
+    margin-top: 58px;
+  }
+  #page_index .home_banner_image .info p {
     max-width: 90%;
     margin: 0 5%;
     font-size: 20px;
@@ -839,21 +851,59 @@ form .error_message {
   #page_index main .search_filters form input {
     width: 100%;
   }
-  #page_index main .container {
-    width: 90%;
-  }
-  #page_index main .container .project_tile {
+  #page_index main .project_tile {
     width: 47.5%;
     float: left;
     margin: 15px 0 0 0;
   }
-  #page_index main .container .project_tile:nth-child(even) {
+  #page_index main .project_tile:nth-child(even) {
     margin: 15px 0 0 5%;
   }
 
   .project_pages {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  #page_project .main_detail {
+    margin-top: 58px;
+  }
+  #page_project .main_detail .banner_wrapper {
+    width: 100%;
+    height: 200px;
+  }
+  #page_project .main_detail .detail_information {
+    width: 100%;
+    height: 350px;
+    padding: 0;
+  }
+  #page_project .main_detail .detail_information > div {
     width: 90%;
-    margin: 15px 5%;
+  }
+  #page_project .main_detail .detail_information h5 {
+    display: inline-block;
+  }
+  #page_project .main_detail .detail_information .project-goal {
+    width: 100%;
+  }
+  #page_project .main_detail .detail_information .project-org, #page_project .main_detail .detail_information .project-end {
+    width: 50%;
+  }
+  #page_project .main_detail .detail_information .project-org {
+    float: left;
+  }
+  #page_project .main_detail .detail_information .project-end {
+    float: right;
+  }
+  #page_project .main_detail .detail_information .bar {
+    width: 100%;
+  }
+  #page_project .about_project, #page_project .project_feed {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #page_project .about_project h3, #page_project .project_feed h3 {
+    text-align: center;
   }
 }
 
