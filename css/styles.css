@@ -107,10 +107,6 @@ h1 {
   font-size: 100px;
 }
 
-h1 {
-  font-size: 100px;
-}
-
 h2 {
   font-size: 56px;
 }
@@ -588,7 +584,7 @@ form .error_message {
   margin-top: 40px;
 }
 
-.about_project h3 {
+.about_project h4 {
   margin-bottom: 20px;
 }
 
@@ -596,7 +592,7 @@ form .error_message {
   float: right;
   text-align: center;
 }
-.project_feed h3 {
+.project_feed h4 {
   margin-bottom: 20px;
   text-align: left;
 }
@@ -630,7 +626,7 @@ form .error_message {
   height: 100vh;
   background: rgba(255, 255, 255, 0.75);
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   text-align: center;
   top: 0;
 }
@@ -798,11 +794,11 @@ form .error_message {
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   h4 {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   header {
@@ -874,7 +870,7 @@ form .error_message {
   }
   #page_project .main_detail .detail_information {
     width: 100%;
-    height: 350px;
+    height: 400px;
     padding: 0;
   }
   #page_project .main_detail .detail_information > div {
@@ -904,6 +900,13 @@ form .error_message {
   }
   #page_project .about_project h3, #page_project .project_feed h3 {
     text-align: center;
+  }
+  #page_project .fund {
+    width: 80%;
+    padding: 30px 5%;
+  }
+  #page_project .fund form {
+    width: 100%;
   }
 }
 
