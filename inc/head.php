@@ -8,4 +8,5 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/dropdowns.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/organisation.js"></script>
 </head>

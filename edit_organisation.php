@@ -40,8 +40,8 @@
         <article class="about_organisation">
           <h3>About this organisation</h3>
           <form action="#" method="post">
-            <textarea name="description"><?php echo $organisation['description']; ?></textarea>
-            <input class="red_btn" type="submit" value="Save">
+            <textarea class="description" name="description"><?php echo $organisation['description']; ?></textarea>
+            <input class="red_btn save_desc" type="submit" value="Save">
           </form>
           <h3>Projects</h3>
         </article>
