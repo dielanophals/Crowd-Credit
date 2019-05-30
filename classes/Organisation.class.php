@@ -15,4 +15,11 @@
       $organisation = $statement->fetch(PDO::FETCH_ASSOC);
       return $organisation;
     }
+
+    public function updateDescription($id, $desc){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("UPDATE organisations SET description = '$desc' WHERE id = '$id'");
+      $result = $statement->execute();
+      return $result;
+    }
   }
