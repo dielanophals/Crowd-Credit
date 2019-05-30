@@ -18,7 +18,8 @@
 
     public function updateDescription($id, $desc){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("UPDATE organisations SET description = '$desc' WHERE id = '$id'");
+      $statement = $conn->prepare("UPDATE organisations SET description = :desc WHERE id = '$id'");
+      $statement->bindParam(':desc', $desc);
       $result = $statement->execute();
       return $result;
     }

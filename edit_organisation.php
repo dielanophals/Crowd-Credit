@@ -56,7 +56,7 @@
               <article class="project_info">
                 <h3><?php echo $p['name']; ?></h3>
                 <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
-                <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">View project</a><br>
+                <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">Edit project</a><br>
                 <label class="switch">
                   <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
                   <span class="slider round"></span>
