@@ -1,6 +1,8 @@
 <?php
- require_once("bootstrap.php");
- Session::check();
+  require_once("bootstrap.php");
+  if(Session::check() === false){
+    header("Location: index.php");
+  }
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
