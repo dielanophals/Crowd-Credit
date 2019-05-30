@@ -161,3 +161,20 @@
     }
   }
 }
+
+.project_title{
+  text-align: center;
+  clear:both;
+  position: relative;
+
+  h3{
+    display: inline-block;
+    margin-top:15px;
+  }
+  
+  a{
+    position: absolute;
+    right:0;
+    top:0;
+  }
+}

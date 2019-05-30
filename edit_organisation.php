@@ -6,7 +6,7 @@
   $user = new User();
   $userData = $user->getUserData($_SESSION['id']);
 
-  if($userData['organisation_id'] != 1){
+  if(isset($userData['organisation_id']) && $userData['organisation_id'] != 1){
     $organisation_id = $userData['organisation_id'];
     $org = new Organisation;
     $organisation = $org->getorganisation($organisation_id);
@@ -43,35 +43,38 @@
             <textarea class="description" name="description"><?php echo $organisation['description']; ?></textarea>
             <input class="red_btn save_desc" data-id="<?php echo $organisation_id ?>" type="submit" value="Save">
           </form>
-          <h3>Projects</h3>
         </article>
       </div>
-        <div class="project_tiles container">
-          <?php
-            foreach(Project::getAllProjectsOrg($organisation_id) as $p):
-            $location = Project::getLocation($p['locations_id']);
-          ?>
-            <div class="project_tile">
-              <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
-              <article class="project_info">
-                <h3><?php echo $p['name']; ?></h3>
-                <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
-                <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">Edit project</a><br>
-                <label class="switch">
-                  <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
-                  <span data-id="<?php echo $p['id'] ?>" class="slider round<?php if($p['active'] == 1){echo " checked";} ?>"></span>
-                </label>
-                <?php
-                  if($p['active'] == 1){
-                    echo "<p>Active</p>";
-                  }else{
-                    echo "<p>Inactive</p>";
-                  }
-                ?>
-              </article>
-            </div>
-          <?php endforeach; ?>
-        </div>
+      <div class="container project_title">
+        <h3>Projects</h3>
+        <a href="#" class="btn red_btn">Add new</a>
+      </div>
+      <div class="project_tiles container">
+        <?php
+          foreach(Project::getAllProjectsOrg($organisation_id) as $p):
+          $location = Project::getLocation($p['locations_id']);
+        ?>
+          <div class="project_tile">
+            <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
+            <article class="project_info">
+              <h3><?php echo $p['name']; ?></h3>
+              <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
+              <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">Edit project</a><br>
+              <label class="switch">
+                <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
+                <span data-id="<?php echo $p['id'] ?>" class="slider round<?php if($p['active'] == 1){echo " checked";} ?>"></span>
+              </label>
+              <?php
+                if($p['active'] == 1){
+                  echo "<p>Active</p>";
+                }else{
+                  echo "<p>Inactive</p>";
+                }
+              ?>
+            </article>
+          </div>
+        <?php endforeach; ?>
+      </div>
     </section>
   </body>
 </html>
