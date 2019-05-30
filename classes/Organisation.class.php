@@ -23,4 +23,11 @@
       $result = $statement->execute();
       return $result;
     }
+
+    public function updateActive($id, $act){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("UPDATE projects SET active = '$act' WHERE id = '$id'");
+      $result = $statement->execute();
+      return $result;
+    }
   }

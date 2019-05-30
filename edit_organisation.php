@@ -59,7 +59,7 @@
                 <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">Edit project</a><br>
                 <label class="switch">
                   <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
-                  <span class="slider round"></span>
+                  <span data-id="<?php echo $p['id'] ?>" class="slider round<?php if($p['active'] == 1){echo " checked";} ?>"></span>
                 </label>
                 <?php
                   if($p['active'] == 1){
