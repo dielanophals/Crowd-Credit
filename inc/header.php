@@ -37,7 +37,12 @@
           </div>
           <ul id="wallet_ul">
             <li id="li_projects"><a href="profile.php">My profile</a></li>
-            <li id="li_transactions"><a href="transactions.php">Transactions</a></li>
+            <?php if($userData['organisation_id'] != 1): ?>
+              <li id="li_edit_organisation"><a href="edit_organisation.php">Edit organisation</a></li>
+            <?php endif; ?>
+            <?php if($userData['organisation_id'] == 1): ?>
+              <li id="li_transactions"><a href="transactions.php">Transactions</a></li>
+            <?php endif; ?>
             <li id="li_settings"><a href="settings.php">Settings</a></li>
             <li id="li_logout" class="logout"><a class="red" href="logout.php">Logout</a></li>
           </ul>
