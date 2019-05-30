@@ -37,9 +37,12 @@
     </main>
     <section>
       <div class="container">
-        <article class="about_organisation">
+        <article class="about_organisation edit_organisation">
           <h3>About this organisation</h3>
-          <p><?php echo $organisation['description']; ?></p>
+          <form action="#">
+            <textarea name="description"><?php echo $organisation['description']; ?></textarea>
+            <input class="red_btn" type="submit" value="Save">
+          </form>
           <h3>Active projects</h3>
         </article>
       </div>

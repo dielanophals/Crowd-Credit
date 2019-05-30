@@ -24,7 +24,7 @@
         <a id="profile" class="nav_profile_dropdown_btn" href="#">
             <?php
               $user = new User();
-          $userData = $user->getUserData($_SESSION['id']); ?>
+              $userData = $user->getUserData($_SESSION['id']); ?>
             <div class="profile_image_wrapper">
               <div id="image" class="profile_image" style="background: url(<?php echo $userData['image']; ?>); background-size:cover; background-position:center;"></div>
             </div>
