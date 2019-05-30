@@ -42,7 +42,7 @@
       </div>
         <div class="project_tiles container">
           <?php
-            foreach(Project::getAllProjectsOrg($organisation_id) as $p):
+            foreach(Project::getAllActiveProjectsOrg($organisation_id) as $p):
             $location = Project::getLocation($p['locations_id']);
           ?>
             <div class="project_tile">

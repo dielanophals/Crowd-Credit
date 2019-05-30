@@ -10,6 +10,14 @@
 
     public function getAllProjectsOrg($org){
       $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM projects WHERE organisation_id = $org ORDER BY id ASC");
+      $statement->execute();
+      $project = $statement->fetchAll();
+      return $project;
+    }
+
+    public function getAllActiveProjectsOrg($org){
+      $conn = Db::getInstance();
       $statement = $conn->prepare("SELECT * FROM projects WHERE organisation_id = $org && active = 1 ORDER BY id ASC");
       $statement->execute();
       $project = $statement->fetchAll();

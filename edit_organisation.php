@@ -39,7 +39,7 @@
       <div class="container">
         <article class="about_organisation">
           <h3>About this organisation</h3>
-          <form action="#">
+          <form action="#" method="post">
             <textarea name="description"><?php echo $organisation['description']; ?></textarea>
             <input class="red_btn" type="submit" value="Save">
           </form>
@@ -58,10 +58,16 @@
                 <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
                 <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">View project</a><br>
                 <label class="switch">
-                  <input type="checkbox">
+                  <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
                   <span class="slider round"></span>
                 </label>
-                <p>Inactive</p>
+                <?php
+                  if($p['active'] == 1){
+                    echo "<p>Active</p>";
+                  }else{
+                    echo "<p>Inactive</p>";
+                  }
+                ?>
               </article>
             </div>
           <?php endforeach; ?>
