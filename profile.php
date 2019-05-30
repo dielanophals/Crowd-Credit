@@ -18,8 +18,11 @@
         <a class="btn red_btn" href="transactions.php">My wallet</a>
         <?php endif; ?>
         <a class="btn grey_btn" href="settings.php">Settings</a>
+        <?php if($userData['organisation_id'] == 1): ?>
         <h3 class="funded">Funded projects</h3>
+        <?php endif; ?>
       </section>
+    <?php if($userData['organisation_id'] == 1): ?>
       <div class="project_tiles">
       <?php
         $project = new Project;
@@ -37,6 +40,7 @@
           </div>
         <?php endforeach; ?>
       </div>
+      <?php endif; ?>
       
     </div>
   </main>
