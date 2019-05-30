@@ -1,6 +1,12 @@
 <?php
   require_once("bootstrap.php");
-  if(Session::check() === false){
+
+  Session::check();
+
+  $user = new User();
+  $userData = $user->getUserData($_SESSION['id']);
+
+  if($userData['organisation_id'] != 1){
     header("Location: index.php");
   }
  ?>

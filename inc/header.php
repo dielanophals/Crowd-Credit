@@ -32,10 +32,12 @@
           <p id="name"><?php echo $userData['firstname'].' '.$userData['lastname']; ?></p>
         </a>
         <div id="profile_dropdown" class="nav_profile_dropdown hide">
+        <?php if($userData['organisation_id'] == 1): ?>
           <div id="wallet" class="wallet">
             <img id="credit_card" src="sign/credit_card.png" alt="Credit card">
             <h4 id="wallet_data">€ <?php echo $userData['wallet']; ?></h4>
           </div>
+        <?php endif; ?>
           <ul id="wallet_ul">
             <li id="li_projects"><a href="profile.php">My profile</a></li>
             <?php if($userData['organisation_id'] != 1): ?>
