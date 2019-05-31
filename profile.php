@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <?php require_once("inc/head.php"); ?>
-  <body>
+  <body id="page_profile">
   <?php require_once("inc/header.php"); ?>
   <main>
     <div class="container profile">
@@ -16,7 +16,7 @@
         <h3 class="name"><?php echo $userData['firstname'] . ' ' . $userData['lastname']; ?></h3>
         <a class="btn red_btn" href="transactions.php">My wallet</a>
         <a class="btn grey_btn" href="settings.php">Settings</a>
-        <h3 class="funded">Funded projects</h3>
+        <h4 class="funded">Funded projects</h4>
       </section>
       <div class="project_tiles">
       <?php

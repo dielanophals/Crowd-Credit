@@ -3,13 +3,15 @@
 }
 
 .transaction_wallet{
-    margin-bottom:30px;
+    margin-bottom: 50px;
     float:left;
 }
 
 .add_money{
     float:right;
     text-decoration: none;
+	padding: 10px;
+	border-radius: $radius;
 }
 
 .transaction_title{

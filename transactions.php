@@ -5,12 +5,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <?php require_once("inc/head.php"); ?>
-  <body>
+  <body id="page_wallet">
   <?php require_once("inc/header.php"); ?>
   <main>
     <div class="container transactions">
-      <h3 class="transaction_wallet">Wallet total: €<?php echo $userData['wallet']; ?></h3>
-      <a href="#" class="red add_money">+ Add money</a>
+      <h3 class="transaction_wallet">Wallet Total: €<?php echo $userData['wallet']; ?></h3>
+      <a href="#" class="red_btn add_money">+ Add Money</a>
       <div class="transaction_title">
         <h5>Project</h5>
         <h5>Amount</h5>

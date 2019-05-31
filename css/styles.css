@@ -73,7 +73,6 @@ body {
   width: 1024px;
   max-width: 100%;
   margin: auto;
-  overflow: hidden;
 }
 
 .btn {
@@ -738,13 +737,15 @@ form .error_message {
 }
 
 .transaction_wallet {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   float: left;
 }
 
 .add_money {
   float: right;
   text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .transaction_title {
@@ -856,6 +857,9 @@ form .error_message {
   #page_index main .project_tile:nth-child(even) {
     margin: 15px 0 0 5%;
   }
+  #page_index main .project_tile .project_banner {
+    height: 150px;
+  }
 
   .project_pages {
     width: 100%;
@@ -921,6 +925,50 @@ form .error_message {
   #page_about .main_about .about-form {
     width: 100%;
     float: left;
+  }
+
+  #page_profile .profile_information {
+    margin-top: 68px;
+  }
+  #page_profile .profile_information .profile_image_wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  #page_profile .project_tiles .project_tile {
+    width: 47.5%;
+    float: left;
+    margin: 15px 0 0 0;
+  }
+  #page_profile .project_tiles .project_tile:nth-child(even) {
+    margin: 15px 0 0 5%;
+  }
+  #page_profile .project_tiles .project_tile .project_banner {
+    height: 150px;
+  }
+
+  #page_wallet .transactions {
+    margin-top: 68px;
+  }
+  #page_wallet .transactions .transaction_wallet, #page_wallet .transactions .add_money {
+    text-align: center;
+    float: none;
+    display: block;
+  }
+  #page_wallet .transactions .transaction_wallet {
+    margin-bottom: 20px;
+  }
+  #page_wallet .transactions .add_money {
+    margin-bottom: 50px;
+  }
+  #page_wallet .transactions .transaction_title {
+    padding: 0 10px;
+  }
+  #page_wallet .transactions .transaction {
+    height: 40px;
+    padding: 10px;
+  }
+  #page_wallet .transactions .transaction h4 {
+    font-size: 12px;
   }
 }
 

@@ -79,6 +79,9 @@
 				&:nth-child(even){
 					margin: 15px 0 0 5%;
 				}
+				.project_banner{
+					height: 150px;
+				}
 			}
 		}
 	}
@@ -140,7 +143,7 @@
 		}
 	}
 	
-	
+	// ORGANISATIONS
 	
 	// ABOUT US
 	#page_about{
@@ -155,6 +158,58 @@
 			.about-form{
 				width: 100%;
 				float: left;
+			}
+		}
+	}
+	
+	// PROFILE
+	#page_profile{
+		.profile_information{
+			margin-top: 68px;
+			.profile_image_wrapper{
+				width: 100px;
+				height: 100px;
+			}
+		}
+		.project_tiles{
+			.project_tile{
+				width: 47.5%;
+				float: left;
+				margin: 15px 0 0 0;
+				&:nth-child(even){
+					margin: 15px 0 0 5%;
+				}
+				.project_banner{
+					height: 150px;
+				}
+			}
+		}
+	}
+	
+	// WALLET
+	#page_wallet{
+		.transactions{
+    		margin-top:68px;
+			.transaction_wallet, .add_money{
+				text-align: center;
+				float: none;
+				display: block;
+			}
+			.transaction_wallet{
+				margin-bottom: 20px;
+			}
+			.add_money{
+				margin-bottom: 50px;
+			}
+			.transaction_title {
+				padding: 0 10px;
+			}
+			.transaction{
+				height: 40px;
+				padding: 10px;
+				h4{
+					font-size: 12px;
+				}
 			}
 		}
 	}
