@@ -16,8 +16,8 @@
   if(!empty($_POST)){
     if($_POST['title'] != "" && $_POST['text'] != "" && $_POST['date'] != "" && $_POST['goal'] != "" && $_POST['cont'] != ""){
       $pro->insertProject($_POST['title'], $_POST['text'], $_POST['date'], $_POST['goal'], $_POST['cont'], $organisation_id);
-      $pro->getLastProject();
-      header("Location: project.php?project=" . $project_id);
+      $last_project = $pro->getLastProject();
+      header("Location: project.php?project=" . $last_project['id']);
     }else{
       $error = "Please fill in all the fields";
     }

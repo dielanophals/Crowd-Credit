@@ -149,4 +149,13 @@
       $result = $statement->execute();
       return $result;
     }
+
+    public function getLastProject(){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM projects ORDER BY id DESC LIMIT 1");
+      $statement->execute();
+      $project = $statement->fetch(PDO::FETCH_ASSOC);
+
+      return $project;
+    }
   }
