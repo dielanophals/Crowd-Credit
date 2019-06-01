@@ -20,7 +20,8 @@
 
     public function getAllActiveProjectsOrg($org){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE organisation_id = $org && active = 1 ORDER BY id ASC");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE organisation_id = :org && active = 1 ORDER BY id ASC");
+      $statement->bindParam(':org', $org);
       $statement->execute();
       $project = $statement->fetchAll();
       return $project;
@@ -124,14 +125,18 @@
       $timestamp = date('Y-m-d H:i:s');
 
       $conn = Db::getInstance();
-      $statement = $conn->prepare("INSERT INTO transactions (amount, user_id, project_id, timestamp) VALUES ('$value', '$id', '$project_id', '$timestamp')");
+      $statement = $conn->prepare("INSERT INTO transactions (amount, user_id, project_id, timestamp) VALUES (:value, :id, :project_id, '$timestamp')");
+      $statement->bindParam(':value', $value);
+      $statement->bindParam(':id', $id);
+      $statement->bindParam(':project_id', $project_id);
       $result = $statement->execute();
       return $result;
     }
 
     public function insertFundUser($id, $wallet){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("UPDATE users SET wallet = '$wallet' WHERE id = '$id'");
+      $statement = $conn->prepare("UPDATE users SET wallet = :wallet WHERE id = '$id'");
+      $statement->bindParam(':wallet', $wallet);
       $result = $statement->execute();
       return $result;
     }
