@@ -571,7 +571,11 @@ form .error_message {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.main_detail .detail_information .bar {
+.main_detail .detail_information .btn {
+  margin-top: 20px;
+}
+
+.bar {
   width: 180px;
   background: #F2F2F2;
   height: 6px;
@@ -580,12 +584,9 @@ form .error_message {
   margin-bottom: 10px;
   overflow: hidden;
 }
-.main_detail .detail_information .bar .progress {
+.bar .progress {
   height: 100%;
   background: #F2494C;
-}
-.main_detail .detail_information .btn {
-  margin-top: 20px;
 }
 
 .about_project, .project_feed {
@@ -823,8 +824,15 @@ form .error_message {
   height: 200px;
 }
 .edit_organisation .project_tiles .project_tile {
-  height: 470px;
+  height: 505px;
   max-height: none;
+  position: relative;
+}
+.edit_organisation .total {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .switch {

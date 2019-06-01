@@ -76,6 +76,8 @@
               <?php if($p['date_end'] <= date('Y-m-d')): ?>
                 <h3 class="expired red">Expired</h3>
               <?php endif; ?>
+              <?php $total_transactions_procent = Project::getTotalProjectTransactions($p['id'], $p['goal']); ?>
+              <p class="lightgrey total"><?php echo "Total: " . $total_transactions_procent; ?> %</p>
             </article>
           </div>
         <?php endforeach; ?>

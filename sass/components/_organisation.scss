@@ -21,8 +21,16 @@
     }
 
     .project_tiles .project_tile{
-        height:470px;
+        height:505px;
         max-height: none;
+        position: relative;
+    }
+
+    .total{
+      position: absolute;
+      bottom:0;
+      text-align: center;
+      width:100%;
     }
 }
 

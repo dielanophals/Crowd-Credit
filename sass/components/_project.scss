@@ -34,24 +34,24 @@
           margin-bottom:10px;
       }
 
-      .bar{
-        width:180px;
-        background:$lightgrey;
-        height:6px;
-        border-radius:3px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        overflow: hidden;
-
-        .progress{
-          height:100%;
-          background: $darkred;
-        }
-      }
-
       .btn{
         margin-top:20px;
       }
+  }
+}
+
+.bar{
+  width:180px;
+  background:$lightgrey;
+  height:6px;
+  border-radius:3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  .progress{
+    height:100%;
+    background: $darkred;
   }
 }
 
