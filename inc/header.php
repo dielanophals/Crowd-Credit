@@ -41,7 +41,7 @@
           <ul id="wallet_ul">
             <li id="li_projects"><a href="profile.php">My profile</a></li>
             <?php if($userData['organisation_id'] != 1): ?>
-              <li id="li_edit_organisation"><a href="edit_organisation.php">Edit organisation</a></li>
+              <li id="li_edit_organisation"><a href="edit_organisation.php">Editor</a></li>
             <?php endif; ?>
             <?php if($userData['organisation_id'] == 1): ?>
               <li id="li_transactions"><a href="transactions.php">Transactions</a></li>

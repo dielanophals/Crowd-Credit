@@ -47,7 +47,7 @@
       </div>
       <div class="container project_title">
         <h3>Projects</h3>
-        <a href="#" class="btn red_btn">Add new</a>
+        <a href="new_project.php" class="btn red_btn">Add new</a>
       </div>
       <div class="project_tiles container">
         <?php
