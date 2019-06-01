@@ -48,7 +48,7 @@
           <h5 class="lightgrey">Organisation</h5>
           <h4><?php echo $organisation['name']; ?></h4>
           <h5 class="lightgrey">End date</h5>
-          <h4><?php echo $project['date_end']; ?></h4>
+          <h4><?php echo substr($project['date_end'], 8, 2) . "/" . substr($project['date_end'], 5, 2) . "/" . substr($project['date_end'], 0, 4); ?> </h4>
           <h5 class="lightgrey">Goal</h5>
           <h4 class="red">&euro;<?php echo $project['goal']; ?></h4>
           <?php $total_transactions_procent = $pro->getTotalProjectTransactions($project_id, $project['goal']); ?>
