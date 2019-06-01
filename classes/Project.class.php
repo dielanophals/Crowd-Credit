@@ -65,6 +65,14 @@
       return $continent;
     }
 
+    public function getEditContinents($id){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM locations WHERE id != $id");
+      $statement->execute();
+      $continent = $statement->fetchAll();
+      return $continent;
+    }
+
     public function setContinent($continent){
       $loc = "locations_id IN(" . str_replace('-', ', ', $continent);
       $loc .= ") &&";
