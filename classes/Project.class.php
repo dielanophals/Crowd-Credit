@@ -139,13 +139,13 @@
       return $result;
     }
 
-    public function insertProject($title, $text, $date, $goal, $loc){
+    public function insertProject($title, $text, $date, $goal, $loc, $org){
       date_default_timezone_set("Europe/Brussels");
       $timestamp = date('Y-m-d H:i:s');
       $startdate = date('Y-m-d');
 
       $conn = Db::getInstance();
-      $statement = $conn->prepare("INSERT INTO projects (name, locations_id, description, date_start, date_end, goal, banner, timestamp, active) VALUES ('$title', '$loc', '$text', '$startdate', '$date', '$goal', '', '$timestamp', 1)");
+      $statement = $conn->prepare("INSERT INTO projects (name, locations_id, description, date_start, date_end, goal, banner, timestamp, active, organisation_id) VALUES ('$title', '$loc', '$text', '$startdate', '$date', '$goal', 'http://2.bp.blogspot.com/-WnRZOGyOwMM/TrpA6oATSMI/AAAAAAAADJg/wRp9Cx54qdg/s1600/donkeys.jpg', '$timestamp', 1, $org)");
       $result = $statement->execute();
       return $result;
     }
