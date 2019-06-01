@@ -138,6 +138,12 @@ p{
   transform: translate(-50%, -50%);
 }
 
+.edit{
+  position: fixed;
+  top: 100px;
+  right:40px;
+}
+
 @import 'components/header';
 @import 'components/form';
 @import 'components/index';

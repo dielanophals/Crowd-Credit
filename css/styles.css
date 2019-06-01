@@ -189,6 +189,12 @@ p {
   transform: translate(-50%, -50%);
 }
 
+.edit {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+}
+
 header {
   background: #fff;
   width: 100%;

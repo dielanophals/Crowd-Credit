@@ -33,6 +33,9 @@
       </div>
   </div>
     <?php require_once("inc/header.php"); ?>
+    <?php if($project['organisation_id'] == $userData['organisation_id']): ?>
+      <a class="btn red_btn edit" href="edit_project.php?project=<?php echo $project_id ?>">Edit project</a>
+    <?php endif; ?>
     <main class="main_detail">
     <div class="container">
       <div class="banner_wrapper">

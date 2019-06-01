@@ -15,6 +15,9 @@
   <?php require_once("inc/head.php"); ?>
   <body>
     <?php require_once("inc/header.php"); ?>
+    <?php if($organisation_id == $userData['organisation_id']): ?>
+      <a class="btn red_btn edit" href="edit_organisation.php">Edit page</a>
+    <?php endif; ?>
     <main class="main_detail">
     <div class="container">
       <div class="banner_wrapper">
