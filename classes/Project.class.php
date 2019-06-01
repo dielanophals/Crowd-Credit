@@ -1,8 +1,10 @@
 <?php
   class Project{
     public function getProjects($off, $search, $continent){
+      $date = date('Y-m-d');
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE $continent active = 1 && name LIKE '%$search%' ORDER BY id ASC LIMIT 9 OFFSET $off");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE $continent active = 1 && name LIKE '%$search%' && date_end >= :date ORDER BY id ASC LIMIT 9 OFFSET $off");
+      $statement->bindParam(':date', $date);
       $statement->execute();
       $project = $statement->fetchAll();
       return $project;
@@ -25,8 +27,10 @@
     }
 
     public function getTotalProjects($search, $continent){
+      $date = date('Y-m-d');
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE $continent active = 1 && name LIKE '%$search%'");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE $continent active = 1 && name LIKE '%$search%' && date_end >= :date");
+      $statement->bindParam(':date', $date);
       $statement->execute();
       $statement->fetchAll();
       $total_projects = $statement->rowCount();
