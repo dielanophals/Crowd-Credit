@@ -19,9 +19,11 @@
     }
 
     public function getAllActiveProjectsOrg($org){
+      $date = date('Y-m-d');
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM projects WHERE organisation_id = :org && active = 1 ORDER BY id ASC");
+      $statement = $conn->prepare("SELECT * FROM projects WHERE organisation_id = :org && active = 1  && date_end >= :date ORDER BY id ASC");
       $statement->bindParam(':org', $org);
+      $statement->bindParam(':date', $date);
       $statement->execute();
       $project = $statement->fetchAll();
       return $project;
