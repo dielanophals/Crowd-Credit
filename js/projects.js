@@ -148,4 +148,9 @@ $(document).ready(function() {
       alert("Please accept the risks.");      
     }
   });
+
+  $(document).on("click", '.funding_popup', function(e) {
+    e.preventDefault();
+    $('.popup').removeClass('hide');
+  });
 });
