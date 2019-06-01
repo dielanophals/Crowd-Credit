@@ -39,7 +39,7 @@
       <div class="overlay">
         <div class="info center">
           <h1>Crowdfund a dream</h1>
-          <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance</p>
+          <p>We are a crowdfunding platform for developing countries in the South. We want to give every person an equal chance.</p>
           <a class="btn red_btn" href="#">View projects</a>
         </div>
       </div>
