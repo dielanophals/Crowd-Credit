@@ -60,10 +60,11 @@
               <h3><?php echo htmlspecialchars($p['name']); ?></h3>
               <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
               <a class="red_btn btn" href="edit_project.php?project=<?php echo htmlspecialchars($p['id']); ?>">Edit project</a><br>
-              <label class="switch">
-                <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
-                <span data-id="<?php echo $p['id'] ?>" class="slider round<?php if($p['active'] == 1){echo " checked";} ?>"></span>
-              </label>
+              <?php if($p['date_end'] >= date('Y-m-d')): ?>
+                <label class="switch">
+                  <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
+                  <span data-id="<?php echo $p['id'] ?>" class="slider round<?php if($p['active'] == 1){echo " checked";} ?>"></span>
+                </label>
               <?php
                 if($p['active'] == 1){
                   echo "<p>Active</p>";
@@ -71,6 +72,10 @@
                   echo "<p>Inactive</p>";
                 }
               ?>
+              <?php endif; ?>
+              <?php if($p['date_end'] <= date('Y-m-d')): ?>
+                <h3 class="expired red">Expired</h3>
+              <?php endif; ?>
             </article>
           </div>
         <?php endforeach; ?>

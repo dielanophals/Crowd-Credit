@@ -884,6 +884,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.expired {
+  margin-top: 40px;
+}
+
 @media only screen and (max-width: 950px) {
   h1 {
     font-size: 40px;
