@@ -142,7 +142,7 @@
     public function insertProject($title, $text, $date, $goal, $loc){
       date_default_timezone_set("Europe/Brussels");
       $timestamp = date('Y-m-d H:i:s');
-      $startdate = date('Y-m-d')
+      $startdate = date('Y-m-d');
 
       $conn = Db::getInstance();
       $statement = $conn->prepare("INSERT INTO projects (name, locations_id, description, date_start, date_end, goal, banner, timestamp, active) VALUES ('$title', '$loc', '$text', '$startdate', '$date', '$goal', '', '$timestamp', 1)");
