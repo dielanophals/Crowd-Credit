@@ -312,7 +312,7 @@ form {
   text-align: center;
   max-width: 100%;
 }
-form input[type="email"], form input[type="password"], form input[type="text"], form input[type="submit"], form input[type="number"], form input[type="date"], form textarea {
+form input[type="email"], form input[type="password"], form input[type="text"], form input[type="submit"], form input[type="number"], form input[type="date"], form select, form textarea {
   border: none;
   width: 100%;
   border-radius: 5px;
@@ -329,7 +329,7 @@ form input:focus, form textarea:focus {
   -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
   box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
 }
-form input[type="email"], form input[type="password"], form input[type="text"], form input[type="number"], form textarea {
+form input[type="email"], form input[type="password"], form input[type="text"], form input[type="number"], form input[type="date"], form select, form textarea {
   box-sizing: border-box;
   margin-bottom: 10px;
   background: #F2F2F2;
@@ -689,6 +689,9 @@ form .error_message {
   top: 0;
 }
 
+.edit_project .detail_information h5 {
+  margin-top: 20px;
+}
 .edit_project form {
   width: 100%;
   padding: 0;

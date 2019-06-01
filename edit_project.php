@@ -25,31 +25,47 @@
   }else{
     header("Location: index.php");
   }
+
+  if(!empty($_POST)){
+    echo $_POST['cont'];
+    if($_POST['title'] != "" && $_POST['text'] != "" && $_POST['date'] != "" && $_POST['goal'] != "" && $_POST['cont'] != ""){
+      $pro->updateProject($project_id, $_POST['title'], $_POST['text'], $_POST['date'], $_POST['goal'], $_POST['cont']);
+      header("Location: project.php?project=" . $project_id);
+    }else{
+      $error = "Please fill in all the fields";
+    }
+  }
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <?php require_once("inc/head.php"); ?>
   <body class="edit_project">
     <?php require_once("inc/header.php"); ?>
+    <form action="#" method="post">
     <main class="main_detail">
     <div class="container">
+      <?php
+      if(isset($error)){
+        echo "<p class='error_message'>$error</p>";
+      }
+      ?>
       <div class="banner_wrapper">
         <div class="banner_image" style="background:url(<?php echo $project['banner']; ?>); background-size:cover; background-position:center;"></div>
       </div>
       <section class="detail_information">
         <div class="center">
-        <form action="#" method="post">
-          <h3 class="red"><?php echo $project['name']; ?></h3>
-          <select>
+          <h5 class="red">Title</h5>
+          <input type="text" name="title" value="<?php echo $project['name']; ?>" required>
+          <h5 class="lightgrey">Continent</h5>
+          <select name="cont" required>
           <option value="<?php echo $location['id']; ?>"><?php echo $location['continent']; ?></option>
           <?php foreach($pro->getEditContinents($location['id']) as $co): ?>
             <option value="<?php echo $co['id'] ?>"><?php echo $co['continent']; ?></option>
           <?php endforeach; ?>
           </select>
           <h5 class="lightgrey">End date</h5>
-          <input type="date" value="<?php echo substr($project['date_end'], 0, 10); ?>">
+          <input name="date" type="date" value="<?php echo substr($project['date_end'], 0, 10); ?>" required>
           <h5 class="lightgrey">Goal</h5>
-          <input type="number" value="<?php echo $project['goal']; ?>">
-        </form>
+          <input type="number" name="goal" value="<?php echo $project['goal']; ?>" required>
         </div>
       </section>
     </div>
@@ -58,10 +74,8 @@
       <div class="container">
       <article class="about_project">
         <h3>About this project</h3>
-        <form action="#" method=post>
-        <textarea name="" id="" cols="30" rows="10"><?php echo $project['description']; ?></textarea>
-        <input class="red_btn" type="submit" value="Save">
-        </form>
+        <textarea name="text"><?php echo $project['description']; ?></textarea>
+        <input class="red_btn" type="submit" value="Save" required>
       </article>
       <div class="project_feed">
         <h3>Project feed</h3>
@@ -77,5 +91,6 @@
       </div>
       </div>
     </section>
+    </form>
   </body>
 </html>

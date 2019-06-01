@@ -131,4 +131,11 @@
       $result = $statement->execute();
       return $result;
     }
+
+    public function updateProject($id, $title, $text, $date, $goal, $loc){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("UPDATE projects SET name = '$title', locations_id = '$loc', description = '$text', date_end='$date', goal = '$goal' WHERE id = '$id'");
+      $result = $statement->execute();
+      return $result;
+    }
   }
