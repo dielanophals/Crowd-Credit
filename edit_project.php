@@ -29,7 +29,7 @@
   if(!empty($_POST)){
     if($_POST['title'] != "" && $_POST['text'] != "" && $_POST['date'] != "" && $_POST['goal'] != "" && $_POST['cont'] != ""){
       $pro->updateProject($project_id, $_POST['title'], $_POST['text'], $_POST['date'], $_POST['goal'], $_POST['cont']);
-      header("Location: project.php?project=" . $project_id);
+      //header("Location: project.php?project=" . $project_id);
     }else{
       $error = "Please fill in all the fields";
     }
@@ -74,7 +74,7 @@
       <article class="about_project">
         <h3>About this project</h3>
         <textarea name="text"><?php echo $project['description']; ?></textarea>
-        <input class="red_btn" type="submit" value="Save" required>
+        <input class="red_btn" type="submit" value="Save">
       </article>
       <div class="project_feed">
         <h3>Project feed</h3>
