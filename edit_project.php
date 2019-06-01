@@ -48,23 +48,23 @@
       }
       ?>
       <div class="banner_wrapper">
-        <div class="banner_image" style="background:url(<?php echo $project['banner']; ?>); background-size:cover; background-position:center;"></div>
+        <div class="banner_image" style="background:url(<?php echo htmlspecialchars($project['banner']); ?>); background-size:cover; background-position:center;"></div>
       </div>
       <section class="detail_information">
         <div class="center">
           <h5 class="red">Title</h5>
-          <input type="text" name="title" value="<?php echo $project['name']; ?>" required>
+          <input type="text" name="title" value="<?php echo htmlspecialchars($project['name']); ?>" required>
           <h5 class="lightgrey">Continent</h5>
           <select name="cont" required>
-          <option value="<?php echo $location['id']; ?>"><?php echo $location['continent']; ?></option>
+          <option value="<?php echo $location['id']; ?>"><?php echo htmlspecialchars($location['continent']); ?></option>
           <?php foreach($pro->getEditContinents($location['id']) as $co): ?>
-            <option value="<?php echo $co['id'] ?>"><?php echo $co['continent']; ?></option>
+            <option value="<?php echo $co['id'] ?>"><?php echo htmlspecialchars($co['continent']); ?></option>
           <?php endforeach; ?>
           </select>
           <h5 class="lightgrey">End date</h5>
-          <input name="date" type="date" value="<?php echo substr($project['date_end'], 0, 10); ?>" required>
+          <input name="date" type="date" value="<?php echo htmlspecialchars(substr($project['date_end'], 0, 10)); ?>" required>
           <h5 class="lightgrey">Goal</h5>
-          <input type="number" name="goal" value="<?php echo $project['goal']; ?>" required>
+          <input type="number" name="goal" value="<?php echo htmlspecialchars($project['goal']); ?>" required>
         </div>
       </section>
     </div>
@@ -73,7 +73,7 @@
       <div class="container">
       <article class="about_project">
         <h3>About this project</h3>
-        <textarea name="text"><?php echo $project['description']; ?></textarea>
+        <textarea name="text"><?php echo htmlspecialchars($project['description']); ?></textarea>
         <input class="red_btn" type="submit" value="Save">
       </article>
       <div class="project_feed">
@@ -83,7 +83,7 @@
             <div class="feed_image_wrapper">
               <div class="feed_image" style="background: url(<?php echo $f['image'] ?>); background-size:cover; background-position:center;"></div>
             </div>
-            <p><?php echo $f['description']; ?></p>
+            <p><?php echo htmlspecialchars($f['description']); ?></p>
           </article>
         <?php endforeach; ?>
         <a class="btn grey_btn" href="#">Add feed</a>

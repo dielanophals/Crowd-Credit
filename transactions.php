@@ -29,8 +29,8 @@
       <?php $project = Project::getProject($t['project_id']) ?>
 
       <div class="transaction">
-        <h4><?php echo $project['name']; ?></h4>
-        <h4>- €<?php echo $t['amount']; ?></h4>
+        <h4><?php echo htmlspecialchars($project['name']); ?></h4>
+        <h4>- €<?php echo htmlspecialchars($t['amount']); ?></h4>
         <h4><?php echo $date; ?></h4>
       </div>
     <?php endforeach; ?>

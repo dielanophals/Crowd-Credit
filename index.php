@@ -51,7 +51,7 @@
           <a href="#" class="filter_dropdown_btn" id="continent">Continent <img src="sign/arrow-grey.png" id="dropdown_arrow_continent" alt="options"></a>
           <div id="continents" class="dropdown hide">
               <?php foreach($project->getContinents() as $co): ?>
-                <p id="continent<?php $co['id']; ?>"><input class="check_continent" data-continent="<?php echo $co['id']; ?>" type="checkbox" name="continent" value="<?php echo $co['id']; ?>" id="<?php echo $co['continent']; ?>"><label class="check_continent" data-continent="<?php echo $co['id']; ?>" id="con<?php $co['id']; ?>" for="<?php echo $co['continent']; ?>"><?php echo $co['continent']; ?></label></p>
+                <p id="continent<?php $co['id']; ?>"><input class="check_continent" data-continent="<?php echo $co['id']; ?>" type="checkbox" name="continent" value="<?php echo $co['id']; ?>" id="<?php echo htmlspecialchars($co['continent']); ?>"><label class="check_continent" data-continent="<?php echo $co['id']; ?>" id="con<?php $co['id']; ?>" for="<?php echo htmlspecialchars($co['continent']); ?>"><?php echo htmlspecialchars($co['continent']); ?></label></p>
               <?php endforeach; ?>
           </div>
         </div>
@@ -59,7 +59,7 @@
           <a href="#" class="filter_dropdown_btn" id="category">Category <img src="sign/arrow-grey.png" id="dropdown_arrow_category" alt="options"></a>
           <div id="categories" class="dropdown hide">
             <?php foreach($project->getCategories() as $ca): ?>
-              <p id="category<?php echo $ca['id']; ?>"><input class="check_category" data-category="<?php echo $ca['id']; ?>" type="checkbox" name="category" value="<?php echo $ca['id']; ?>" id="<?php echo $ca['name']; ?>"><label class="check_category" data-category="<?php echo $ca['id']; ?>" id="cat<?php echo $ca['id']; ?>" for="<?php echo $ca['name']; ?>"><?php echo $ca['name']; ?></label></p>
+              <p id="category<?php echo $ca['id']; ?>"><input class="check_category" data-category="<?php echo $ca['id']; ?>" type="checkbox" name="category" value="<?php echo $ca['id']; ?>" id="<?php echo htmlspecialchars($ca['name']); ?>"><label class="check_category" data-category="<?php echo $ca['id']; ?>" id="cat<?php echo $ca['id']; ?>" for="<?php echo htmlspecialchars($ca['name']); ?>"><?php echo htmlspecialchars($ca['name']); ?></label></p>
             <?php endforeach; ?>
           </div>
         </div>
@@ -79,9 +79,9 @@
           <div class="project_tile">
             <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
-              <h3><?php echo $p['name']; ?></h3>
-              <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
-              <a class="red_btn btn" href="project.php?project=<?php echo $p['id']; ?>">View project</a>
+              <h3><?php echo htmlspecialchars($p['name']); ?></h3>
+              <h4 class="lightgrey"><?php echo htmlspecialchars($location['continent']); ?></h4>
+              <a class="red_btn btn" href="project.php?project=<?php echo htmlspecialchars($p['id']); ?>">View project</a>
             </article>
           </div>
         <?php endforeach; ?>

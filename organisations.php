@@ -21,7 +21,7 @@
         <div class="organisation_tile">
           <div class="image_wrapper"><div class="image" style="background: url(<?php echo $o['banner']; ?>); background-position:center; background-size:cover;"></div></div>
           <article>
-            <h3 class="red"><?php echo $o['name']; ?></h3>
+            <h3 class="red"><?php echo htmlspecialchars($o['name']); ?></h3>
             <a class="btn red_btn" href="organisation.php?organisation=<?php echo $o['id']; ?>">More info</a>
           </article>
         </div>

@@ -21,16 +21,16 @@
     <main class="main_detail">
     <div class="container">
       <div class="banner_wrapper">
-        <div class="banner_image" style="background:url(<?php echo $organisation['banner']; ?>); background-size:cover; background-position:center;"></div>
+        <div class="banner_image" style="background:url(<?php echo htmlspecialchars($organisation['banner']); ?>); background-size:cover; background-position:center;"></div>
       </div>
       <section class="detail_information">
         <div class="center">
-          <h3 class="red"><?php echo $organisation['name']; ?></h3>
+          <h3 class="red"><?php echo htmlspecialchars($organisation['name']); ?></h3>
           <h5 class="lightgrey">Active since</h5>
           <?php $year = substr($organisation['timestamp'], 0, 4); ?>
-          <h4><?php echo $year; ?></h4>
+          <h4><?php echo htmlspecialchars($year); ?></h4>
           <h5 class="lightgrey">Active projects</h5>
-          <h4><?php echo Project::getTotalProjects("", "organisation_id = $organisation_id &&"); ?></h4>
+          <h4><?php echo htmlspecialchars(Project::getTotalProjects("", "organisation_id = $organisation_id &&")); ?></h4>
         </div>
       </section>
     </div>
@@ -40,8 +40,8 @@
         <article class="about_organisation">
           <h3>About this organisation</h3>
           <form action="#" method="post">
-            <textarea class="description" name="description"><?php echo $organisation['description']; ?></textarea>
-            <input class="red_btn save_desc" data-id="<?php echo $organisation_id ?>" type="submit" value="Save">
+            <textarea class="description" name="description"><?php echo htmlspecialchars($organisation['description']); ?></textarea>
+            <input class="red_btn save_desc" data-id="<?php echo htmlspecialchars($organisation_id); ?>" type="submit" value="Save">
           </form>
         </article>
       </div>
@@ -55,11 +55,11 @@
           $location = Project::getLocation($p['locations_id']);
         ?>
           <div class="project_tile">
-            <figure class="project_banner" style="background: url(<?php echo $p['banner']; ?>); background-size: cover; background-position:center;"></figure>
+            <figure class="project_banner" style="background: url(<?php echo htmlspecialchars($p['banner']); ?>); background-size: cover; background-position:center;"></figure>
             <article class="project_info">
-              <h3><?php echo $p['name']; ?></h3>
+              <h3><?php echo htmlspecialchars($p['name']); ?></h3>
               <h4 class="lightgrey"><?php echo $location['continent']; ?></h4>
-              <a class="red_btn btn" href="edit_project.php?project=<?php echo $p['id']; ?>">Edit project</a><br>
+              <a class="red_btn btn" href="edit_project.php?project=<?php echo htmlspecialchars($p['id']); ?>">Edit project</a><br>
               <label class="switch">
                 <input type="checkbox" <?php if($p['active'] == 1){echo "checked";} ?>>
                 <span data-id="<?php echo $p['id'] ?>" class="slider round<?php if($p['active'] == 1){echo " checked";} ?>"></span>

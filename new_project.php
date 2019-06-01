@@ -45,7 +45,7 @@
           <h5 class="lightgrey">Continent</h5>
           <select name="cont" required>
           <?php foreach($pro->getContinents() as $co): ?>
-            <option value="<?php echo $co['id'] ?>"><?php echo $co['continent']; ?></option>
+            <option value="<?php echo htmlspecialchars($co['id']); ?>"><?php echo htmlspecialchars($co['continent']); ?></option>
           <?php endforeach; ?>
           </select>
           <h5 class="lightgrey">End date</h5>

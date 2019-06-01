@@ -138,8 +138,9 @@
 
     public function updateProject($id, $title, $text, $date, $goal, $loc){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("UPDATE projects SET name = :title, locations_id = '$loc', description = '$text', date_end='$date', goal = '$goal' WHERE id = '$id'");
+      $statement = $conn->prepare("UPDATE projects SET name = :title, locations_id = '$loc', description = :desc, date_end='$date', goal = '$goal' WHERE id = '$id'");
       $statement->bindParam(':title', $title);
+      $statement->bindParam(':desc', $text);
       $result = $statement->execute();
       return $result;
     }

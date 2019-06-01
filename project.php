@@ -44,13 +44,13 @@
       <section class="detail_information">
         <div class="center">
           <h3 class="red"><?php echo $project['name']; ?></h3>
-          <h4><?php echo $location['continent']; ?></h4>
+          <h4><?php echo htmlspecialchars($location['continent']); ?></h4>
           <h5 class="lightgrey">Organisation</h5>
-          <h4><?php echo $organisation['name']; ?></h4>
+          <h4><?php echo htmlspecialchars($organisation['name']); ?></h4>
           <h5 class="lightgrey">End date</h5>
-          <h4><?php echo substr($project['date_end'], 8, 2) . "/" . substr($project['date_end'], 5, 2) . "/" . substr($project['date_end'], 0, 4); ?> </h4>
+          <h4><?php echo htmlspecialchars(substr($project['date_end'], 8, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 5, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 0, 4)); ?> </h4>
           <h5 class="lightgrey">Goal</h5>
-          <h4 class="red">&euro;<?php echo $project['goal']; ?></h4>
+          <h4 class="red">&euro;<?php echo htmlspecialchars($project['goal']); ?></h4>
           <?php $total_transactions_procent = $pro->getTotalProjectTransactions($project_id, $project['goal']); ?>
           <div class="bar">
             <div class="progress" style="width: <?php echo $total_transactions_procent ?>%"></div>
@@ -76,7 +76,7 @@
             <div class="feed_image_wrapper">
               <div class="feed_image" style="background: url(<?php echo $f['image'] ?>); background-size:cover; background-position:center;"></div>
             </div>
-            <p><?php echo $f['description']; ?></p>
+            <p><?php echo htmlspecialchars($f['description']); ?></p>
           </article>
         <?php endforeach; ?>
         <a class="btn grey_btn" href="#">More news</a>
