@@ -594,6 +594,9 @@ form .error_message {
   float: left;
   margin-top: 40px;
 }
+.about_project textarea, .project_feed textarea {
+  height: 200px;
+}
 
 .about_project h3 {
   margin-bottom: 20px;
