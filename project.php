@@ -59,7 +59,7 @@
             <div class="progress" style="width: <?php echo $total_transactions_procent ?>%"></div>
           </div>
           <p class="lightgrey"><?php echo $total_transactions_procent; ?> %</p>
-          <?php if($userData['organisation_id'] == 1): ?>
+          <?php if($userData['organisation_id'] == 1 && $project['date_end'] >= date('Y-m-d')): ?>
             <a class="btn red_btn" href="?project=<?php echo $project_id; ?>&fund=true">Fund today</a>
           <?php endif; ?>
         </div>
