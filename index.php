@@ -108,7 +108,7 @@
               }
             }
 
-            if($total >= $current_page){
+            if($total > $current_page ){
               $next = $current_page + 1;
               echo "<a class='number_page arrow next' href='?page=$next' data-page='$next'><img src=\"sign/arrow-white.png\" class=\"arrow-next\"></a>";
             }else{
