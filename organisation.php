@@ -13,7 +13,7 @@
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
   <?php require_once("inc/head.php"); ?>
-  <body>
+  <body id="page_org">
     <?php require_once("inc/header.php"); ?>
     <?php if($organisation_id == $userData['organisation_id']): ?>
       <a class="btn red_btn edit" href="edit_organisation.php">Edit page</a>

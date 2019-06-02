@@ -231,6 +231,10 @@ nav .nav_profile .nav_profile_dropdown ul .logout {
   width: 100%;
 }
 
+#menu_open {
+  display: none;
+}
+
 form {
   width: 550px;
   padding: 25px;
@@ -895,6 +899,9 @@ input:checked + .slider:before {
     margin: 20px 0;
     text-align: center;
   }
+  header .nav_mobile ul li a {
+    font-size: 18px;
+  }
   header .nav_mobile .nav_profile {
     width: calc(90% - 20px);
     bottom: 100px;
@@ -905,8 +912,9 @@ input:checked + .slider:before {
     display: block;
   }
   header .nav_mobile .nav_profile #profile p {
-    text-align: center;
     width: 80%;
+    text-align: center;
+    font-size: 18px;
   }
   header .nav_mobile .nav_bottom {
     bottom: 50px;
@@ -941,10 +949,16 @@ input:checked + .slider:before {
   #page_index main .search_filters form input {
     width: 100%;
   }
+  #page_index main .project_tiles .project_tiles {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   #page_index main .project_tile {
     width: 47.5%;
     float: left;
     margin: 15px 0 0 0;
+    height: auto;
   }
   #page_index main .project_tile:nth-child(even) {
     margin: 15px 0 0 5%;
@@ -958,52 +972,72 @@ input:checked + .slider:before {
     margin: 15px 0;
   }
 
-  #page_project .main_detail {
+  #page_project .main_detail, #page_org .main_detail {
     margin-top: 55px;
   }
-  #page_project .main_detail .banner_wrapper {
+  #page_project .main_detail .banner_wrapper, #page_org .main_detail .banner_wrapper {
     width: 100%;
     height: 200px;
   }
-  #page_project .main_detail .detail_information {
+  #page_project .main_detail .detail_information, #page_org .main_detail .detail_information {
     width: 100%;
     height: 400px;
     padding: 0;
   }
-  #page_project .main_detail .detail_information > div {
+  #page_project .main_detail .detail_information > div, #page_org .main_detail .detail_information > div {
     width: 90%;
   }
-  #page_project .main_detail .detail_information h5 {
+  #page_project .main_detail .detail_information h5, #page_org .main_detail .detail_information h5 {
     display: inline-block;
   }
-  #page_project .main_detail .detail_information .project-goal {
+  #page_project .main_detail .detail_information .project-goal, #page_org .main_detail .detail_information .project-goal {
     width: 100%;
   }
-  #page_project .main_detail .detail_information .project-org, #page_project .main_detail .detail_information .project-end {
+  #page_project .main_detail .detail_information .project-org, #page_project .main_detail .detail_information .project-end, #page_org .main_detail .detail_information .project-org, #page_org .main_detail .detail_information .project-end {
     width: 50%;
   }
-  #page_project .main_detail .detail_information .project-org {
+  #page_project .main_detail .detail_information .project-org, #page_org .main_detail .detail_information .project-org {
     float: left;
   }
-  #page_project .main_detail .detail_information .project-end {
+  #page_project .main_detail .detail_information .project-end, #page_org .main_detail .detail_information .project-end {
     float: right;
   }
-  #page_project .main_detail .detail_information .bar {
+  #page_project .main_detail .detail_information .bar, #page_org .main_detail .detail_information .bar {
     width: 100%;
   }
-  #page_project .about_project, #page_project .project_feed {
+  #page_project .about_project, #page_project .project_feed, #page_org .about_project, #page_org .project_feed {
     width: 100%;
     margin-top: 20px;
   }
-  #page_project .about_project h3, #page_project .project_feed h3 {
+  #page_project .about_project h3, #page_project .project_feed h3, #page_org .about_project h3, #page_org .project_feed h3 {
     text-align: center;
   }
-  #page_project .fund {
+  #page_project .fund, #page_org .fund {
     width: 80%;
     padding: 30px 5%;
   }
-  #page_project .fund form {
+  #page_project .fund form, #page_org .fund form {
     width: 100%;
+  }
+
+  .main_organisations {
+    margin-top: 45px;
+  }
+
+  #page_org .detail_information {
+    height: 300px !important;
+  }
+  #page_org .project_tile {
+    width: 47.5%;
+    float: left;
+    margin: 15px 0 0 0;
+    height: auto;
+  }
+  #page_org .project_tile:nth-child(even) {
+    margin: 15px 0 0 5%;
+  }
+  #page_org .project_tile .project_banner {
+    height: 150px;
   }
 
   #page_about .main_about {

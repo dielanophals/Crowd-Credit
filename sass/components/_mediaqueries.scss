@@ -68,6 +68,9 @@
 					width: 100%;
 					margin: 20px 0;
 					text-align: center;
+					a{
+						font-size: 18px;
+					}
 				}
 			}
 			.nav_profile{
@@ -80,8 +83,9 @@
 				display: block;
 				#profile{
 					p{
-						text-align: center;
     					width: 80%;
+						text-align: center;
+						font-size: 18px;
 					}
 				}
 			}
@@ -122,10 +126,18 @@
 					}
 				}
 			}
+			.project_tiles .project_tiles{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				// NEXT PREV. PAGE -> EXTRA DIV.project_tiles 
+				// BUG?? O.o
+			}
 			.project_tile{
 				width: 47.5%;
 				float: left;
 				margin: 15px 0 0 0;
+				height: auto;
 				&:nth-child(even){
 					margin: 15px 0 0 5%;
 				}
@@ -141,7 +153,7 @@
 	}
 	
 	// PROJECT DETAIL
-	#page_project{
+	#page_project, #page_org{
 		.main_detail{
 			margin-top: 55px;
 			.banner_wrapper{
@@ -194,6 +206,27 @@
 	}
 	
 	// ORGANISATIONS
+	.main_organisations{
+		margin-top: 45px;
+	}
+	
+	#page_org{
+		.detail_information{
+			height: 300px !important;
+		}
+		.project_tile{
+			width: 47.5%;
+			float: left;
+			margin: 15px 0 0 0;
+			height: auto;
+			&:nth-child(even){
+				margin: 15px 0 0 5%;
+			}
+			.project_banner{
+				height: 150px;
+			}
+		}
+	}
 	
 	// ABOUT US
 	#page_about{

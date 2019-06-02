@@ -23,8 +23,7 @@ nav{
   display: flex;
   align-items: center;
   margin-right: 20px;
-  float:right;
-
+  float:right;	
   ul{
     margin-right: 20px;
 
@@ -128,4 +127,8 @@ nav{
 .profile_image{
   height:100%;
   width:100%;
+}
+
+#menu_open{
+	display: none;
 }
