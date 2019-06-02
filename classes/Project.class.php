@@ -122,12 +122,12 @@
       return $feed;
     }
 
-    public function insertFund($project_id, $id, $value){
+    public function insertFund($project_id, $id, $value, $organisation, $ref){
       date_default_timezone_set("Europe/Brussels");
       $timestamp = date('Y-m-d H:i:s');
 
       $conn = Db::getInstance();
-      $statement = $conn->prepare("INSERT INTO transactions (amount, user_id, project_id, timestamp) VALUES (:value, :id, :project_id, '$timestamp')");
+      $statement = $conn->prepare("INSERT INTO transactions (amount, user_id, project_id, timestamp, organisation_id, refund) VALUES (:value, :id, :project_id, '$timestamp', '$organisation', '$ref')");
       $statement->bindParam(':value', $value);
       $statement->bindParam(':id', $id);
       $statement->bindParam(':project_id', $project_id);
