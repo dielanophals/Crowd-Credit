@@ -37,7 +37,7 @@
 			<input type="text" name="lastname" value="<?php echo htmlspecialchars($s['lastname']); ?>" required>
 			<input type="file" name="profilepic" value="image" accept="image/*" required>
 			<input class="red_btn btn" type="submit" name="submit" value="save changes">
-			<a href=profile.php class="btn grey">cancel</a>
+			<a href="profile.php" class="btn darkgrey_btn">cancel</a>
 		</form>
 		<?php endforeach; ?>
 	</body>

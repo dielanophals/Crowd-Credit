@@ -598,14 +598,6 @@ form .error_message {
 .popup .fund form input[type="submit"] {
   margin-top: 30px;
 }
-.popup .fund form .darkgrey_btn {
-  font-size: 16px;
-  padding: 15px 15px !important;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-}
 
 .project_title {
   text-align: center;
@@ -1155,6 +1147,15 @@ input:checked + .slider:before {
 }
 .red_btn:hover {
   background: #FF5555;
+}
+
+.darkgrey_btn {
+  font-size: 16px;
+  padding: 15px 15px !important;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
 .center {
