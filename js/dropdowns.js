@@ -90,7 +90,7 @@ $(document).ready(function() {
             'amount': amount
         },
         success: function (data) {
-          alert(data)
+          window.location = "index.php";
         }
       });
     }else{
