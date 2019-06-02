@@ -47,6 +47,9 @@
             <?php if($userData['organisation_id'] != 1): ?>
               <li id="li_edit_organisation"><a href="edit_organisation.php">Editor</a></li>
             <?php endif; ?>
+            <?php if($userData['organisation_id'] != 1): ?>
+              <li id="li_edit_organisation"><a href="refund.php">Refunds</a></li>
+            <?php endif; ?>
             <?php if($userData['organisation_id'] == 1): ?>
               <li id="li_transactions"><a href="transactions.php">Transactions</a></li>
             <?php endif; ?>

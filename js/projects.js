@@ -126,6 +126,7 @@ $(document).ready(function() {
   $(document).on("click", '#fund', function(e) {
     e.preventDefault();
     if (document.getElementById('accept').checked) {
+      var org_id = $(this).data('org');
       var project_id = $(this).data('project');
       var amount = $('#amount').val();
 
@@ -135,7 +136,8 @@ $(document).ready(function() {
           dataType: 'html',
           data: {
               'project': project_id,
-              'amount': amount
+              'amount': amount,
+              'organisation': org_id
           },
           success: function (data) {
             if(data !== ""){

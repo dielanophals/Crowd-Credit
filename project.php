@@ -20,14 +20,15 @@
       <div class="center fund">
         <h4 class="grey">Fund a dream</h4>
         <h5 class="lightgrey">Project</h5>
-        <h3 class="red"><?php echo $project['name'] ?></h3>
+        <h3 class="red"><?php echo $project['name']; ?></h3>
         <h5 class="lightgrey">Amount</h5>
         <form action="#" method="post">
           <input type="number" name="value" id="amount" value="100" min="10">
           <h5 class="lightgrey">Terms</h5>
           <input type="checkbox" id="accept">
-          <p class="terms"><label for="accept">I know &amp; understand the <a href="risks.php" target="_blank">risks</a> of funding this project</label></p>
-          <input class="btn red_btn" id="fund" data-project="<?php echo $project_id; ?>" data-user="<?php echo $_SESSION['id']; ?>" type="submit" name="fund" value="Fund">
+          <p class="terms"><label for="accept">I know &amp; understand the <a href="#">risks</a> of funding this project</label></p>
+          <input class="btn red_btn" id="fund" data-project="<?php echo $project_id; ?>" data-org="<?php echo $project['organisation_id']; ?>" data-user="<?php echo $_SESSION['id']; ?>" type="submit" name="fund" value="Fund">
+         
           <a class="btn darkgrey_btn" href="?project=<?php echo $project_id; ?>">Cancel</a>
         </form>
       </div>

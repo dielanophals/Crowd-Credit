@@ -66,7 +66,16 @@
       return $transactions;
     }
 	  
-	public function moveImage() {
+    public function getSearchUsers(){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("SELECT * FROM users");
+      $statement->execute();
+      $users = $statement->fetchAll();
+
+      return $users;
+    }
+	
+	public function moveImage(){
 		$fileName = $_FILES["file"]["name"];
 		$fileTmpName = $_FILES["file"]["tmp_name"];
 		$imagepath = "images/profile/" . $_SESSION['user']."-" . time().".jpg";
@@ -81,4 +90,5 @@
 			return false;
     	}    
 	}
+	  
 }

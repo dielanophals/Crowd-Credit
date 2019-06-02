@@ -5,6 +5,7 @@
   if(isset($_POST['project'])){
     $project = $_POST['project'];
     $amount = $_POST['amount'];
+    $organisation = $_POST['organisation'];
 
     $user = new User;
     $data = $user->getUserData($_SESSION['id']);
@@ -15,7 +16,7 @@
       $wallet -= $amount;
       $pro = new Project;
       $pro->insertFundUser($_SESSION['id'], $wallet);
-      $pro->insertFund($project, $_SESSION['id'], $amount);
+      $pro->insertFund($project, $_SESSION['id'], $amount, $organisation, 0);
     }
   }else{
     echo "nope";
