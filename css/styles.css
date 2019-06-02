@@ -183,7 +183,7 @@ nav .nav_profile .profile_image_wrapper {
 }
 nav .nav_profile .nav_profile_dropdown {
   position: absolute;
-  width: 200px;
+  width: 215px;
   background: #F2F2F2;
   top: 60px;
   right: -25px;
@@ -237,7 +237,7 @@ form {
   text-align: center;
   max-width: 100%;
 }
-form input[type="email"], form input[type="password"], form input[type="text"], form input[type="submit"], form input[type="number"], form textarea {
+form input[type="email"], form input[type="password"], form input[type="text"], form input[type="submit"], form input[type="number"], form input[type="date"], form select, form textarea {
   border: none;
   width: 100%;
   border-radius: 5px;
@@ -254,7 +254,7 @@ form input:focus, form textarea:focus {
   -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
   box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
 }
-form input[type="email"], form input[type="password"], form input[type="text"], form input[type="number"], form textarea {
+form input[type="email"], form input[type="password"], form input[type="text"], form input[type="number"], form input[type="date"], form select, form textarea {
   box-sizing: border-box;
   margin-bottom: 10px;
   background: #F2F2F2;
@@ -444,7 +444,7 @@ form .error_message {
   text-align: center;
   line-height: 1.6;
   margin-top: 35px;
-  max-height: 368px;
+  height: 380px;
 }
 .project_tiles .project_tile:nth-child(3n+2) {
   margin-left: 3.5%;
@@ -490,7 +490,11 @@ form .error_message {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.main_detail .detail_information .bar {
+.main_detail .detail_information .btn {
+  margin-top: 20px;
+}
+
+.bar {
   width: 180px;
   background: #F2F2F2;
   height: 6px;
@@ -499,18 +503,18 @@ form .error_message {
   margin-bottom: 10px;
   overflow: hidden;
 }
-.main_detail .detail_information .bar .progress {
+.bar .progress {
   height: 100%;
   background: #F2494C;
-}
-.main_detail .detail_information .btn {
-  margin-top: 20px;
 }
 
 .about_project, .project_feed {
   width: 48%;
   float: left;
   margin-top: 40px;
+}
+.about_project textarea, .project_feed textarea {
+  height: 200px;
 }
 
 .about_project h4 {
@@ -597,6 +601,33 @@ form .error_message {
   box-sizing: border-box;
   text-align: center;
   font-family: "Nunito", sans-serif;
+}
+
+.project_title {
+  text-align: center;
+  clear: both;
+  position: relative;
+}
+.project_title h3 {
+  display: inline-block;
+  margin-top: 15px;
+}
+.project_title a {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.edit_project .detail_information h5 {
+  margin-top: 20px;
+}
+.edit_project form {
+  width: 100%;
+  padding: 0;
+}
+.edit_project form input {
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .main_about {
@@ -708,6 +739,86 @@ form .error_message {
 .about_organisation p {
   margin-top: 30px;
   margin-bottom: 80px;
+}
+
+.edit_organisation form {
+  width: 100%;
+  box-sizing: border-box;
+}
+.edit_organisation form textarea {
+  height: 200px;
+}
+.edit_organisation .project_tiles .project_tile {
+  height: 505px;
+  max-height: none;
+  position: relative;
+}
+.edit_organisation .total {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 20px 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F2F2F2;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #F2494C;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.expired {
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 950px) {
@@ -1017,6 +1128,12 @@ form .error_message {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.edit {
+  position: fixed;
+  top: 100px;
+  right: 40px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,10 +16,7 @@
 <html lang="en" dir="ltr">
   <?php require_once("inc/head.php"); ?>
   <body  id="page_project">
-  <?php
-    if(isset($_GET['fund']) && $_GET['fund'] == true):
-  ?>
-  <div class="popup">
+  <div class="popup hide">
       <div class="center fund">
         <h4 class="grey">Fund a dream</h4>
         <h5 class="lightgrey">Project</h5>
@@ -35,10 +32,10 @@
         </form>
       </div>
   </div>
-  <?php
-    endif;
-  ?>
     <?php require_once("inc/header.php"); ?>
+    <?php if($project['organisation_id'] == $userData['organisation_id']): ?>
+      <a class="btn red_btn edit" href="edit_project.php?project=<?php echo $project_id ?>">Edit project</a>
+    <?php endif; ?>
     <main class="main_detail">
     <div class="container">
       <div class="banner_wrapper">
@@ -46,26 +43,28 @@
       </div>
       <section class="detail_information">
         <div class="center">
-          <h3 class="red"><?php echo $project['name']; ?></h3>
-          <h4><?php echo $location['continent']; ?></h4>
+          <h3 class="red"><?php echo htmlspecialchars($project['name']); ?></h3>
+          <h4><?php echo htmlspecialchars($location['continent']); ?></h4>
           <div class="project-org">
           	<h5 class="lightgrey">Organisation</h5>
-            <h4><?php echo $organisation['name']; ?></h4>
-          </div>
-          <div class="project-end">
-          	<h5 class="lightgrey">End date</h5>
-            <h4><?php echo $project['date_end']; ?></h4>
-          </div>
+            <h4><?php echo htmlspecialchars($organisation['name']); ?></h4>
+		  </div>
+		  <div class="project-end">
+		    <h5 class="lightgrey">End date</h5>
+            <h4><?php echo htmlspecialchars(substr($project['date_end'], 8, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 5, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 0, 4)); ?> </h4>
+		  </div>
           <div class="project-goal">
-          	<h5 class="lightgrey">Goal</h5>
-            <h4 class="red">&euro;<?php echo $project['goal']; ?></h4>
-          <?php $total_transactions_procent = $pro->getTotalProjectTransactions($project_id, $project['goal']); ?>
+            <h5 class="lightgrey">Goal</h5>
+            <h4 class="red">&euro;<?php echo htmlspecialchars($project['goal']); ?></h4>
+            <?php $total_transactions_procent = $pro->getTotalProjectTransactions($project_id, $project['goal']); ?>
             <div class="bar">
               <div class="progress" style="width: <?php echo $total_transactions_procent ?>%"></div>
             </div>
-          <p class="lightgrey"><?php echo $total_transactions_procent; ?> %</p>
-          </div>
-          <a class="btn red_btn" href="?project=<?php echo $project_id; ?>&fund=true">Fund today</a>
+		  </div>
+    	  <p class="lightgrey"><?php echo $total_transactions_procent; ?> %</p>
+          <?php if($userData['organisation_id'] == 1 && $project['date_end'] >= date('Y-m-d')): ?>
+            <a class="btn red_btn funding_popup" href="#">Fund today</a>
+          <?php endif; ?>
         </div>
       </section>
     </div>
@@ -83,7 +82,7 @@
             <div class="feed_image_wrapper">
               <div class="feed_image" style="background: url(<?php echo $f['image'] ?>); background-size:cover; background-position:center;"></div>
             </div>
-            <p><?php echo $f['description']; ?></p>
+            <p><?php echo htmlspecialchars($f['description']); ?></p>
           </article>
         <?php endforeach; ?>
         <a class="btn grey_btn" href="#">More news</a>

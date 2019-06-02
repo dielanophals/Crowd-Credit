@@ -9,4 +9,5 @@
     <script src="js/nav.js"></script>
     <script src="js/dropdowns.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/organisation.js"></script>
 </head>

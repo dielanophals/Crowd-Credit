@@ -12,7 +12,7 @@
       <article class="about-article">
         <h4>Get in Touch</h4>
         <p>We want to offer financial aid to ambitious start-ups in 3rd world countries so they can realize their dreams. This is possible through the crowdfunding of microcredits, which are ultimately repaid to the voluntary funders.</p>
-        <p>If you have any questions / complaints, feel free to shoot us a message. Or email us at <a href="mailto:hello@dielanophals.be" class="red">hello@crowdcredit.com</a></p>
+        <p>If you have any questions / complaints, feel free to shoot us a message. Or email us at <a href="mailto:hello@crowdcredit.be" class="red">hello@crowdcredit.be</a></p>
         <br>
         <h4>Organizations</h4>
         <p>To make this work, we collaborate with local, national, and international organizations to ensure that the crowdfunded money goes to the right person. They act as a protective network to guide and assist the projects.</p>

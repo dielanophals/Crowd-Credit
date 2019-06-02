@@ -15,4 +15,19 @@
       $organisation = $statement->fetch(PDO::FETCH_ASSOC);
       return $organisation;
     }
+
+    public function updateDescription($id, $desc){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("UPDATE organisations SET description = :desc WHERE id = '$id'");
+      $statement->bindParam(':desc', $desc);
+      $result = $statement->execute();
+      return $result;
+    }
+
+    public function updateActive($id, $act){
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("UPDATE projects SET active = '$act' WHERE id = '$id'");
+      $result = $statement->execute();
+      return $result;
+    }
   }
