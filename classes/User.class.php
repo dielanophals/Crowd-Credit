@@ -49,8 +49,7 @@
 
     public function getUserData($id){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM users WHERE id = :id");
-	  $statement->bindParam(":id", $id);
+      $statement = $conn->prepare("SELECT * FROM users WHERE id = $id");
       $statement->execute();
       $user = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -60,8 +59,7 @@
     public function getUserTransactions(){
       $id = $_SESSION['id'];
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM transactions WHERE user_id = :id ORDER BY timestamp DESC");
-	  $statement->bindParam(":id", $id);
+      $statement = $conn->prepare("SELECT * FROM transactions WHERE user_id = $id ORDER BY timestamp DESC");
       $statement->execute();
       $transactions = $statement->fetchAll();
 
@@ -69,19 +67,18 @@
     }
 	  
 	public function moveImage() {
-    	$fileName = $_FILES["file"]["name"];
-    	$fileTmpName = $_FILES["file"]["tmp_name"];
-    	$imagepath = "images/profile/" . $_SESSION['user']."-" . time().".jpg";
-    	$fileExt = explode(".",$fileName);
-    	$fileActualExt = strtolower(end($fileExt));
-    	$allowed = array('jpg','jpeg','png');
-    	if(in_array($fileActualExt,$allowed)){
-        	move_uploaded_file($fileTmpName, $imagepath);
-    
+		$fileName = $_FILES["file"]["name"];
+		$fileTmpName = $_FILES["file"]["tmp_name"];
+		$imagepath = "images/profile/" . $_SESSION['user']."-" . time().".jpg";
+		$fileExt = explode(".",$fileName);
+		$fileActualExt = strtolower(end($fileExt));
+		$allowed = array('jpg','jpeg','png');
+		if(in_array($fileActualExt,$allowed)){
+			move_uploaded_file($fileTmpName, $imagepath);
         	$this->imagepath = $imagepath;
     	}
     	else{
-       	 return false;
+			return false;
     	}    
 	}
 }

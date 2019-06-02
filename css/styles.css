@@ -649,6 +649,12 @@ form .error_message {
   padding: 0;
 }
 
+#page_risks .container {
+  width: 1024px;
+  max-width: 100%;
+  margin: 140px auto 10px auto;
+}
+
 .profile_information {
   text-align: center;
   margin-top: 140px;
@@ -838,6 +844,11 @@ input:checked + .slider:before {
 
   h4 {
     font-size: 22px;
+  }
+
+  #page_risks .container {
+    width: 90%;
+    margin: 65px 5% 10px 5%;
   }
 
   header {
