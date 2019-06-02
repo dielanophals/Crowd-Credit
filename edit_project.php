@@ -72,12 +72,12 @@
     <section>
       <div class="container">
       <article class="about_project">
-        <h3>About this project</h3>
+        <h4>About this project</h4>
         <textarea name="text"><?php echo htmlspecialchars($project['description']); ?></textarea>
         <input class="red_btn" type="submit" value="Save">
       </article>
       <div class="project_feed">
-        <h3>Project feed</h3>
+        <h4>Project feed</h4>
         <?php foreach($pro->getProjectFeed3($project_id) as $f): ?>
           <article class="feed_block">
             <div class="feed_image_wrapper">
@@ -86,7 +86,7 @@
             <p><?php echo htmlspecialchars($f['description']); ?></p>
           </article>
         <?php endforeach; ?>
-        <a class="btn grey_btn" href="#">Add feed</a>
+        <a class="btn grey_btn" href="add_feed.php?project=<?php echo $project_id; ?>">Add feed</a>
       </div>
       </div>
     </section>

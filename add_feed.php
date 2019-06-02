@@ -9,8 +9,12 @@
 	}
 
 	if(!empty($_POST)){
-		$title = $_POST['title'];
-		$description = $_POST['description'];
+		if($_POST['description'] != ""){
+		  Project::insertFeed($project_id, $_POST['description'], 'https://www.dielanophals.be/images/me.jpg');
+		  header("Location: project.php?project=" . $project_id);
+		}else{
+		  $error = "Please fill in all the fields";
+		}
 	}
 ?>
 <!DOCTYPE html>
@@ -24,8 +28,7 @@
 					echo "<p class='error_message'>$error</p>";
 				}
 			?>
-			<input type="text" name="title" placeholder="Title" required>
-			<input type="text" name="description" placeholder="Description" required>
+			<textarea name="description" class="add_desc" placeholder="Description"></textarea>
 			<input type="file" name="feedpic" value="image" accept="image/*">
 			<input class="red_btn btn" type="submit" name="submit" value="add to feed">
 			<a href="project.php?project=<?php echo $project_id ?>" class="btn darkgrey_btn">cancel</a>

@@ -80,6 +80,10 @@
     text-align: left;
   }
 
+  p{
+    margin-top:0;
+  }
+
   .feed_block{
     box-shadow: $shadow;
     border-radius: $radius;
@@ -189,4 +193,8 @@
       margin-bottom:0;
     }
   }
+}
+
+.add_desc{
+  height:150px;
 }

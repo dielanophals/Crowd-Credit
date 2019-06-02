@@ -171,4 +171,17 @@
 
       return $project;
     }
+
+    public function insertFeed($id, $desc, $image){
+      date_default_timezone_set("Europe/Brussels");
+      $timestamp = date('Y-m-d H:i:s');
+
+      $conn = Db::getInstance();
+      $statement = $conn->prepare("INSERT INTO project_feed (project_id, description, image, timestamp, active) VALUES (:id, :desc, :img, '$timestamp', 1)");
+      $statement->bindParam(':id', $id);
+      $statement->bindParam(':desc', $desc);
+      $statement->bindParam(':img', $image);
+      $result = $statement->execute();
+      return $result;
+    }
   }

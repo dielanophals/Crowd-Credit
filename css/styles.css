@@ -533,6 +533,9 @@ form .error_message {
   margin-bottom: 20px;
   text-align: left;
 }
+.project_feed p {
+  margin-top: 0;
+}
 .project_feed .feed_block {
   box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.3);
   border-radius: 5px;
@@ -624,6 +627,10 @@ form .error_message {
 .edit_project form input {
   text-align: center;
   margin-bottom: 0;
+}
+
+.add_desc {
+  height: 150px;
 }
 
 .main_about {
