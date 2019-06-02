@@ -1,11 +1,13 @@
 <?php
 	require_once("bootstrap.php");
 	Session::check();
+	
+	$settings = new User();
 
 	if(!empty($_POST)){
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
-		$email = $_POST['email'];
+		
 
 		$check_mail = User::checkMail($email);
 
@@ -22,17 +24,19 @@
   <?php require_once("inc/head.php"); ?>
 	<body id="page_settings">
  	<?php require_once("inc/header.php"); ?>
+   		<?php foreach($settings->getUserData() as $s): ?>
     	<form class="center" action="#" method="post">
 			<?php
 				if(isset($error)){
 					echo "<p class='error_message'>$error</p>";
 				}
 			?>
-			<input type="text" name="firstname" value="First name" required>
-			<input type="text" name="lastname" value="Last name" required>
-			<input type="file" name="profilepic" value="image" required>
+			<input type="text" name="firstname" value="<?php echo htmlspecialchars($s['firstname']); ?>" required>
+			<input type="text" name="lastname" value="<?php echo htmlspecialchars($s['lastname']); ?>" required>
+			<input type="file" name="profilepic" value="image" accept="image/*" required>
 			<input class="red_btn btn" type="submit" name="submit" value="save changes">
 			<a href=profile.php class="btn grey">cancel</a>
 		</form>
+		<?php endforeach; ?>
 	</body>
 </html>

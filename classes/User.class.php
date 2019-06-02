@@ -49,7 +49,8 @@
 
     public function getUserData($id){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM users WHERE id = $id");
+      $statement = $conn->prepare("SELECT * FROM users WHERE id = :id");
+	  $statement->bindParam(":id", $id);
       $statement->execute();
       $user = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -59,7 +60,8 @@
     public function getUserTransactions(){
       $id = $_SESSION['id'];
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM transactions WHERE user_id = $id ORDER BY timestamp DESC");
+      $statement = $conn->prepare("SELECT * FROM transactions WHERE user_id = :id ORDER BY timestamp DESC");
+	  $statement->bindParam(":id", $id);
       $statement->execute();
       $transactions = $statement->fetchAll();
 
