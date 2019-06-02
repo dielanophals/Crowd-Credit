@@ -52,7 +52,7 @@
 		  </div>
 		  <div class="project-end">
 		    <h5 class="lightgrey">End date</h5>
-            <h4><?php echo htmlspecialchars(substr($project['date_end'], 8, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 5, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 0, 4)); ?> </h4>
+            <h4><?php echo htmlspecialchars(substr($project['date_end'], 8, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 5, 2)) . "/" . htmlspecialchars(substr($project['date_end'], 0, 4)); ?></h4>
 		  </div>
           <div class="project-goal">
             <h5 class="lightgrey">Goal</h5>
