@@ -2,7 +2,9 @@
 	require_once("bootstrap.php");
 	Session::check();
 	
-	$settings = new User();
+	$id = (int)$_SESSION['id'];
+ 	$settings = new User();
+//	$settings->getUserData($id);
 
 	if(!empty($_POST)){
 		$firstname = $_POST['firstname'];
@@ -18,13 +20,13 @@
 			$error = "Unable to use this email";
 		}
 	}
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <?php require_once("inc/head.php"); ?>
 	<body id="page_settings">
  	<?php require_once("inc/header.php"); ?>
-   		<?php foreach($settings->getUserData() as $s): ?>
+   		<?php foreach($settings->getUserData($id) as $s): ?>
     	<form class="center" action="#" method="post">
 			<?php
 				if(isset($error)){
