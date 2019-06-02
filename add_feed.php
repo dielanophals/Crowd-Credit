@@ -7,6 +7,11 @@
   	}else{
     	header("Location: index.php");
 	}
+
+	if(!empty($_POST)){
+		$title = $_POST['title'];
+		$description = $_POST['description'];
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -23,7 +28,7 @@
 			<input type="text" name="description" placeholder="Description" required>
 			<input type="file" name="feedpic" value="image" accept="image/*">
 			<input class="red_btn btn" type="submit" name="submit" value="add to feed">
-			<a href="project.php?id=<?php echo $project_id ?>" class="btn darkgrey_btn">cancel</a>
+			<a href="project.php?project=<?php echo $project_id ?>" class="btn darkgrey_btn">cancel</a>
 		</form>
 	</body>
 </html>
