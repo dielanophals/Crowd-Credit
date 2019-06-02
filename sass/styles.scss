@@ -33,21 +33,6 @@ body{
   margin-top: 10px;
 }
 
-.red_btn{
-  background: $darkred;
-  color: $white;
-}
-
-.grey_btn{
-  background: $grey;
-  color: $white;
-}
-
-.darkgrey_btn{
-  background: $darkgrey;
-  color: $white;
-}
-
 h1, h2, h3, h4, h5, h6{
   font-family: $nunito;
 }
@@ -77,8 +62,62 @@ p, a{
   font-weight: 400;
 }
 
+p{
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+@import 'components/header';
+@import 'components/form';
+@import 'components/index';
+@import 'components/projects_pages';
+@import 'components/projects';
+@import 'components/project';
+@import 'components/about';
+@import 'components/profile';
+@import 'components/organisations';
+@import 'components/transactions';
+@import 'components/organisation';
+@import 'components/mediaqueries';
+
+.red_btn{
+  background: $darkred;
+  color: $white;
+}
+
+.grey_btn{
+  background: $grey;
+  color: $white;
+}
+
+.darkgrey_btn{
+  background: $darkgrey;
+  color: $white;
+}
+
 .lightgrey{
   color: $lightgrey;
+}
+
+.red{
+  color: $darkred;
+}
+
+.grey{
+  color: $darkgrey;
+}
+
+.lightgrey{
+  color: $grey;
+}
+
+.hide{
+  display: none !important;
+}
+
+.invisible{
+    visibility: hidden;
 }
 
 .btn{
@@ -102,48 +141,9 @@ p, a{
     }
 }
 
-p{
-  line-height: 1.4;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.red{
-  color: $darkred;
-}
-
-.grey{
-  color: $darkgrey;
-}
-
-.lightgrey{
-  color: $grey;
-}
-
-.hide{
-  display: none;
-}
-
-.invisible{
-    visibility: hidden;
-}
-
 .center{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-@import 'components/header';
-@import 'components/form';
-@import 'components/index';
-@import 'components/projects_pages';
-@import 'components/projects';
-@import 'components/project';
-@import 'components/about';
-@import 'components/profile';
-@import 'components/organisations';
-@import 'components/transactions';
-@import 'components/organisation';
-@import 'components/mediaqueries'; 
