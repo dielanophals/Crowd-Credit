@@ -30,7 +30,7 @@
                   $photo = $post->uploadImage();
                   $pro->insertProject($_POST['title'], $_POST['text'], $_POST['date'], $_POST['goal'], $_POST['cont'], $organisation_id, $photo);
                   $last_project = $pro->getLastProject();
-                  //header("Location: project.php?project=" . $last_project['id']);
+                  header("Location: project.php?project=" . $last_project['id']);
               }
           }
       }
@@ -52,8 +52,14 @@
         echo "<p class='error_message'>$error</p>";
       }
       ?>
-      <div class="banner_wrapper">
-      <input type="file" name="fileToUpload">
+      <div class="banner_wrapper relative">
+        <div class="center new_project">
+          <h3>About this project</h3>
+          <input type="file" name="fileToUpload">
+          <textarea name="text"></textarea>
+          <input class="red_btn" type="submit" value="Save" required>
+        </div>
+        
       </div>
       <section class="detail_information">
         <div class="center">
@@ -76,14 +82,8 @@
     <section>
       <div class="container">
       <article class="about_project">
-        <h3>About this project</h3>
-        <textarea name="text"></textarea>
-        <input class="red_btn" type="submit" value="Save" required>
+        
       </article>
-      <div class="project_feed">
-        <h3>Project feed</h3>
-        <a class="btn grey_btn" href="#">Add feed</a>
-      </div>
       </div>
     </section>
     </form>
