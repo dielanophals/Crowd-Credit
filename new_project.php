@@ -14,10 +14,27 @@
   }
 
   if(!empty($_POST)){
-    if($_POST['title'] != "" && $_POST['text'] != "" && $_POST['date'] != "" && $_POST['goal'] != "" && $_POST['cont'] != ""){
-      $pro->insertProject($_POST['title'], $_POST['text'], $_POST['date'], $_POST['goal'], $_POST['cont'], $organisation_id);
-      $last_project = $pro->getLastProject();
-      header("Location: project.php?project=" . $last_project['id']);
+    if($_POST['title'] != "" && $_POST['text'] != "" && $_POST['date'] != "" && $_POST['goal'] != "" && $_POST['cont'] != "" && $_FILES['fileToUpload']){
+      $imagePost = $_FILES['fileToUpload'];
+      $post = new Upload();
+      if ($post->checkType($imagePost) === false) {
+        $error = 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.';
+      } else {
+          if ($post->fileSize($imagePost) === false) {
+            $error = 'Sorry, your file is too big.';
+          } else {
+              $post->createDirectory('project');
+              if ($post->fileExists() === false) {
+                  $feedback = 'Sorry, this file already exists. Please try again.';
+              } else {
+                  $photo = $post->uploadImage();
+                  $pro->insertProject($_POST['title'], $_POST['text'], $_POST['date'], $_POST['goal'], $_POST['cont'], $organisation_id, $photo);
+                  $last_project = $pro->getLastProject();
+                  header("Location: project.php?project=" . $last_project['id']);
+              }
+          }
+      }
+        
     }else{
       $error = "Please fill in all the fields";
     }
@@ -27,7 +44,7 @@
   <?php require_once("inc/head.php"); ?>
   <body class="edit_project">
     <?php require_once("inc/header.php"); ?>
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
     <main class="main_detail">
     <div class="container">
       <?php
@@ -35,8 +52,14 @@
         echo "<p class='error_message'>$error</p>";
       }
       ?>
-      <div class="banner_wrapper">
-        <div class="banner_image" style="background:url('http://2.bp.blogspot.com/-WnRZOGyOwMM/TrpA6oATSMI/AAAAAAAADJg/wRp9Cx54qdg/s1600/donkeys.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="banner_wrapper relative">
+        <div class="center new_project">
+          <h3>About this project</h3>
+          <input type="file" name="fileToUpload">
+          <textarea name="text"></textarea>
+          <input class="red_btn" type="submit" value="Save" required>
+        </div>
+        
       </div>
       <section class="detail_information">
         <div class="center">
@@ -59,14 +82,8 @@
     <section>
       <div class="container">
       <article class="about_project">
-        <h3>About this project</h3>
-        <textarea name="text"></textarea>
-        <input class="red_btn" type="submit" value="Save" required>
+        
       </article>
-      <div class="project_feed">
-        <h3>Project feed</h3>
-        <a class="btn grey_btn" href="#">Add feed</a>
-      </div>
       </div>
     </section>
     </form>

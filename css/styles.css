@@ -676,6 +676,17 @@ form .error_message {
   height: 150px;
 }
 
+.new_project {
+  width: 90%;
+}
+.new_project h3 {
+  margin-bottom: 20px;
+}
+.new_project textarea {
+  margin-top: 15px;
+  height: 150px;
+}
+
 .main_about {
   overflow: hidden;
   margin: 140px 0 0 0;
@@ -1230,6 +1241,10 @@ input:checked + .slider:before {
 
 .invisible {
   visibility: hidden;
+}
+
+.relative {
+  position: relative;
 }
 
 /*# sourceMappingURL=styles.css.map */
