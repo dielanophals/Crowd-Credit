@@ -68,6 +68,49 @@ p{
   font-size: 16px;
 }
 
+.btn{
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display:inline-block;
+  margin-top: 10px;
+}
+
+.red_btn{
+    background: $darkred;
+    font-family: $roboto;
+  	color: $white;
+    transition: $hover;
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    &:hover{
+        background: $lightred;
+    }
+}
+
+.darkgrey_btn{
+	font-size: 16px;
+	padding: 15px 15px !important;
+	width:100%;
+	box-sizing: border-box;
+	text-align:center;
+	font-family: $nunito;
+}
+
+.center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.edit{
+  position: fixed;
+  top: 100px;
+  right: 40px;
+}
+
 @import 'components/header';
 @import 'components/form';
 @import 'components/index';
@@ -119,47 +162,4 @@ p{
 
 .invisible{
     visibility: hidden;
-}
-
-.btn{
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display:inline-block;
-  margin-top: 10px;
-}
-
-.red_btn{
-    background: $darkred;
-    font-family: $roboto;
-  	color: $white;
-    transition: $hover;
-    -webkit-transition-property: background-color;
-    -o-transition-property: background-color;
-    transition-property: background-color;
-    &:hover{
-        background: $lightred;
-    }
-}
-
-.darkgrey_btn{
-	font-size: 16px;
-	padding: 15px 15px !important;
-	width:100%;
-	box-sizing: border-box;
-	text-align:center;
-	font-family: $nunito;
-}
-
-.center{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-	
-.edit{
-  position: fixed;
-  top: 100px;
-  right:40px;
 }

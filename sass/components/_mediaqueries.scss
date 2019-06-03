@@ -19,11 +19,17 @@
 		font-size: 22px;
 	}
 	#page_risks{
-	.container{
-		width: 90%;
-		margin: 65px 5% 10px 5%;
+		.container{
+			width: 90%;
+			margin: 65px 5% 10px 5%;
+		}
 	}
-}
+
+	.edit{
+		position: relative;
+    	top: 50px;
+    	left: 5%;
+	}
 	
 	// HEADER
 	header{
