@@ -59,7 +59,7 @@
     public function getUserTransactions(){
       $id = $_SESSION['id'];
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM transactions WHERE user_id = $id ORDER BY timestamp DESC");
+      $statement = $conn->prepare("SELECT * FROM transactions WHERE user_id = $id && refund = 0 ORDER BY timestamp DESC");
       $statement->execute();
       $transactions = $statement->fetchAll();
 

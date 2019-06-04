@@ -102,7 +102,7 @@
 
     public function getTotalProjectTransactions($id, $goal){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM transactions WHERE project_id = $id");
+      $statement = $conn->prepare("SELECT * FROM transactions WHERE project_id = $id && refund = 0");
       $statement->execute();
       $transactions = $statement->fetchAll();
 
