@@ -14,7 +14,7 @@
   }
 
   if(!empty($_POST)){
-    if($_POST['title'] != "" && $_POST['text'] != "" && $_POST['date'] != "" && $_POST['goal'] != "" && $_POST['cont'] != "" && $_FILES['fileToUpload']){
+    if($_POST['title'] != "" && $_POST['text'] != "" && $_POST['date'] != "" && $_POST['goal'] != "" && $_POST['cont'] != "" && $_FILES['fileToUpload']["name"] != ""){
       $imagePost = $_FILES['fileToUpload'];
       $post = new Upload();
       if ($post->checkType($imagePost) === false) {
