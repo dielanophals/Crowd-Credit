@@ -68,7 +68,7 @@
 
     public function getSearchUsers(){
       $conn = Db::getInstance();
-      $statement = $conn->prepare("SELECT * FROM users");
+      $statement = $conn->prepare("SELECT * FROM users WHERE organisation_id = 1 && active = 1");
       $statement->execute();
       $users = $statement->fetchAll();
 

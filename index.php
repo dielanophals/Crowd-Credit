@@ -55,14 +55,6 @@
               <?php endforeach; ?>
           </div>
         </div>
-        <div class="filter">
-          <a href="#" class="filter_dropdown_btn" id="category">Category <img src="sign/arrow-grey.png" id="dropdown_arrow_category" alt="options"></a>
-          <div id="categories" class="dropdown hide">
-            <?php foreach($project->getCategories() as $ca): ?>
-              <p id="category<?php echo $ca['id']; ?>"><input class="check_category" data-category="<?php echo $ca['id']; ?>" type="checkbox" name="category" value="<?php echo $ca['id']; ?>" id="<?php echo htmlspecialchars($ca['name']); ?>"><label class="check_category" data-category="<?php echo $ca['id']; ?>" id="cat<?php echo $ca['id']; ?>" for="<?php echo htmlspecialchars($ca['name']); ?>"><?php echo htmlspecialchars($ca['name']); ?></label></p>
-            <?php endforeach; ?>
-          </div>
-        </div>
         <form class="search" action="#" method="post">
           <input class="search_input" type="text" name="search" placeholder="Search..." <?php if(isset($search) && !empty($search)){ echo 'value="'.$search.'"'; } ?>>
         </form>
